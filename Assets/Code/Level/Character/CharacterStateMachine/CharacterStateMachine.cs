@@ -1,5 +1,5 @@
 ﻿
-public class CharacterStateMachine : IFixedUpdate
+public class CharacterStateMachine : IUpdate
 {
     private readonly TransitionsPresenter _transitionsPresenter;
     private CharacterState _state;
@@ -10,7 +10,7 @@ public class CharacterStateMachine : IFixedUpdate
         _state = initialState;
     }
 
-    void IFixedUpdate.FixedUpdate()
+    void IUpdate.Update()
     {
         _state.Update();
         TryTransit();

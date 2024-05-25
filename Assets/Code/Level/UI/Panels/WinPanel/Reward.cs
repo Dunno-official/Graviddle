@@ -9,7 +9,7 @@ public class Reward : MonoBehaviour, IRestart
     public int CollectedStars { get; private set; }
     public bool IsMaxStars => CollectedStars == _maxStars;
 
-    public void Init(IReadOnlyCollection<LevelStar> levelStars)
+    public void Initialize(IReadOnlyCollection<LevelStar> levelStars)
     {
         _levelStars = levelStars;
     }

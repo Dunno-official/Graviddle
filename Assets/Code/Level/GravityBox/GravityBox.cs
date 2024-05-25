@@ -10,7 +10,7 @@ public class GravityBox : MonoBehaviourWrapper
     [SerializeField] private Collider2D _collider;
     [SerializeField] private Canvas _canvas;
 
-    public void Init(SwipeHandler swipeHandler)
+    public void Initialize(SwipeHandler swipeHandler)
     {
         PhysicsInputTrigger physicsInputTrigger = new(_collider);
         Gravity gravity = new(_constantForce2D, 50f, _gravityDirection);

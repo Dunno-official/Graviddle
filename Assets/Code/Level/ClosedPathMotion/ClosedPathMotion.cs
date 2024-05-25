@@ -13,7 +13,7 @@ public class ClosedPathMotion : MonoBehaviour, IRestart
         _targetPosition = _targetTransform.position;
         _startPosition = transform.position;
 
-        _motionCalculator.Init();
+        _motionCalculator.Initialize();
     }
 
     private void Update()

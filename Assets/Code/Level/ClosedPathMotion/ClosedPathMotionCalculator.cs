@@ -9,7 +9,7 @@ public class ClosedPathMotionCalculator
     private float _period;
     private float _time;    
 
-    public void Init()
+    public void Initialize()
     {
         _period = _motionType.Period;
     }

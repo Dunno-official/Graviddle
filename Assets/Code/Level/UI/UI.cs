@@ -8,11 +8,11 @@ public class UI : MonoBehaviour
     [SerializeField] [ChildGameObjectsOnly] private Panel[] _states;
     private Panel _current;
 
-    public async UniTask Init()
+    public async UniTask Initialize()
     {
         foreach (Panel panel in _states)
         {
-            await panel.Init();
+            await panel.Initialize();
         }
     }
 

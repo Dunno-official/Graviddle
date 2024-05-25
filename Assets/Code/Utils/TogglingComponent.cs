@@ -1,5 +1,5 @@
 ﻿
-public abstract class TogglingComponent : IUpdate, ILateUpdate
+public abstract class TogglingComponent : IUpdate, ILateUpdate, IFixedUpdate
 {
     public bool IsActive = true;
     
@@ -19,6 +19,15 @@ public abstract class TogglingComponent : IUpdate, ILateUpdate
         }
     }
 
+    public void FixedUpdate()
+    {
+        if (IsActive)
+        {
+            OnFixedUpdate();
+        }
+    }
+
+    protected virtual void OnFixedUpdate() {}
     protected virtual void OnUpdate() {}
     protected virtual void OnLateUpdate() {}
 }

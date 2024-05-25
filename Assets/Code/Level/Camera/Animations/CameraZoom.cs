@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CameraAnimationHandler : ISubscriber, IDisposable
+public class CameraZoom : ISubscriber, IDisposable
 {
     private readonly CameraAnimation _animation;
     private readonly SwipeHandler _swipeHandler;
@@ -10,7 +10,7 @@ public class CameraAnimationHandler : ISubscriber, IDisposable
     private readonly Button _zoomOutButton;
     private readonly Button _zoomInButton;
 
-    public CameraAnimationHandler(CameraData data, Camera camera, CharacterCapture capture)
+    public CameraZoom(CameraData data, Camera camera, CharacterCapture capture)
     {
         CameraMovingToCentreAnimation movingToCentreAnimation = new(data.Borders, camera);
         LevelZoomCalculator zoomCalculator = new(camera, data.Borders, data.CharacterGravityState);

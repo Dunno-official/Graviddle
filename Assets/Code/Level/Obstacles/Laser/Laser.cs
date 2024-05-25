@@ -12,7 +12,7 @@ public class Laser : MonoBehaviour, IRestart
     
     private void Start()
     {
-        _laserSwitcher.Init(_startOnAwake);
+        _laserSwitcher.Initialize(_startOnAwake);
 
         if (_infiniteWorking == false)
         {

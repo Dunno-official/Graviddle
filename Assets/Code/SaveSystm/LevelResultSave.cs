@@ -9,7 +9,7 @@ public class LevelResultSave : MonoBehaviour
     private const string _saves = "Saves";
     private WinState _characterWinState;
 
-    public void Init(WinState winState)
+    public void Initialize(WinState winState)
     {
         _characterWinState = winState;
     }

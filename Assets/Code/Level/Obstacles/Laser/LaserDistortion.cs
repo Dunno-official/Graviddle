@@ -9,7 +9,7 @@ public class LaserDistortion
     private readonly string _noiseDistortionName = "_NoiseAmount";
     private readonly string _noisePowerName = "_NoisePower";
 
-    public void Init()
+    public void Initialize()
     {
         _propertyBlock = new MaterialPropertyBlock();
     }

@@ -10,11 +10,11 @@ public class LevelButtonsPresenter
         _blocker = blocker;
     }
 
-    public void Init()
+    public void Initialize()
     {
         foreach (LevelButton levelButton in _buttons)
         {
-            levelButton.Init(_blocker);
+            levelButton.Initialize(_blocker);
         }
     }
 }

@@ -8,7 +8,7 @@ public class LevelButton : MonoBehaviour
     [SerializeField] private Image _lockImage;
     [SerializeField] private Button _button;
 
-    public void Init(UIBlocker uiBlocker)
+    public void Initialize(UIBlocker uiBlocker)
     {
         _button.onClick.AddListener(uiBlocker.Enable);
     }

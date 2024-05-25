@@ -11,12 +11,12 @@ public class LaserSwitcher : MonoBehaviour, ISwitcher
     
     public event Action<bool> Toggled;
 
-    public void Init(bool startOnAwake)
+    public void Initialize(bool startOnAwake)
     {
         _laserTogglingEventWithDelay = new InvocationWithDelay(0.5f, 2f, activate => Toggled?.Invoke(activate));
         _particlesTogglingWithDelay = new InvocationWithDelay(0.7f, 1f, _laserParticlesSwitcher.ToggleParticles);
 
-        _laserLineSwitcher.Init();
+        _laserLineSwitcher.Initialize();
        Restart(startOnAwake);
     }
 

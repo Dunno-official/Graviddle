@@ -4,7 +4,7 @@ public class MusicVolume
 {
     private const string _musicVolume = "MusicVolume";
 
-    public void Init()
+    public void Initialize()
     {
         float volume;
         

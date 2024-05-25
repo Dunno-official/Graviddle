@@ -28,7 +28,7 @@ public class WinAnimation
 
     private async void ActivateEffects()
     {
-        _effects.Init();
+        _effects.Initialize();
         await _effects.ActivateEffects();
         _buttons.ForEach(button => button.interactable = true);
     }

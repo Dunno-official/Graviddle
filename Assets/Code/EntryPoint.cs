@@ -23,15 +23,15 @@ public class EntryPoint : MonoBehaviourWrapper
         CharacterGravityState characterGravityState = new(_swipeHandler);
         PollingEvent restartEvent = new();
 
-        _transitionsConditions.Init(_characterMovementDirection, _character, _borders, restartEvent.CheckIfEventHappened);
-        _character.Init(transitionsPresenter, states, _swipeHandler, characterGravityState);
-        _laserTurrets.ForEach(laserTurret => laserTurret.Init(characterGravityState));
-        _cameraData.Init(_swipeHandler, _borders, characterGravityState, _character);
-        _gravityBoxes.ForEach(gravityBox => gravityBox.Init(_swipeHandler));
-        _characterMovementDirection.Init(characterGravityState);
+        _transitionsConditions.Initialize(_characterMovementDirection, _character, _borders, restartEvent.CheckIfEventHappened);
+        _character.Initialize(transitionsPresenter, states, _swipeHandler, characterGravityState);
+        _laserTurrets.ForEach(laserTurret => laserTurret.Initialize(characterGravityState));
+        _cameraData.Initialize(_swipeHandler, _borders, characterGravityState, _character);
+        _gravityBoxes.ForEach(gravityBox => gravityBox.Initialize(_swipeHandler));
+        _characterMovementDirection.Initialize(characterGravityState);
         _levelStarsMediator.Resolve(characterGravityState);
-        _levelResultSave.Init(states.WinState);
-        _mainCamera.Init(_cameraData);
+        _levelResultSave.Initialize(states.WinState);
+        _mainCamera.Initialize(_cameraData);
 
         SetDependencies(new IUnityCallback[]
         {

@@ -12,7 +12,7 @@ public class TransitionsConditions
     private LevelBorders _levelBorders;
     private Character _character;
 
-    public void Init(CharacterMovementDirection characterMovementDirection, Character character, LevelBorders borders, Func<bool> restartCondition)
+    public void Initialize(CharacterMovementDirection characterMovementDirection, Character character, LevelBorders borders, Func<bool> restartCondition)
     {
         _characterMovementDirection = characterMovementDirection;
         _restartCondition = restartCondition;

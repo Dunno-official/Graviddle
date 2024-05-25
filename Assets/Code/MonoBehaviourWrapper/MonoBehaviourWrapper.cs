@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Utils.CoroutineHelpers;
 
-public abstract class MonoBehaviourWrapper : MonoBehaviour, IRestart, IAfterRestart
+public abstract class MonoBehaviourWrapper : MonoBehaviour, IRestart, IAfterRestart, ICoroutineRunner
 {
     private IEnumerable<IAfterRestart> _afterRestartComponents;
     private IEnumerable<IRestart> _restartComponents;
@@ -25,43 +26,19 @@ public abstract class MonoBehaviourWrapper : MonoBehaviour, IRestart, IAfterRest
         _updates = dependencies.OfType<IUpdate>();
     }
 
-    private void OnEnable()
-    {
-        _subscribers.SubscribeForEach();
-    }
+    private void OnEnable() => _subscribers.SubscribeForEach();
 
-    private void OnDisable()
-    {
-        _subscribers.UnsubscribeForEach();
-    }
+    private void OnDisable() => _subscribers.UnsubscribeForEach();
 
-    private void FixedUpdate()
-    {
-        _fixedUpdates.FixedUpdateForEach();
-    }
+    private void FixedUpdate() => _fixedUpdates.FixedUpdateForEach();
 
-    private void Update()
-    {
-        _updates.UpdateForEach();
-    }
+    private void Update() => _updates.UpdateForEach();
 
-    private void LateUpdate()
-    {
-        _lateUpdates.LateUpdateForEach();
-    }
+    private void LateUpdate() => _lateUpdates.LateUpdateForEach();
 
-    void IRestart.Restart()
-    {
-        _restartComponents.RestartForEach();
-    }
-    
-    void IAfterRestart.Restart()
-    {
-        _afterRestartComponents.RestartForEach();
-    }
+    void IRestart.Restart() => _restartComponents.RestartForEach();
 
-    private void OnDestroy()
-    {
-        _disposables.DisposeForEach();
-    }
+    void IAfterRestart.Restart() => _afterRestartComponents.RestartForEach();
+
+    private void OnDestroy() => _disposables.DisposeForEach();
 }

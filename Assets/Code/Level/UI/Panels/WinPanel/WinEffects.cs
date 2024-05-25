@@ -12,7 +12,7 @@ public class WinEffects
     [SerializeField] private Reward _reward;
     private float _starsCoolDown;
 
-    public void Init()
+    public void Initialize()
     {
         const float coolDown = 0.5f;
         _starsCoolDown = _starsParticles.First().main.duration + coolDown;

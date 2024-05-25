@@ -13,7 +13,7 @@ public class Character : MonoBehaviourWrapper
 
     public event Action Respawned;
     
-    public void Init(TransitionsPresenter transitionsPresenter, CharacterStatesPresenter states, SwipeHandler swipeHandler, CharacterGravityState characterGravityState)
+    public void Initialize(TransitionsPresenter transitionsPresenter, CharacterStatesPresenter states, SwipeHandler swipeHandler, CharacterGravityState characterGravityState)
     {
         Transition fallToIdleTransition = transitionsPresenter.GetTransition(states.FallState, states.IdleState);
         Gravity gravity = new(_constantForce2d, 15, GravityDirection.Down);

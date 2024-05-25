@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class Panel : MonoBehaviour
 {
-    public virtual async UniTask Init()
+    public virtual async UniTask Initialize()
     {
         await UniTask.Yield();
     }

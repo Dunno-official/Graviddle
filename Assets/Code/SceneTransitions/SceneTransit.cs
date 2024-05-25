@@ -20,6 +20,6 @@ public class SceneTransit : MonoBehaviour
 
     private async UniTask LoadScene(int scene)
     {
-        await SceneManager.LoadSceneAsync(scene);
+        await SceneManager.LoadSceneAsync(scene).ToUniTask();
     }
 }

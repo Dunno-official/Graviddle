@@ -10,17 +10,17 @@ public abstract class AnimatedPanel : Panel
     private IEnumerable<UniTask> _onShowAnimation;
     private IEnumerable<UniTask> _onHideAnimation;
     
-    public override UniTask Init()
+    public override UniTask Initialize()
     {
         foreach (AnimatedUIElement animatedElement in _animatedElements)
         {
-            animatedElement.Init(_canvas);
+            animatedElement.Initialize(_canvas);
         }
 
         _onShowAnimation = _animatedElements.Select(element => element.Show());
         _onHideAnimation = _animatedElements.Select(element => element.Hide());
 
-        return base.Init();
+        return base.Initialize();
     }
 
     protected override async UniTask OnShow()

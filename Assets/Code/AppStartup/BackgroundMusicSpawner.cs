@@ -7,7 +7,7 @@ public class BackgroundMusicSpawner
 {
     [SerializeField] private BackgroundMusic _backgroundMusic;
 
-    public void Init()
+    public void Initialize()
     {
         Object.Instantiate(_backgroundMusic);
     }

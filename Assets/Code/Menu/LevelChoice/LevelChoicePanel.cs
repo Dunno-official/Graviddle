@@ -2,13 +2,13 @@
 
 public class LevelChoicePanel : AnimatedPanel
 {
-    public override UniTask Init()
+    public override UniTask Initialize()
     {
         LevelButton[] buttons = GetComponentsInChildren<LevelButton>();
         LevelButtonsPresenter buttonsPresenter = new(buttons, UIBlocker);
         
-        buttonsPresenter.Init();
+        buttonsPresenter.Initialize();
 
-        return base.Init();
+        return base.Initialize();
     }
 }

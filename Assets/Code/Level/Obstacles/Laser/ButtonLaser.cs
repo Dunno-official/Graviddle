@@ -7,7 +7,7 @@ public class ButtonLaser : MonoBehaviour
     
     private void Start()
     {
-        _laserSwitcher.Init(true);
+        _laserSwitcher.Initialize(true);
     }
     
     private void OnEnable()

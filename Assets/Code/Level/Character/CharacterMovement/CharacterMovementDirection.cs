@@ -10,7 +10,7 @@ public class CharacterMovementDirection : IUpdate
 
     public Vector2 Direction { get; private set; }
 
-    public void Init(IGravityState gravityState)
+    public void Initialize(IGravityState gravityState)
     {
         _gravityState = gravityState;
     }

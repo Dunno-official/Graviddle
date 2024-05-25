@@ -10,9 +10,9 @@ public class LaserLineSwitcher
     private LaserDistortionData _distortionData = new();
     private Tween _switchingTween;
 
-    public void Init()
+    public void Initialize()
     {
-        _laserDistortion.Init();
+        _laserDistortion.Initialize();
     }
 
     public IEnumerator ToggleLaserLine(bool activateLaser)

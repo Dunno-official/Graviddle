@@ -11,13 +11,13 @@ public class AnimatedUIElement
     [SerializeField] private UIAnimation _showAnimation;
     [SerializeField] private UIAnimation _hideAnimation;
 
-    public void Init(Canvas canvas)
+    public void Initialize(Canvas canvas)
     {
         HiddenUIAlignment alignment = new(_transform, _target, _anchorPreset, canvas);
         alignment.Execute();
         
-        _showAnimation.Init(_target.position, _transform);
-        _hideAnimation.Init(_transform.position, _transform);
+        _showAnimation.Initialize(_target.position, _transform);
+        _hideAnimation.Initialize(_transform.position, _transform);
     }
 
     public UniTask Show()

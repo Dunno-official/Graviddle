@@ -6,7 +6,7 @@ public class LevelStar : MonoBehaviourWrapper
     [SerializeField] private PhysicsEventBroadcaster _physics;
     public event Action StarCollected;
 
-    public void Init(StarPickupFeedback pickupFeedback, CharacterGravityState characterCharacterGravityState)
+    public void Initialize(StarPickupFeedback pickupFeedback, CharacterGravityState characterCharacterGravityState)
     {
         SetDependencies(new IUnityCallback[]
         {

@@ -13,7 +13,7 @@ public class UIAnimation
     private Vector3 _targetPosition;
     private Sequence _animation;
 
-    public void Init(Vector3 targetPosition, RectTransform transform)
+    public void Initialize(Vector3 targetPosition, RectTransform transform)
     {
         _targetPosition = targetPosition;
         _transform = transform;

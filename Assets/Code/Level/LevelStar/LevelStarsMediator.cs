@@ -12,9 +12,9 @@ public class LevelStarsMediator
     {
         foreach (LevelStar levelStar in _levelStars)
         {
-            levelStar.Init(_starPickupFeedback, characterCharacterGravityState);
+            levelStar.Initialize(_starPickupFeedback, characterCharacterGravityState);
         }
         
-        _reward.Init(_levelStars);
+        _reward.Initialize(_levelStars);
     }
 }
