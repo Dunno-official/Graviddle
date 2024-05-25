@@ -1,6 +1,8 @@
 using UnityEngine;
 
-
-public class Ground : MonoBehaviour
+namespace Level
 {
+    public class Ground : MonoBehaviour
+    {
+    }
 }

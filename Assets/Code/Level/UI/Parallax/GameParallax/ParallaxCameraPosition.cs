@@ -1,22 +1,25 @@
 ﻿using System;
+using Character.Helpers;
 using UnityEngine;
 
-
-[Serializable]
-public class ParallaxCameraPosition 
+namespace Level.UI.Parallax.GameParallax
 {
-    [SerializeField] private Camera _mainCamera;
-
-
-    public float GetCameraPosition(GravityDirection gravityDirection)
+    [Serializable]
+    public class ParallaxCameraPosition 
     {
-        return gravityDirection switch
+        [SerializeField] private UnityEngine.Camera _mainCamera;
+
+
+        public float GetCameraPosition(GravityDirection gravityDirection)
         {
-            GravityDirection.Down => _mainCamera.transform.position.x,
-            GravityDirection.Up => -_mainCamera.transform.position.x,
-            GravityDirection.Left => -_mainCamera.transform.position.y,
-            GravityDirection.Right => _mainCamera.transform.position.y,
-            _ => throw new ArgumentOutOfRangeException()
-        };
+            return gravityDirection switch
+            {
+                GravityDirection.Down => _mainCamera.transform.position.x,
+                GravityDirection.Up => -_mainCamera.transform.position.x,
+                GravityDirection.Left => -_mainCamera.transform.position.y,
+                GravityDirection.Right => _mainCamera.transform.position.y,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+        }
     }
 }

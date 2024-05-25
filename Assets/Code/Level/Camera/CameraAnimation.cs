@@ -1,29 +1,32 @@
 using DG.Tweening;
+using Level.Camera.Animations;
 using UnityEngine;
 
-
-public class CameraAnimation : MonoBehaviour
+namespace Level.Camera
 {
-    [SerializeField] private CameraZoomAnimation _zoomAnimation;
-    [SerializeField] private CameraMovingToCentreAnimation _movingToCentreAnimation;
-    
-    
-    public void Init()
+    public class CameraAnimation : MonoBehaviour
     {
-        _zoomAnimation.Init();
-        _movingToCentreAnimation.Init();
-    }
+        [SerializeField] private CameraZoomAnimation _zoomAnimation;
+        [SerializeField] private CameraMovingToCentreAnimation _movingToCentreAnimation;
+    
+    
+        public void Init()
+        {
+            _zoomAnimation.Init();
+            _movingToCentreAnimation.Init();
+        }
 
 
-    public Tween ZoomIn()
-    {
-        return _zoomAnimation.ZoomIn();
-    }
+        public Tween ZoomIn()
+        {
+            return _zoomAnimation.ZoomIn();
+        }
     
     
-    public Tween ZoomOutAndMoveToCentre()
-    {
-        _movingToCentreAnimation.Move();
-        return _zoomAnimation.ZoomOut();
+        public Tween ZoomOutAndMoveToCentre()
+        {
+            _movingToCentreAnimation.Move();
+            return _zoomAnimation.ZoomOut();
+        }
     }
 }

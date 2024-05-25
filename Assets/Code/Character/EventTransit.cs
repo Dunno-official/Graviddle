@@ -1,21 +1,24 @@
 ﻿
-public class EventTransit
+namespace Character
 {
-    private bool _eventHappened;
+    public class EventTransit
+    {
+        private bool _eventHappened;
 
     
-    public bool CheckIfEventHappened()
-    {
-        bool result = _eventHappened;
+        public bool CheckIfEventHappened()
+        {
+            bool result = _eventHappened;
 
-        _eventHappened = false;
+            _eventHappened = false;
 
-        return result;
-    }
+            return result;
+        }
 
 
-    public void Invoke()
-    {
-        _eventHappened = true;
+        public void Invoke()
+        {
+            _eventHappened = true;
+        }
     }
 }

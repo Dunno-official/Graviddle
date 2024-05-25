@@ -1,40 +1,45 @@
-﻿using UnityEngine;
+﻿using Character.Helpers;
+using Level.Restart;
+using Level.UnityCallbackWrappers;
+using UnityEngine;
 
-
-public class Gravity : IRestart, ISubscriber
+namespace Level.Gravitation
 {
-    private readonly SwipeHandler _swipeHandler;
-
-
-    public Gravity(SwipeHandler swipeHandler)
+    public class Gravity : IRestart, ISubscriber
     {
-        _swipeHandler = swipeHandler;
-        Physics2D.gravity = new Vector2(0, -1);
-    }
+        private readonly SwipeHandler.SwipeHandler _swipeHandler;
 
 
-    void ISubscriber.Subscribe()
-    {
-        _swipeHandler.GravityChanged += OnGravityChanged;
-    }
+        public Gravity(SwipeHandler.SwipeHandler swipeHandler)
+        {
+            _swipeHandler = swipeHandler;
+            Physics2D.gravity = new Vector2(0, -1);
+        }
+
+
+        void ISubscriber.Subscribe()
+        {
+            _swipeHandler.GravityChanged += OnGravityChanged;
+        }
     
 
-    void ISubscriber.Unsubscribe()
-    {
-        _swipeHandler.GravityChanged -= OnGravityChanged;
-    }
+        void ISubscriber.Unsubscribe()
+        {
+            _swipeHandler.GravityChanged -= OnGravityChanged;
+        }
 
 
-    private void OnGravityChanged(GravityDirection gravityDirection)
-    {
-        GravityData gravityData = GravityDataPresenter.GravityData[gravityDirection];
+        private void OnGravityChanged(GravityDirection gravityDirection)
+        {
+            GravityData gravityData = GravityDataPresenter.GravityData[gravityDirection];
 
-        Physics2D.gravity = gravityData.GravityVector;
-    }
+            Physics2D.gravity = gravityData.GravityVector;
+        }
 
 
-    void IRestart.Restart()
-    {
-        OnGravityChanged(GravityDirection.Down);
+        void IRestart.Restart()
+        {
+            OnGravityChanged(GravityDirection.Down);
+        }
     }
 }

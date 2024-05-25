@@ -1,15 +1,17 @@
 using UnityEngine;
 
-
-public class EditorUISwitcher : MonoBehaviour
+namespace Level.UI.Switchers
 {
-    [SerializeField] private UIStatesSwitcher _uiStatesSwitcher;
+    public class EditorUISwitcher : MonoBehaviour
+    {
+        [SerializeField] private UIStatesSwitcher _uiStatesSwitcher;
     
 
-    private void Start()
-    {
-        #if  UNITY_EDITOR
-        _uiStatesSwitcher.gameObject.SetActive(true);
-        #endif
+        private void Start()
+        {
+#if  UNITY_EDITOR
+            _uiStatesSwitcher.gameObject.SetActive(true);
+#endif
+        }
     }
 }

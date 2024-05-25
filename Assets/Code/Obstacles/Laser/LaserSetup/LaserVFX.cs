@@ -1,46 +1,48 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
+using UnityEngine;
 
-
-[Serializable]
-public class LaserSourceEffectsAdjuster
+namespace Obstacles.Laser.LaserSetup
 {
-    [SerializeField] private ParticleSystem _sourceFlame;
-    [SerializeField] private ParticleSystem _sourceSparks;
-
-
-    public void ConfigureSourceEffects(float laserDistance)
+    [Serializable]
+    public class LaserSourceEffectsAdjuster
     {
-        ParticleSystem.MainModule sparksMain = _sourceSparks.main;
-        ParticleSystem.MainModule flameMain = _sourceFlame.main;
-
-        sparksMain.startLifetime = EvaluateSparksLifeTime(laserDistance);
-        sparksMain.startSpeed = EvaluateSparksSpeed(laserDistance);
-        flameMain.startLifetime = EvaluateFlameLifeTime(laserDistance);
-        _sourceFlame.transform.localPosition = EvaluateFlamePosition(laserDistance);
-    }
+        [SerializeField] private ParticleSystem _sourceFlame;
+        [SerializeField] private ParticleSystem _sourceSparks;
 
 
-    private float EvaluateSparksLifeTime(float laserDistance)
-    {
-        return 0.00362f * laserDistance + 0.28185f;
-    }
+        public void ConfigureSourceEffects(float laserDistance)
+        {
+            ParticleSystem.MainModule sparksMain = _sourceSparks.main;
+            ParticleSystem.MainModule flameMain = _sourceFlame.main;
+
+            sparksMain.startLifetime = EvaluateSparksLifeTime(laserDistance);
+            sparksMain.startSpeed = EvaluateSparksSpeed(laserDistance);
+            flameMain.startLifetime = EvaluateFlameLifeTime(laserDistance);
+            _sourceFlame.transform.localPosition = EvaluateFlamePosition(laserDistance);
+        }
 
 
-    private float EvaluateSparksSpeed(float laserDistance)
-    {
-        return 0.14515f * laserDistance + 1.2742f;
-    }
+        private float EvaluateSparksLifeTime(float laserDistance)
+        {
+            return 0.00362f * laserDistance + 0.28185f;
+        }
 
 
-    private float EvaluateFlameLifeTime(float laserDistance)
-    {
-        return 0.01814f * laserDistance + 0.10927f;
-    }
+        private float EvaluateSparksSpeed(float laserDistance)
+        {
+            return 0.14515f * laserDistance + 1.2742f;
+        }
 
 
-    private Vector3 EvaluateFlamePosition(float laserDistance)
-    {
-        return new Vector2(_sourceFlame.transform.localPosition.x, -0.03284f * laserDistance + 0.08452f);
+        private float EvaluateFlameLifeTime(float laserDistance)
+        {
+            return 0.01814f * laserDistance + 0.10927f;
+        }
+
+
+        private Vector3 EvaluateFlamePosition(float laserDistance)
+        {
+            return new Vector2(_sourceFlame.transform.localPosition.x, -0.03284f * laserDistance + 0.08452f);
+        }
     }
 }

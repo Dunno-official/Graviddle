@@ -1,26 +1,28 @@
 ﻿using UnityEngine;
 
-
-public class MusicVolume
+namespace AppStartup
 {
-    private const string _musicVolume = "MusicVolume";
-
-    public void Init()
+    public class MusicVolume
     {
-        float volume;
-        
-        if (PlayerPrefs.HasKey(_musicVolume))
-        {
-            volume = PlayerPrefs.GetFloat(_musicVolume);
-        }
+        private const string _musicVolume = "MusicVolume";
 
-        else
+        public void Init()
         {
-            volume = 1;
-            PlayerPrefs.SetFloat(_musicVolume, volume);
+            float volume;
+        
+            if (PlayerPrefs.HasKey(_musicVolume))
+            {
+                volume = PlayerPrefs.GetFloat(_musicVolume);
+            }
+
+            else
+            {
+                volume = 1;
+                PlayerPrefs.SetFloat(_musicVolume, volume);
+            }
+        
+        
+            AudioListener.volume = volume; 
         }
-        
-        
-        AudioListener.volume = volume; 
     }
 }

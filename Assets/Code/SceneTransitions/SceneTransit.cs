@@ -2,28 +2,30 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class SceneTransit : MonoBehaviour
+namespace SceneTransitions
 {
-    [SerializeField] private LoadingScreen _loadingScreen;
-
-
-    private void Start()
+    public class SceneTransit : MonoBehaviour
     {
-        DontDestroyOnLoad(gameObject);
-    }
+        [SerializeField] private LoadingScreen _loadingScreen;
 
 
-    public async UniTask MakeTransition(int scene)
-    {
-        var backstage = new Backstage(_loadingScreen, ()=> LoadScene(scene));
+        private void Start()
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
+
+        public async UniTask MakeTransition(int scene)
+        {
+            var backstage = new Backstage(_loadingScreen, ()=> LoadScene(scene));
         
-        await backstage.MakeTransition();
-    }
+            await backstage.MakeTransition();
+        }
 
 
-    private async UniTask LoadScene(int scene)
-    {
-        await SceneManager.LoadSceneAsync(scene);
+        private async UniTask LoadScene(int scene)
+        {
+            await SceneManager.LoadSceneAsync(scene).ToUniTask();
+        }
     }
 }

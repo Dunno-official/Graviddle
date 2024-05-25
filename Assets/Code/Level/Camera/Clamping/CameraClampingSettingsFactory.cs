@@ -1,41 +1,43 @@
-﻿using UnityEngine;
+﻿using Level.Camera.Clamping.Data;
 
-
-public class CameraClampingSettingsFactory
+namespace Level.Camera.Clamping
 {
-    private readonly LevelBorders _levelBorders;
-    private readonly Camera _camera;
+    public class CameraClampingSettingsFactory
+    {
+        private readonly LevelBorders _levelBorders;
+        private readonly UnityEngine.Camera _camera;
 
     
-    public CameraClampingSettingsFactory(LevelBorders levelBorders, Camera camera)
-    {
-        _levelBorders = levelBorders;
-        _camera = camera;
-    }
+        public CameraClampingSettingsFactory(LevelBorders levelBorders, UnityEngine.Camera camera)
+        {
+            _levelBorders = levelBorders;
+            _camera = camera;
+        }
     
     
-    public CameraClampingSettings Create()
-    {
-        float cameraHalfHeight = _camera.orthographicSize;
-        float cameraHalfWidth = cameraHalfHeight * _camera.aspect;
+        public CameraClampingSettings Create()
+        {
+            float cameraHalfHeight = _camera.orthographicSize;
+            float cameraHalfWidth = cameraHalfHeight * _camera.aspect;
 
-        CameraBorders cameraBorders = CreateCameraBorders(cameraHalfWidth, cameraHalfHeight);
+            CameraBorders cameraBorders = CreateCameraBorders(cameraHalfWidth, cameraHalfHeight);
 
-        return new CameraClampingSettings(cameraBorders, cameraHalfWidth - cameraHalfHeight);
-    }
+            return new CameraClampingSettings(cameraBorders, cameraHalfWidth - cameraHalfHeight);
+        }
 
 
-    private CameraBorders CreateCameraBorders(float cameraHalfWidth, float cameraHalfHeight)
-    {
-        const float tileOffset = 0.75f;
-        float widthOffset = cameraHalfWidth - tileOffset;
-        float heightOffset = cameraHalfHeight - tileOffset;
+        private CameraBorders CreateCameraBorders(float cameraHalfWidth, float cameraHalfHeight)
+        {
+            const float tileOffset = 0.75f;
+            float widthOffset = cameraHalfWidth - tileOffset;
+            float heightOffset = cameraHalfHeight - tileOffset;
 
-        float cameraTopBorder = _levelBorders.Top - heightOffset;
-        float cameraDownBorder = _levelBorders.Down + heightOffset;
-        float cameraLeftBorder = _levelBorders.Left + widthOffset;
-        float cameraRightBorder = _levelBorders.Right - widthOffset;
+            float cameraTopBorder = _levelBorders.Top - heightOffset;
+            float cameraDownBorder = _levelBorders.Down + heightOffset;
+            float cameraLeftBorder = _levelBorders.Left + widthOffset;
+            float cameraRightBorder = _levelBorders.Right - widthOffset;
 
-        return new CameraBorders(cameraTopBorder, cameraDownBorder, cameraLeftBorder, cameraRightBorder);
+            return new CameraBorders(cameraTopBorder, cameraDownBorder, cameraLeftBorder, cameraRightBorder);
+        }
     }
 }

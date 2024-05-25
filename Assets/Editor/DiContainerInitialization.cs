@@ -1,5 +1,7 @@
-﻿using UnityEditor;
+﻿using Level.GameEntryPoint;
+using UnityEditor;
 using UnityEngine;
+using Logger = Extensions.Logger;
 
 
 [CustomEditor(typeof(EntryPoint))]

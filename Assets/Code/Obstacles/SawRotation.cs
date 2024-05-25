@@ -1,13 +1,15 @@
 using UnityEngine;
 
-
-public class SawRotation : MonoBehaviour
+namespace Obstacles
 {
-    [SerializeField] private float _rotationSpeed = 2f;
-
-
-    private void Update()
+    public class SawRotation : MonoBehaviour
     {
-        transform.Rotate(Vector3.forward, _rotationSpeed * Time.deltaTime);
+        [SerializeField] private float _rotationSpeed = 2f;
+
+
+        private void Update()
+        {
+            transform.Rotate(Vector3.forward, _rotationSpeed * Time.deltaTime);
+        }
     }
 }

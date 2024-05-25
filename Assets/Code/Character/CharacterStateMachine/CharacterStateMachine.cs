@@ -1,39 +1,45 @@
 ﻿
 
-public class CharacterStateMachine : IUpdatable
+using Character.CharacterStateMachine.StateTransitions;
+using Level.UnityCallbackWrappers;
+
+namespace Character.CharacterStateMachine
 {
-    private readonly TransitionsPresenter _transitionsPresenter;
-    private CharacterState _state;
-
-
-    public CharacterStateMachine(TransitionsPresenter transitionsPresenter, CharacterState initialState)
+    public class CharacterStateMachine : IUpdatable
     {
-        _transitionsPresenter = transitionsPresenter;
-        _state = initialState;
-    }
+        private readonly TransitionsPresenter _transitionsPresenter;
+        private CharacterState _state;
 
 
-    void IUpdatable.Update()
-    {
-        _state.Update();
-        TryTransit();
-    }
+        public CharacterStateMachine(TransitionsPresenter transitionsPresenter, CharacterState initialState)
+        {
+            _transitionsPresenter = transitionsPresenter;
+            _state = initialState;
+        }
+
+
+        void IUpdatable.Update()
+        {
+            _state.Update();
+            TryTransit();
+        }
 
     
-    private void TryTransit()
-    {
-        CharacterState newState = _transitionsPresenter.Transit(_state);
-        
-        if (newState != _state)
+        private void TryTransit()
         {
-            SwitchState(newState);
+            CharacterState newState = _transitionsPresenter.Transit(_state);
+        
+            if (newState != _state)
+            {
+                SwitchState(newState);
+            }
         }
-    }
 
 
-    private void SwitchState(CharacterState newState)
-    {
-        _state = newState;
-        _state.Enter();
+        private void SwitchState(CharacterState newState)
+        {
+            _state = newState;
+            _state.Enter();
+        }
     }
 }

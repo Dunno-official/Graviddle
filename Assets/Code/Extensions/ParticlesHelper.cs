@@ -1,21 +1,24 @@
 ﻿using System;
+using Addresables;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-
-public static class ParticlesHelper
+namespace Extensions
 {
-    public static async void PlayAndDestroy(AssetReference reference, Transform transform)
+    public static class ParticlesHelper
     {
-        try
+        public static async void PlayAndDestroy(AssetReference reference, Transform transform)
         {
-            var particles = await LocalAssetLoader.Load<ParticleSystem>(reference);
-            particles.transform.SetPositionAndRotation(transform);
-            particles.Play();
-            await UniTask.Delay(TimeSpan.FromSeconds(particles.main.duration));
-            LocalAssetLoader.Unload(particles.gameObject);
+            try
+            {
+                var particles = await LocalAssetLoader.Load<ParticleSystem>(reference);
+                particles.transform.SetPositionAndRotation(transform);
+                particles.Play();
+                await UniTask.Delay(TimeSpan.FromSeconds(particles.main.duration));
+                LocalAssetLoader.Unload(particles.gameObject);
+            }
+            catch { /*scene transition*/}
         }
-        catch { /*scene transition*/}
     }
 }

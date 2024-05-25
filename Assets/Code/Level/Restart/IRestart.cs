@@ -1,5 +1,8 @@
 ﻿
-public interface IRestart 
+namespace Level.Restart
 {
-    void Restart();
+    public interface IRestart 
+    {
+        void Restart();
+    }
 }

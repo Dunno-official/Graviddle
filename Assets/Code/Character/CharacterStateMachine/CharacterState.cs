@@ -1,27 +1,29 @@
 ﻿using UnityEngine;
 
-
-public abstract class CharacterState
+namespace Character.CharacterStateMachine
 {
-    private readonly Animator _animator;
-    private readonly string _animationName;
-
-
-    protected CharacterState(Animator animator, string animationName)
+    public abstract class CharacterState
     {
-        _animator = animator;
-        _animationName = animationName;
+        private readonly Animator _animator;
+        private readonly string _animationName;
+
+
+        protected CharacterState(Animator animator, string animationName)
+        {
+            _animator = animator;
+            _animationName = animationName;
+        }
+
+
+        public void Enter()
+        {
+            _animator.Play(_animationName);
+
+            OnEnterState();
+        }
+
+
+        public virtual void Update() { }
+        protected virtual void OnEnterState() { }
     }
-
-
-    public void Enter()
-    {
-        _animator.Play(_animationName);
-
-        OnEnterState();
-    }
-
-
-    public virtual void Update() { }
-    protected virtual void OnEnterState() { }
 }

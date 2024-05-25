@@ -2,26 +2,28 @@
 using System.Collections;
 using UnityEngine;
 
-
-public class InvocationWithDelay
+namespace Extensions
 {
-    private readonly Action<bool> _action;
-    private readonly float _activationDelay;
-    private readonly float _deactivationDelay;
-
-
-    public InvocationWithDelay(float activationDelay, float deactivationDelay, Action<bool> action)
+    public class InvocationWithDelay
     {
-        _activationDelay = activationDelay;
-        _deactivationDelay = deactivationDelay;
-        _action = action;
-    }
+        private readonly Action<bool> _action;
+        private readonly float _activationDelay;
+        private readonly float _deactivationDelay;
 
 
-    public IEnumerator Invoke(bool activate)
-    {
-        yield return new WaitForSeconds(activate ? _activationDelay : _deactivationDelay);
+        public InvocationWithDelay(float activationDelay, float deactivationDelay, Action<bool> action)
+        {
+            _activationDelay = activationDelay;
+            _deactivationDelay = deactivationDelay;
+            _action = action;
+        }
 
-        _action(activate);
+
+        public IEnumerator Invoke(bool activate)
+        {
+            yield return new WaitForSeconds(activate ? _activationDelay : _deactivationDelay);
+
+            _action(activate);
+        }
     }
 }

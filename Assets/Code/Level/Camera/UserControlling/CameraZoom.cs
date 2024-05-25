@@ -1,64 +1,68 @@
-﻿using UnityEngine;
+﻿using Extensions;
+using Level.Restart;
+using UnityEngine;
 
-
-public class CameraZoom : MonoBehaviour, IRestart
+namespace Level.Camera.UserControlling
 {
-    private Camera _camera;
-    private LevelZoomCalculator _levelZoomCalculator;
-    private float _characterZoom;
-    private const float _zoomSpeed = 0.25f;
-
-
-    public void Init(Camera mainCamera, LevelZoomCalculator zoomCalculator)
+    public class CameraZoom : MonoBehaviour, IRestart
     {
-        _camera = mainCamera;
-        _levelZoomCalculator = zoomCalculator;
-        _characterZoom = mainCamera.orthographicSize;
-    }
+        private UnityEngine.Camera _camera;
+        private LevelZoomCalculator _levelZoomCalculator;
+        private float _characterZoom;
+        private const float _zoomSpeed = 0.25f;
 
 
-    private void Update()
-    {
-        if (Input.touchCount == 2)
+        public void Init(UnityEngine.Camera mainCamera, LevelZoomCalculator zoomCalculator)
         {
-            float zoomCoefficient = GetZoomCoefficient();
-            ZoomCamera(zoomCoefficient);
+            _camera = mainCamera;
+            _levelZoomCalculator = zoomCalculator;
+            _characterZoom = mainCamera.orthographicSize;
         }
-    }
 
 
-    private float GetZoomCoefficient()
-    {
-        Touch firstTouch = Input.GetTouch(0);
-        Touch secondTouch = Input.GetTouch(1);
-
-        Vector2 previousFirstTouchPosition = firstTouch.GetPreviousTouchPosition();
-        Vector2 previousSecondTouchPosition = secondTouch.GetPreviousTouchPosition();
-
-        float previousDelta = GetDiffInMagnitude(previousFirstTouchPosition, previousSecondTouchPosition);
-        float currentDelta = GetDiffInMagnitude(firstTouch.position, secondTouch.position);
-
-        return previousDelta - currentDelta;
-    }
+        private void Update()
+        {
+            if (Input.touchCount == 2)
+            {
+                float zoomCoefficient = GetZoomCoefficient();
+                ZoomCamera(zoomCoefficient);
+            }
+        }
 
 
-    private float GetDiffInMagnitude(Vector2 first, Vector2 second)
-    {
-        return (first - second).magnitude;
-    }
+        private float GetZoomCoefficient()
+        {
+            Touch firstTouch = Input.GetTouch(0);
+            Touch secondTouch = Input.GetTouch(1);
+
+            Vector2 previousFirstTouchPosition = firstTouch.GetPreviousTouchPosition();
+            Vector2 previousSecondTouchPosition = secondTouch.GetPreviousTouchPosition();
+
+            float previousDelta = GetDiffInMagnitude(previousFirstTouchPosition, previousSecondTouchPosition);
+            float currentDelta = GetDiffInMagnitude(firstTouch.position, secondTouch.position);
+
+            return previousDelta - currentDelta;
+        }
 
 
-    private void ZoomCamera(float zoomCoefficient)
-    {
-        float levelZoom = _levelZoomCalculator.GetLevelZoom();
-
-        _camera.orthographicSize += zoomCoefficient * _zoomSpeed * Time.deltaTime;
-        _camera.orthographicSize = Mathf.Clamp(_camera.orthographicSize, _characterZoom, levelZoom);
-    }
+        private float GetDiffInMagnitude(Vector2 first, Vector2 second)
+        {
+            return (first - second).magnitude;
+        }
 
 
-    void IRestart.Restart()
-    {
-        _camera.orthographicSize = _characterZoom;
+        private void ZoomCamera(float zoomCoefficient)
+        {
+            float levelZoom = _levelZoomCalculator.GetLevelZoom();
+
+            _camera.orthographicSize += zoomCoefficient * _zoomSpeed * Time.deltaTime;
+            _camera.orthographicSize = Mathf.Clamp(_camera.orthographicSize, _characterZoom, levelZoom);
+        }
+
+
+        void IRestart.Restart()
+        {
+            _camera.orthographicSize = _characterZoom;
+        }
     }
 }

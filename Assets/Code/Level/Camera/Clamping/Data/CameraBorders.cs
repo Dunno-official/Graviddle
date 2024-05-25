@@ -1,17 +1,20 @@
 ﻿
-public class CameraBorders
+namespace Level.Camera.Clamping.Data
 {
-    public readonly float Top;
-    public readonly float Down;
-    public readonly float Left;
-    public readonly float Right;
-
-
-    public CameraBorders(float topBorder, float downBorder, float leftBorder, float rightBorder)
+    public class CameraBorders
     {
-        Top = topBorder;
-        Down = downBorder;
-        Left = leftBorder;
-        Right = rightBorder;
+        public readonly float Top;
+        public readonly float Down;
+        public readonly float Left;
+        public readonly float Right;
+
+
+        public CameraBorders(float topBorder, float downBorder, float leftBorder, float rightBorder)
+        {
+            Top = topBorder;
+            Down = downBorder;
+            Left = leftBorder;
+            Right = rightBorder;
+        }
     }
 }

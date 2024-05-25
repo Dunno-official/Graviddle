@@ -1,21 +1,24 @@
-﻿using UnityEngine;
+﻿using Character;
+using UnityEngine;
 using UnityEngine.UI;
 
-
-public class RestartButton : MonoBehaviour
+namespace Level.UI
 {
-    [SerializeField] private Button _button;
-    private readonly EventTransit _eventTransit = new EventTransit();
-
-
-    private void Start()
+    public class RestartButton : MonoBehaviour
     {
-        _button.onClick.AddListener(_eventTransit.Invoke);
-    }
+        [SerializeField] private Button _button;
+        private readonly EventTransit _eventTransit = new EventTransit();
+
+
+        private void Start()
+        {
+            _button.onClick.AddListener(_eventTransit.Invoke);
+        }
 
     
-    public bool CheckIfPressed()
-    {
-        return _eventTransit.CheckIfEventHappened();
+        public bool CheckIfPressed()
+        {
+            return _eventTransit.CheckIfEventHappened();
+        }
     }
 }

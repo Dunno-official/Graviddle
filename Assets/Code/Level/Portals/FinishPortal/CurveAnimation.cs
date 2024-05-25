@@ -1,30 +1,32 @@
 ﻿using UnityEngine;
 
-
-public class CurveAnimation : MonoBehaviour
+namespace Level.Portals.FinishPortal
 {
-    [SerializeField] private AnimationCurve _motionCurve;
-    private Vector3 _startPosition;
-
-
-    private void Start()
+    public class CurveAnimation : MonoBehaviour
     {
-        _startPosition = transform.localPosition;
-
-        _motionCurve.postWrapMode = WrapMode.Loop;
-        _motionCurve.preWrapMode = WrapMode.Loop;
-    }
+        [SerializeField] private AnimationCurve _motionCurve;
+        private Vector3 _startPosition;
 
 
-    private void Update()
-    {
-        Vector3 offset = transform.up * _motionCurve.Evaluate(Time.time);
-
-        if (transform != transform.root)
+        private void Start()
         {
-            offset = transform.root.rotation * offset;
+            _startPosition = transform.localPosition;
+
+            _motionCurve.postWrapMode = WrapMode.Loop;
+            _motionCurve.preWrapMode = WrapMode.Loop;
         }
 
-        transform.localPosition = _startPosition + offset;
+
+        private void Update()
+        {
+            Vector3 offset = transform.up * _motionCurve.Evaluate(Time.time);
+
+            if (transform != transform.root)
+            {
+                offset = transform.root.rotation * offset;
+            }
+
+            transform.localPosition = _startPosition + offset;
+        }
     }
 }

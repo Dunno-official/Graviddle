@@ -3,45 +3,47 @@ using System.Linq;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-
-[Serializable]
-public class WinEffects 
+namespace Level.UI.Victory
 {
-    [SerializeField] private ParticleSystem[] _starsParticles;
-    [SerializeField] private ParticleSystem _sunEffect;
-    [SerializeField] private ParticleSystem _confetti;
-    [SerializeField] private Reward _reward;
-
-    private float _starsCoolDown;
-
-
-    public void Init()
+    [Serializable]
+    public class WinEffects 
     {
-        const float coolDown = 0.5f;
-        _starsCoolDown = _starsParticles.First().main.duration + coolDown;
-    }
+        [SerializeField] private ParticleSystem[] _starsParticles;
+        [SerializeField] private ParticleSystem _sunEffect;
+        [SerializeField] private ParticleSystem _confetti;
+        [SerializeField] private Reward _reward;
+
+        private float _starsCoolDown;
+
+
+        public void Init()
+        {
+            const float coolDown = 0.5f;
+            _starsCoolDown = _starsParticles.First().main.duration + coolDown;
+        }
     
 
-    public async UniTask ActivateEffects()
-    {
-        int collectedStars = _reward.CollectedStars;
-
-        for (var starIndex = 0; starIndex < collectedStars; ++starIndex)
+        public async UniTask ActivateEffects()
         {
-            await ActivateStar(starIndex);
+            int collectedStars = _reward.CollectedStars;
+
+            for (var starIndex = 0; starIndex < collectedStars; ++starIndex)
+            {
+                await ActivateStar(starIndex);
+            }
+
+            if (collectedStars == _reward.MaxStars)
+            {
+                _confetti.gameObject.SetActive(true);
+            }
         }
 
-        if (collectedStars == _reward.MaxStars)
+
+        private async UniTask ActivateStar(int starIndex)
         {
-            _confetti.gameObject.SetActive(true);
+            _starsParticles[starIndex].gameObject.SetActive(true);
+            await UniTask.Delay(TimeSpan.FromSeconds(_starsCoolDown));
+            _sunEffect.gameObject.SetActive(true);
         }
-    }
-
-
-    private async UniTask ActivateStar(int starIndex)
-    {
-        _starsParticles[starIndex].gameObject.SetActive(true);
-        await UniTask.Delay(TimeSpan.FromSeconds(_starsCoolDown));
-        _sunEffect.gameObject.SetActive(true);
     }
 }

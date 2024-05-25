@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class NextLevelButton : MonoBehaviour
+namespace Level.UI.Victory
 {
-    private void Start()
+    public class NextLevelButton : MonoBehaviour
     {
-        int activeSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int scenesCount = SceneManager.sceneCountInBuildSettings;
-
-        if (activeSceneIndex == scenesCount - 1)
+        private void Start()
         {
-            gameObject.SetActive(false);
+            int activeSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            int scenesCount = SceneManager.sceneCountInBuildSettings;
+
+            if (activeSceneIndex == scenesCount - 1)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 }

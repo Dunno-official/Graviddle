@@ -1,5 +1,8 @@
 ﻿
-public interface IInitializable
+namespace Level.UnityCallbackWrappers
 {
-    void Init();
+    public interface IInitializable
+    {
+        void Init();
+    }
 }

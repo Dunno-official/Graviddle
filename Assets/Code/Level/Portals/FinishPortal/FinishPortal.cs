@@ -1,34 +1,37 @@
-﻿using UnityEngine;
+﻿using Character.CharacterStateMachine.States;
+using UnityEngine;
 
-
-public class FinishPortal : MonoBehaviour
+namespace Level.Portals.FinishPortal
 {
-    [SerializeField] private PortalDisappearance _portalDisappearance;
-    [SerializeField] private CharacterToPortalPulling _pullingAnimation;
-    private WinState _characterWinState;
-
-
-    public void Init(WinState winState)
+    public class FinishPortal : MonoBehaviour
     {
-        _characterWinState = winState;
-    }
+        [SerializeField] private PortalDisappearance _portalDisappearance;
+        [SerializeField] private CharacterToPortalPulling _pullingAnimation;
+        private WinState _characterWinState;
 
 
-    private void OnEnable()
-    {
-        _characterWinState.CharacterWon += OnCharacterWon;
-    }
+        public void Init(WinState winState)
+        {
+            _characterWinState = winState;
+        }
 
 
-    private void OnDisable()
-    {
-        _characterWinState.CharacterWon -= OnCharacterWon;
-    }
+        private void OnEnable()
+        {
+            _characterWinState.CharacterWon += OnCharacterWon;
+        }
+
+
+        private void OnDisable()
+        {
+            _characterWinState.CharacterWon -= OnCharacterWon;
+        }
     
 
-    private void OnCharacterWon()
-    {
-        StartCoroutine(_pullingAnimation.PullCharacterToPortal());
-        _portalDisappearance.Disappear();
+        private void OnCharacterWon()
+        {
+            StartCoroutine(_pullingAnimation.PullCharacterToPortal());
+            _portalDisappearance.Disappear();
+        }
     }
 }

@@ -1,12 +1,15 @@
+using Level.UI.Switchers;
 using UnityEngine;
 
-
-public class LevelUIEnabling : MonoBehaviour
+namespace SceneTransitions
 {
-    // enable UI when level was loaded
-    private void OnDestroy()
+    public class LevelUIEnabling : MonoBehaviour
     {
-        var uiStatesSwitcher = FindObjectOfType<UIStatesSwitcher>(true);
-        uiStatesSwitcher.gameObject.SetActive(true);
+        // enable UI when level was loaded
+        private void OnDestroy()
+        {
+            var uiStatesSwitcher = FindAnyObjectByType<UIStatesSwitcher>(FindObjectsInactive.Include);
+            uiStatesSwitcher.gameObject.SetActive(true);
+        }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
-
-public class TransformWithGravityRotation : MonoBehaviour
+namespace Level.Gravitation
 {
+    public class TransformWithGravityRotation : MonoBehaviour
+    {
+    }
 }

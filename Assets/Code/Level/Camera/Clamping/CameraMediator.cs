@@ -1,25 +1,29 @@
-﻿using UnityEngine;
+﻿using Level.Camera.Clamping.Data;
+using Level.Camera.UserControlling;
+using UnityEngine;
 
-
-public class CameraMediator : MonoBehaviour
+namespace Level.Camera.Clamping
 {
-    [SerializeField] private LevelBorders _levelBorders;
-    [SerializeField] private CameraZoom _cameraZoom;
-    [SerializeField] private Camera _mainCamera;
-    [SerializeField] private CameraBordersWithOrientation _bordersWithOrientation;
-    [SerializeField] private LevelZoomCalculator _levelZoomCalculator;
-    [SerializeField] private CameraAnimation _cameraAnimation;
+    public class CameraMediator : MonoBehaviour
+    {
+        [SerializeField] private LevelBorders _levelBorders;
+        [SerializeField] private CameraZoom _cameraZoom;
+        [SerializeField] private UnityEngine.Camera _mainCamera;
+        [SerializeField] private CameraBordersWithOrientation _bordersWithOrientation;
+        [SerializeField] private LevelZoomCalculator _levelZoomCalculator;
+        [SerializeField] private CameraAnimation _cameraAnimation;
     
 
-    public void Init()
-    {
-        var cameraClampingSettingsFactory = new CameraClampingSettingsFactory(_levelBorders, _mainCamera);
+        public void Init()
+        {
+            var cameraClampingSettingsFactory = new CameraClampingSettingsFactory(_levelBorders, _mainCamera);
         
-        CameraClampingSettings settings = cameraClampingSettingsFactory.Create();
+            CameraClampingSettings settings = cameraClampingSettingsFactory.Create();
 
-        _cameraAnimation.Init();
-        _bordersWithOrientation.Init(settings);
-        _levelZoomCalculator.Init(_mainCamera, _levelBorders);
-        _cameraZoom.Init(_mainCamera, _levelZoomCalculator);
+            _cameraAnimation.Init();
+            _bordersWithOrientation.Init(settings);
+            _levelZoomCalculator.Init(_mainCamera, _levelBorders);
+            _cameraZoom.Init(_mainCamera, _levelZoomCalculator);
+        }
     }
 }

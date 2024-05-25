@@ -1,27 +1,29 @@
 ﻿using UnityEngine;
 
-
-public class ParallaxLayerClamping
+namespace Level.UI.Parallax.GameParallax
 {
-    private readonly float _screenWidth;
+    public class ParallaxLayerClamping
+    {
+        private readonly float _screenWidth;
 
     
-    public ParallaxLayerClamping()
-    {
-        _screenWidth = Screen.width;
-    }
-    
-    
-    public void ClampParallaxLayerPosition(ref float targetParallaxLayerPosition)
-    {
-        if (targetParallaxLayerPosition > _screenWidth)
+        public ParallaxLayerClamping()
         {
-            targetParallaxLayerPosition -= _screenWidth;
+            _screenWidth = Screen.width;
         }
-
-        else if (targetParallaxLayerPosition < -_screenWidth)
+    
+    
+        public void ClampParallaxLayerPosition(ref float targetParallaxLayerPosition)
         {
-            targetParallaxLayerPosition += _screenWidth;
+            if (targetParallaxLayerPosition > _screenWidth)
+            {
+                targetParallaxLayerPosition -= _screenWidth;
+            }
+
+            else if (targetParallaxLayerPosition < -_screenWidth)
+            {
+                targetParallaxLayerPosition += _screenWidth;
+            }
         }
     }
 }

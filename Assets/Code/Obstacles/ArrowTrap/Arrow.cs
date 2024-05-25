@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 
-
-public class Arrow : MonoBehaviour
+namespace Obstacles.ArrowTrap
 {
-    private readonly float _speed = 10f;
-
-
-    private void Update()
+    public class Arrow : MonoBehaviour
     {
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + transform.up, _speed * Time.deltaTime);
+        private readonly float _speed = 10f;
+
+
+        private void Update()
+        {
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + transform.up, _speed * Time.deltaTime);
+        }
     }
 }

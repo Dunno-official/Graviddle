@@ -1,30 +1,30 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-
-public class AppStartup : MonoBehaviour
+namespace AppStartup
 {
-    [SerializeField] private BackgroundMusicSpawner _backgroundMusicSpawner;
-    [SerializeField] private AdvertisementStartup _advertisementStartup;
-    private readonly MusicVolume _musicVolume = new MusicVolume();
-    private static bool _appWasInited;
-    
-    
-    private void Start()
+    public class AppStartup : MonoBehaviour
     {
-        if (_appWasInited == false)
+        [SerializeField] private BackgroundMusicSpawner _backgroundMusicSpawner;
+        private readonly MusicVolume _musicVolume = new MusicVolume();
+        private static bool _appWasInited;
+    
+    
+        private void Start()
         {
-            _appWasInited = true;
-            Initialize();
+            if (_appWasInited == false)
+            {
+                _appWasInited = true;
+                Initialize();
+            }
         }
-    }
 
 
-    private void Initialize()
-    {
-        Addressables.InitializeAsync();
-        _backgroundMusicSpawner.Init();
-        _advertisementStartup.Init();
-        _musicVolume.Init();
+        private void Initialize()
+        {
+            Addressables.InitializeAsync();
+            _backgroundMusicSpawner.Init();
+            _musicVolume.Init();
+        }
     }
 }

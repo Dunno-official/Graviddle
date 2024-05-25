@@ -1,32 +1,38 @@
 
 
-public class CurrentGravityData : ISubscriber 
+using Character.Helpers;
+using Level.UnityCallbackWrappers;
+
+namespace Level.Gravitation
 {
-    private readonly SwipeHandler _swipeHandler;
-
-    public CurrentGravityData(SwipeHandler swipeHandler)
+    public class CurrentGravityData : ISubscriber 
     {
-        _swipeHandler = swipeHandler;
-        Data = GravityDataPresenter.GravityData[GravityDirection.Down];
-    }
+        private readonly SwipeHandler.SwipeHandler _swipeHandler;
 
-    public GravityData Data { get; private set; }
+        public CurrentGravityData(SwipeHandler.SwipeHandler swipeHandler)
+        {
+            _swipeHandler = swipeHandler;
+            Data = GravityDataPresenter.GravityData[GravityDirection.Down];
+        }
+
+        public GravityData Data { get; private set; }
 
 
-    void ISubscriber.Subscribe()
-    {
-        _swipeHandler.GravityChanged += OnGravityChanged;
-    }
+        void ISubscriber.Subscribe()
+        {
+            _swipeHandler.GravityChanged += OnGravityChanged;
+        }
 
     
-    void ISubscriber.Unsubscribe()
-    {
-        _swipeHandler.GravityChanged -= OnGravityChanged;
-    }
+        void ISubscriber.Unsubscribe()
+        {
+            _swipeHandler.GravityChanged -= OnGravityChanged;
+        }
 
     
-    private void OnGravityChanged(GravityDirection gravityDirection)
-    {
-        Data = GravityDataPresenter.GravityData[gravityDirection];
+        private void OnGravityChanged(GravityDirection gravityDirection)
+        {
+            Data = GravityDataPresenter.GravityData[gravityDirection];
+        }
     }
 }

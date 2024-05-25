@@ -1,5 +1,8 @@
 ﻿
-public interface IUpdatable
+namespace Level.UnityCallbackWrappers
 {
-    void Update();
+    public interface IUpdatable
+    {
+        void Update();
+    }
 }

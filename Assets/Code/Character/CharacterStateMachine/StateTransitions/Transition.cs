@@ -1,33 +1,35 @@
 ﻿using System;
 
-
-public class Transition
+namespace Character.CharacterStateMachine.StateTransitions
 {
-    public readonly CharacterState StateFrom;
-    public readonly CharacterState StateTo;
-    
-    private readonly Func<bool> _transitionCondition;
-    
-    public event Action TransitionHappened;
-    
-
-    public Transition(CharacterState stateFrom, CharacterState stateTo, Func<bool> condition)
+    public class Transition
     {
-        StateFrom = stateFrom;
-        StateTo = stateTo;
-        _transitionCondition = condition;
-    }
+        public readonly CharacterState StateFrom;
+        public readonly CharacterState StateTo;
+    
+        private readonly Func<bool> _transitionCondition;
+    
+        public event Action TransitionHappened;
+    
 
-
-    public bool CheckCondition()
-    {
-        bool transitionHappened = _transitionCondition();
-
-        if (transitionHappened)
+        public Transition(CharacterState stateFrom, CharacterState stateTo, Func<bool> condition)
         {
-            TransitionHappened?.Invoke();
+            StateFrom = stateFrom;
+            StateTo = stateTo;
+            _transitionCondition = condition;
         }
 
-        return transitionHappened;
+
+        public bool CheckCondition()
+        {
+            bool transitionHappened = _transitionCondition();
+
+            if (transitionHappened)
+            {
+                TransitionHappened?.Invoke();
+            }
+
+            return transitionHappened;
+        }
     }
 }

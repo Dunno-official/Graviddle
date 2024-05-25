@@ -3,30 +3,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[Serializable]
-public class BoolArray 
+namespace Extensions
 {
-    [SerializeField] private List<bool> _boolArray;
-
-    public bool this[int index] => _boolArray[index];
-}
-
-
-[Serializable]
-public class BoolMatrix : IEnumerable<BoolArray>
-{
-    [SerializeField] private List<BoolArray> _boolMatrix;
-
-
-    public IEnumerator<BoolArray> GetEnumerator()
+    [Serializable]
+    public class BoolArray 
     {
-        return _boolMatrix.GetEnumerator();
+        [SerializeField] private List<bool> _boolArray;
+
+        public bool this[int index] => _boolArray[index];
     }
 
 
-    IEnumerator IEnumerable.GetEnumerator()
+    [Serializable]
+    public class BoolMatrix : IEnumerable<BoolArray>
     {
-        return _boolMatrix.GetEnumerator();
+        [SerializeField] private List<BoolArray> _boolMatrix;
+
+
+        public IEnumerator<BoolArray> GetEnumerator()
+        {
+            return _boolMatrix.GetEnumerator();
+        }
+
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _boolMatrix.GetEnumerator();
+        }
     }
 }

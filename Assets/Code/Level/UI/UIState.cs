@@ -1,13 +1,16 @@
-﻿using UnityEngine;
+﻿using Level.UI.Switchers;
+using UnityEngine;
 
-
-public class UIState : MonoBehaviour
+namespace Level.UI
 {
-    [SerializeField] private UIStatesSwitcher _uiStatesSwitcher;
-
-
-    public void Activate()
+    public class UIState : MonoBehaviour
     {
-        _uiStatesSwitcher.ActivateState(this);
+        [SerializeField] private UIStatesSwitcher _uiStatesSwitcher;
+
+
+        public void Activate()
+        {
+            _uiStatesSwitcher.ActivateState(this);
+        }
     }
 }

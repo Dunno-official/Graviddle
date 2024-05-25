@@ -1,19 +1,21 @@
 ﻿using System;
 using UnityEngine;
 
-
-[Serializable]
-public class LaserParticlesSwitcher
+namespace Obstacles.Laser
 {
-    [SerializeField] private ParticleSystem[] _particles;
-
-
-    public void ToggleParticles(bool activate)
+    [Serializable]
+    public class LaserParticlesSwitcher
     {
-        foreach (ParticleSystem particle in _particles)
+        [SerializeField] private ParticleSystem[] _particles;
+
+
+        public void ToggleParticles(bool activate)
         {
-            ParticleSystem.EmissionModule emission = particle.emission;
-            emission.enabled = activate;
+            foreach (ParticleSystem particle in _particles)
+            {
+                ParticleSystem.EmissionModule emission = particle.emission;
+                emission.enabled = activate;
+            }
         }
     }
 }

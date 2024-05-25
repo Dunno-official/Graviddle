@@ -2,26 +2,28 @@
 using System.Linq;
 using UnityEngine;
 
-
-public class CollisionsList : MonoBehaviour
+namespace Character.Physics
 {
-    private readonly List<Collider2D> _colliders = new List<Collider2D>();
-
-
-    private void OnTriggerEnter2D(Collider2D collider2d)
+    public class CollisionsList : MonoBehaviour
     {
-        _colliders.Add(collider2d);
-    }
+        private readonly List<Collider2D> _colliders = new List<Collider2D>();
 
 
-    private void OnTriggerExit2D(Collider2D collider2d)
-    {
-        _colliders.Remove(collider2d);
-    }
+        private void OnTriggerEnter2D(Collider2D collider2d)
+        {
+            _colliders.Add(collider2d);
+        }
 
 
-    public bool CheckCollision<T>() 
-    {
-        return _colliders.Any(collider2d => collider2d.GetComponent<T>() != null);
+        private void OnTriggerExit2D(Collider2D collider2d)
+        {
+            _colliders.Remove(collider2d);
+        }
+
+
+        public bool CheckCollision<T>() 
+        {
+            return _colliders.Any(collider2d => collider2d.GetComponent<T>() != null);
+        }
     }
 }

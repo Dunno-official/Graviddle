@@ -1,28 +1,31 @@
 using System;
+using Level.Restart;
 using UnityEngine;
 
-
-public class LevelStar : MonoBehaviour, IRestart
+namespace Level.LevelStar
 {
-    [SerializeField] private LevelStarImpact _levelStarImpact;
-    public event Action StarCollected;
-    
-    
-    private void OnTriggerEnter2D(Collider2D collider2d)
+    public class LevelStar : MonoBehaviour, IRestart
     {
-        if (collider2d.GetComponent<Character>() != null)
+        [SerializeField] private LevelStarImpact _levelStarImpact;
+        public event Action StarCollected;
+    
+    
+        private void OnTriggerEnter2D(Collider2D collider2d)
         {
-            gameObject.SetActive(false);
+            if (collider2d.GetComponent<Character.Character>() != null)
+            {
+                gameObject.SetActive(false);
             
-            _levelStarImpact.Activate(transform.position);
+                _levelStarImpact.Activate(transform.position);
             
-            StarCollected?.Invoke();
+                StarCollected?.Invoke();
+            }
         }
-    }
 
 
-    void IRestart.Restart()
-    {
-        gameObject.SetActive(true);
+        void IRestart.Restart()
+        {
+            gameObject.SetActive(true);
+        }
     }
 }

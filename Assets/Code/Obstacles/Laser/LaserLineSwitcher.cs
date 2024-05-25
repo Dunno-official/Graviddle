@@ -1,44 +1,46 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
-using System;
 
-
-[Serializable]
-public class LaserLineSwitcher
+namespace Obstacles.Laser
 {
-    [SerializeField] private LaserDistortion _laserDistortion;
-    private LaserDistortionData _distortionData = new LaserDistortionData();
-    private Tween _switchingTween;
-
-
-    public void Init()
+    [Serializable]
+    public class LaserLineSwitcher
     {
-        _laserDistortion.Init();
-    }
+        [SerializeField] private LaserDistortion _laserDistortion;
+        private LaserDistortionData _distortionData = new LaserDistortionData();
+        private Tween _switchingTween;
 
 
-    public IEnumerator ToggleLaserLine(bool activateLaser)
-    {
-        float duration = _distortionData.GetDistortionDuration(activateLaser);
-        float targetDistortion = _distortionData.GetDistortion(activateLaser);
-        float startDistortion = _distortionData.GetDistortion(activateLaser == false);
-
-        _switchingTween = DOTween.To(x => _laserDistortion.SetDistortion(x), startDistortion, targetDistortion, duration);
-
-        yield return _switchingTween.WaitForCompletion();
-    }
+        public void Init()
+        {
+            _laserDistortion.Init();
+        }
 
 
-    public void Restart(bool startOnAwake)
-    {
-        StopAnimation();
-        _laserDistortion.SetDistortion(_distortionData.GetDistortion(startOnAwake));
-    }
+        public IEnumerator ToggleLaserLine(bool activateLaser)
+        {
+            float duration = _distortionData.GetDistortionDuration(activateLaser);
+            float targetDistortion = _distortionData.GetDistortion(activateLaser);
+            float startDistortion = _distortionData.GetDistortion(activateLaser == false);
+
+            _switchingTween = DOTween.To(x => _laserDistortion.SetDistortion(x), startDistortion, targetDistortion, duration);
+
+            yield return _switchingTween.WaitForCompletion();
+        }
 
 
-    public void StopAnimation()
-    {
-        _switchingTween?.Kill();
+        public void Restart(bool startOnAwake)
+        {
+            StopAnimation();
+            _laserDistortion.SetDistortion(_distortionData.GetDistortion(startOnAwake));
+        }
+
+
+        public void StopAnimation()
+        {
+            _switchingTween?.Kill();
+        }
     }
 }

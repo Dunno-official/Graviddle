@@ -1,40 +1,46 @@
 ﻿using System;
+using Character.Helpers;
+using Level.Gravitation;
+using Level.UI.MovementButtons;
+using Level.UnityCallbackWrappers;
 using UnityEngine;
 
-
-[Serializable]
-public class CharacterMoveDirection : IUpdatable
+namespace Character.CharacterMovement
 {
-    [SerializeField] private InputButton[] _inputButtons;
-    [SerializeField] private CharacterSpriteFlipping _characterSpriteFlipping;
-    private CurrentGravityData _currentGravityData;
-
-    public Vector2 Direction { get; private set; }
-
-
-    public void Init(CurrentGravityData currentGravityData)
+    [Serializable]
+    public class CharacterMoveDirection : IUpdatable
     {
-        _currentGravityData = currentGravityData;
-    }
-    
-    
-    void IUpdatable.Update()
-    {
-        var state = MovementState.Stop;
-        
-        TryRun(0, ref state, MovementState.Left);
-        TryRun(1, ref state, MovementState.Right);
-        
-        Direction = _currentGravityData.Data.Rotation * (Vector2.right * (int) state);
-    }
+        [SerializeField] private InputButton[] _inputButtons;
+        [SerializeField] private CharacterSpriteFlipping _characterSpriteFlipping;
+        private CurrentGravityData _currentGravityData;
+
+        public Vector2 Direction { get; private set; }
 
 
-    private void TryRun(int buttonIndex, ref MovementState state, MovementState targetState)
-    {
-        if (_inputButtons[buttonIndex].IsTouching)
+        public void Init(CurrentGravityData currentGravityData)
         {
-            state = targetState;
-            _characterSpriteFlipping.FlipCharacter(state);
+            _currentGravityData = currentGravityData;
+        }
+    
+    
+        void IUpdatable.Update()
+        {
+            var state = MovementState.Stop;
+        
+            TryRun(0, ref state, MovementState.Left);
+            TryRun(1, ref state, MovementState.Right);
+        
+            Direction = _currentGravityData.Data.Rotation * (Vector2.right * (int) state);
+        }
+
+
+        private void TryRun(int buttonIndex, ref MovementState state, MovementState targetState)
+        {
+            if (_inputButtons[buttonIndex].IsTouching)
+            {
+                state = targetState;
+                _characterSpriteFlipping.FlipCharacter(state);
+            }
         }
     }
 }

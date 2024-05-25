@@ -1,15 +1,18 @@
 ﻿using System;
+using Character.Helpers;
 using UnityEngine;
 
-
-[Serializable]
-public class CharacterSpriteFlipping 
+namespace Character.CharacterMovement
 {
-    [SerializeField] private SpriteRenderer _spriteRenderer;
-
-
-    public void FlipCharacter(MovementState movementState)
+    [Serializable]
+    public class CharacterSpriteFlipping 
     {
-        _spriteRenderer.flipX = (movementState == MovementState.Left);
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+
+
+        public void FlipCharacter(MovementState movementState)
+        {
+            _spriteRenderer.flipX = (movementState == MovementState.Left);
+        }
     }
 }

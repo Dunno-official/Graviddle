@@ -1,23 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-
-public abstract class ButtonClick : MonoBehaviour
+namespace Level.UI.ButtonsClick
 {
-    [SerializeField] private Button _button;
-
-
-    public void OnEnable()
+    public abstract class ButtonClick : MonoBehaviour
     {
-        _button.onClick.AddListener(() => OnButtonClick());
+        [SerializeField] private Button _button;
+
+
+        public void OnEnable()
+        {
+            _button.onClick.AddListener(() => OnButtonClick());
+        }
+
+
+        public void OnDisable()
+        {
+            _button.onClick.RemoveListener(() => OnButtonClick());
+        }
+
+
+        protected abstract void OnButtonClick();
     }
-
-
-    public void OnDisable()
-    {
-        _button.onClick.RemoveListener(() => OnButtonClick());
-    }
-
-
-    protected abstract void OnButtonClick();
 }

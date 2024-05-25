@@ -1,73 +1,79 @@
-﻿using UnityEngine;
+﻿using Character.Helpers;
+using Extensions;
+using Level.Camera.Clamping.Data;
+using Level.Gravitation;
+using UnityEngine;
 
-
-public class LevelZoomCalculator : MonoBehaviour
+namespace Level.Camera
 {
-    [SerializeField] private bool _isLevelWithFrame;
-    private CurrentGravityData _currentGravityData;
-    private Camera _mainCamera;
-    private LevelBorders _levelBorders;
-    private const float _frameOffset = 2;
-
-
-    public void Init(Camera mainCamera, LevelBorders levelBorders)
+    public class LevelZoomCalculator : MonoBehaviour
     {
-        _mainCamera = mainCamera;
-        _levelBorders = levelBorders;
-    }
+        [SerializeField] private bool _isLevelWithFrame;
+        private CurrentGravityData _currentGravityData;
+        private UnityEngine.Camera _mainCamera;
+        private LevelBorders _levelBorders;
+        private const float _frameOffset = 2;
+
+
+        public void Init(UnityEngine.Camera mainCamera, LevelBorders levelBorders)
+        {
+            _mainCamera = mainCamera;
+            _levelBorders = levelBorders;
+        }
     
     
-    public void Init(CurrentGravityData currentGravityData)
-    {
-        _currentGravityData = currentGravityData;
-    }
-
-
-    public float GetLevelZoom()
-    {
-        (float levelWidth, float levelHeight) = GetLevelWidthAndHeight();
-        return EvaluateLevelZoom(levelWidth, levelHeight) / 2f;
-    }
-
-
-    private (float, float) GetLevelWidthAndHeight()
-    {
-        float levelHeight = _levelBorders.Top - _levelBorders.Down;
-        float levelWidth = _levelBorders.Right - _levelBorders.Left;
-
-        if (_isLevelWithFrame)
+        public void Init(CurrentGravityData currentGravityData)
         {
-            levelHeight += _frameOffset;
-            levelWidth += _frameOffset;
+            _currentGravityData = currentGravityData;
         }
 
-        if (IsVerticalZoom())
+
+        public float GetLevelZoom()
         {
-            Algorithms.Swap(ref levelWidth, ref levelHeight);
+            (float levelWidth, float levelHeight) = GetLevelWidthAndHeight();
+            return EvaluateLevelZoom(levelWidth, levelHeight) / 2f;
         }
 
-        return (levelWidth, levelHeight);
-    }
 
-
-    private bool IsVerticalZoom()
-    {
-        GravityDirection direction = _currentGravityData.Data.GravityDirection;
-
-        return direction == GravityDirection.Right || direction == GravityDirection.Left;
-    }
-
-
-    private float EvaluateLevelZoom(float levelWidth, float  levelHeight)
-    {
-        float levelZoom = levelHeight;
-        float predictedCameraWidth = levelZoom * _mainCamera.aspect;
-
-        if (levelWidth > predictedCameraWidth)
+        private (float, float) GetLevelWidthAndHeight()
         {
-            levelZoom = levelWidth / _mainCamera.aspect;
+            float levelHeight = _levelBorders.Top - _levelBorders.Down;
+            float levelWidth = _levelBorders.Right - _levelBorders.Left;
+
+            if (_isLevelWithFrame)
+            {
+                levelHeight += _frameOffset;
+                levelWidth += _frameOffset;
+            }
+
+            if (IsVerticalZoom())
+            {
+                Algorithms.Swap(ref levelWidth, ref levelHeight);
+            }
+
+            return (levelWidth, levelHeight);
         }
 
-        return levelZoom;
+
+        private bool IsVerticalZoom()
+        {
+            GravityDirection direction = _currentGravityData.Data.GravityDirection;
+
+            return direction == GravityDirection.Right || direction == GravityDirection.Left;
+        }
+
+
+        private float EvaluateLevelZoom(float levelWidth, float  levelHeight)
+        {
+            float levelZoom = levelHeight;
+            float predictedCameraWidth = levelZoom * _mainCamera.aspect;
+
+            if (levelWidth > predictedCameraWidth)
+            {
+                levelZoom = levelWidth / _mainCamera.aspect;
+            }
+
+            return levelZoom;
+        }
     }
 }

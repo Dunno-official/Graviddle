@@ -1,17 +1,22 @@
 ﻿
-public class RestartEvent : IRestart
+using Character;
+
+namespace Level.Restart
 {
-    private readonly EventTransit _eventTransit = new EventTransit();
+    public class RestartEvent : IRestart
+    {
+        private readonly EventTransit _eventTransit = new EventTransit();
 
 
-    public bool CheckRestart()  
-    {
-        return _eventTransit.CheckIfEventHappened();
-    }
+        public bool CheckRestart()  
+        {
+            return _eventTransit.CheckIfEventHappened();
+        }
     
     
-    void IRestart.Restart()
-    {
-        _eventTransit.Invoke();
+        void IRestart.Restart()
+        {
+            _eventTransit.Invoke();
+        }
     }
 }

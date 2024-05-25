@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 
-
-public class UniformMotion : ClosedPathMotionType
+namespace Level.ClosedPathMotion.ClosedPathMotionConfigs
 {
-    public override float Period =>  2 / Speed;
-
-
-    public override float EvaluateMotionFunction(float time)
+    public class UniformMotion : ClosedPathMotionType
     {
-        return -Mathf.Abs(Speed * time - 1) + 1;
+        public override float Period =>  2 / Speed;
+
+
+        public override float EvaluateMotionFunction(float time)
+        {
+            return -Mathf.Abs(Speed * time - 1) + 1;
+        }
     }
 }

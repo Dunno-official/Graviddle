@@ -1,5 +1,8 @@
 ﻿
-public interface IAfterRestart 
+namespace Level.Restart
 {
-    void Restart();
+    public interface IAfterRestart 
+    {
+        void Restart();
+    }
 }

@@ -1,19 +1,22 @@
 ﻿using System;
+using Character.Helpers;
 using UnityEngine;
 
-
-public class FallState : CharacterState
+namespace Character.CharacterStateMachine.States
 {
-    public event Action CharacterFalling;
-
-
-    public FallState(Animator character) : base(character, AnimationsName.Fall)
+    public class FallState : CharacterState
     {
-    }
+        public event Action CharacterFalling;
 
 
-    protected override void OnEnterState()
-    {
-        CharacterFalling?.Invoke();
+        public FallState(Animator character) : base(character, AnimationsName.Fall)
+        {
+        }
+
+
+        protected override void OnEnterState()
+        {
+            CharacterFalling?.Invoke();
+        }
     }
 }

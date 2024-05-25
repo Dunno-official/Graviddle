@@ -1,25 +1,28 @@
-﻿using UnityEngine;
+﻿using Level.Restart;
+using UnityEngine;
 
-
-public class StartPortal : MonoBehaviour, IRestart, IAfterRestart
+namespace Level.Portals
 {
-    [SerializeField] private PortalDisappearance _portalDisappearance;
-
-
-    private void Start()
+    public class StartPortal : MonoBehaviour, IRestart, IAfterRestart
     {
-        _portalDisappearance.Disappear();
-    }
+        [SerializeField] private PortalDisappearance _portalDisappearance;
 
 
-    void IRestart.Restart()
-    {
-        _portalDisappearance.ResetAnimation();
-    }
+        private void Start()
+        {
+            _portalDisappearance.Disappear();
+        }
 
 
-    void IAfterRestart.Restart()
-    {
-        _portalDisappearance.Disappear();
+        void IRestart.Restart()
+        {
+            _portalDisappearance.ResetAnimation();
+        }
+
+
+        void IAfterRestart.Restart()
+        {
+            _portalDisappearance.Disappear();
+        }
     }
 }

@@ -1,56 +1,60 @@
+using Character.CharacterStateMachine.States;
+using Level.Restart;
 using UnityEngine;
 
-
-public class UIStatesSwitcher : MonoBehaviour, IAfterRestart
+namespace Level.UI.Switchers
 {
-    [SerializeField] private UIState[] _allUIStates;
-    [SerializeField] private UIState _initialState;
-    private DieState _characterDieState;
+    public class UIStatesSwitcher : MonoBehaviour, IAfterRestart
+    {
+        [SerializeField] private UIState[] _allUIStates;
+        [SerializeField] private UIState _initialState;
+        private DieState _characterDieState;
 
     
-    public void Init(DieState dieState)
-    {
-        _characterDieState = dieState;
-    }
-
-
-    private void OnEnable()
-    {
-        _characterDieState.CharacterDied += OnCharacterDied;
-    }
-
-    
-    private void OnDisable()
-    {
-        _characterDieState.CharacterDied -= OnCharacterDied;
-    }
-
-    
-    private void OnCharacterDied()
-    {
-        DeactivateStates();
-    }
-
-
-    public void DeactivateStates()
-    {
-        foreach (UIState uiState in _allUIStates)
+        public void Init(DieState dieState)
         {
-            uiState.gameObject.SetActive(false);
+            _characterDieState = dieState;
         }
-    }
+
+
+        private void OnEnable()
+        {
+            _characterDieState.CharacterDied += OnCharacterDied;
+        }
 
     
-    public void ActivateState(UIState uiStateToBeActivated)
-    {
-        DeactivateStates();
+        private void OnDisable()
+        {
+            _characterDieState.CharacterDied -= OnCharacterDied;
+        }
 
-        uiStateToBeActivated.gameObject.SetActive(true);
-    }
+    
+        private void OnCharacterDied()
+        {
+            DeactivateStates();
+        }
 
 
-    void IAfterRestart.Restart()
-    {
-        _initialState.Activate();
+        public void DeactivateStates()
+        {
+            foreach (UIState uiState in _allUIStates)
+            {
+                uiState.gameObject.SetActive(false);
+            }
+        }
+
+    
+        public void ActivateState(UIState uiStateToBeActivated)
+        {
+            DeactivateStates();
+
+            uiStateToBeActivated.gameObject.SetActive(true);
+        }
+
+
+        void IAfterRestart.Restart()
+        {
+            _initialState.Activate();
+        }
     }
 }

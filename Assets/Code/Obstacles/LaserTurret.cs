@@ -1,31 +1,38 @@
+using Character;
+using Extensions;
+using Level.Gravitation;
+using Level.UnityCallbackWrappers;
+using Obstacles.LaserTurretNM;
 using UnityEngine;
 
-
-public class LaserTurret : MonoBehaviour
+namespace Obstacles
 {
-    [SerializeField] private Transform _turret;
-    [SerializeField] private Transform _turretAnchor;
-    [SerializeField] private Transform _fastening;
-    [SerializeField] private CharacterHead _target;
-    private IUpdatable[] _updatables;
-
-
-    public void Init(CurrentGravityData currentGravityData)
+    public class LaserTurret : MonoBehaviour
     {
-        var turretRotationData = new TurretRotationData(_target, _turret, 1.5f);
-        var fasteningRotationData = new TurretRotationData(_target, _fastening, 2f);
-        
-        _updatables = new IUpdatable[]
+        [SerializeField] private Transform _turret;
+        [SerializeField] private Transform _turretAnchor;
+        [SerializeField] private Transform _fastening;
+        [SerializeField] private CharacterHead _target;
+        private IUpdatable[] _updatables;
+
+
+        public void Init(CurrentGravityData currentGravityData)
         {
-            new TurretPosition(_turret, _turretAnchor),
-            new TurretRotation(turretRotationData),
-            new TurretFasteningRotation(fasteningRotationData, currentGravityData, transform)
-        };
-    }
+            var turretRotationData = new TurretRotationData(_target, _turret, 1.5f);
+            var fasteningRotationData = new TurretRotationData(_target, _fastening, 2f);
+        
+            _updatables = new IUpdatable[]
+            {
+                new TurretPosition(_turret, _turretAnchor),
+                new TurretRotation(turretRotationData),
+                new TurretFasteningRotation(fasteningRotationData, currentGravityData, transform)
+            };
+        }
 
 
-    private void Update()
-    {
-        _updatables.UpdateForEach();
+        private void Update()
+        {
+            _updatables.UpdateForEach();
+        }
     }
 }

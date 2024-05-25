@@ -1,34 +1,37 @@
-﻿using UnityEngine;
+﻿using Character.CharacterStateMachine.States;
+using UnityEngine;
 
-
-public class WinPanel : MonoBehaviour
+namespace Level.UI.Victory
 {
-    [SerializeField] private UIState _uiState;
-    [SerializeField] private WinAnimation _winAnimation;
-    private WinState _characterWinState;
-
-
-    public void Init(WinState winState)
+    public class WinPanel : MonoBehaviour
     {
-        _characterWinState = winState;
-    }
+        [SerializeField] private UIState _uiState;
+        [SerializeField] private WinAnimation _winAnimation;
+        private WinState _characterWinState;
+
+
+        public void Init(WinState winState)
+        {
+            _characterWinState = winState;
+        }
     
 
-    private void OnEnable()
-    {
-        _characterWinState.CharacterWon += OnCharacterWon;
-    }
+        private void OnEnable()
+        {
+            _characterWinState.CharacterWon += OnCharacterWon;
+        }
 
 
-    private void OnDisable()
-    {
-        _characterWinState.CharacterWon -= OnCharacterWon;
-    }
+        private void OnDisable()
+        {
+            _characterWinState.CharacterWon -= OnCharacterWon;
+        }
 
 
-    private void OnCharacterWon()
-    {
-        _winAnimation.Play();
-        _uiState.Activate();
+        private void OnCharacterWon()
+        {
+            _winAnimation.Play();
+            _uiState.Activate();
+        }
     }
 }

@@ -1,6 +1,9 @@
 ﻿
-public interface ISubscriber
+namespace Level.UnityCallbackWrappers
 {
-    void Subscribe();
-    void Unsubscribe();
+    public interface ISubscriber
+    {
+        void Subscribe();
+        void Unsubscribe();
+    }
 }

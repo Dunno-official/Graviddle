@@ -1,19 +1,22 @@
 ﻿using System;
+using Character.Helpers;
 using UnityEngine;
 
-
-public class DieState : CharacterState
+namespace Character.CharacterStateMachine.States
 {
-    public event Action CharacterDied;
-
-
-    public DieState(Animator character) : base(character, AnimationsName.Die)
+    public class DieState : CharacterState
     {
-    }
+        public event Action CharacterDied;
 
 
-    protected override void OnEnterState()
-    {
-        CharacterDied?.Invoke();
+        public DieState(Animator character) : base(character, AnimationsName.Die)
+        {
+        }
+
+
+        protected override void OnEnterState()
+        {
+            CharacterDied?.Invoke();
+        }
     }
 }

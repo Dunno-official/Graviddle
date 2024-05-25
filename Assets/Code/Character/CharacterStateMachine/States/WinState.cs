@@ -1,24 +1,27 @@
 ﻿using System;
+using Character.Helpers;
 using UnityEngine;
 
-
-public class WinState : CharacterState
+namespace Character.CharacterStateMachine.States
 {
-    private readonly Rigidbody2D _rigidbody;
-    public event Action CharacterWon;
-
-
-    public WinState(Animator character) : base(character, AnimationsName.Fall)
+    public class WinState : CharacterState
     {
-        _rigidbody = character.GetComponent<Rigidbody2D>();
-    }
+        private readonly Rigidbody2D _rigidbody;
+        public event Action CharacterWon;
 
 
-    protected override void OnEnterState()
-    {
-        CharacterWon?.Invoke();
+        public WinState(Animator character) : base(character, AnimationsName.Fall)
+        {
+            _rigidbody = character.GetComponent<Rigidbody2D>();
+        }
 
-        _rigidbody.velocity = Vector2.zero;
-        _rigidbody.isKinematic = true;
+
+        protected override void OnEnterState()
+        {
+            CharacterWon?.Invoke();
+
+            _rigidbody.velocity = Vector2.zero;
+            _rigidbody.isKinematic = true;
+        }
     }
 }

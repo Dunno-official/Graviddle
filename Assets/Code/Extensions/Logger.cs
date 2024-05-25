@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 
-
-public static class Logger
+namespace Extensions
 {
-    public static void PrintWithGreen(string text)
+    public static class Logger
     {
-        Debug.Log("<color=#00FF00>" + text + "</color>");
+        public static void PrintWithGreen(string text)
+        {
+            Debug.Log("<color=#00FF00>" + text + "</color>");
+        }
     }
 }

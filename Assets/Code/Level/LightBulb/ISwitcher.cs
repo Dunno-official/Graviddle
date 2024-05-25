@@ -1,7 +1,9 @@
 ﻿using System;
 
-
-public interface ISwitcher
+namespace Level.LightBulb
 {
-    event Action<bool> Toggled;
+    public interface ISwitcher
+    {
+        event Action<bool> Toggled;
+    }
 }

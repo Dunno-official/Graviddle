@@ -1,27 +1,30 @@
 ﻿using System.Collections;
+using Extensions;
 using UnityEngine;
 
-
-public class ArrowTrapGroup : ArrowTrapBase
+namespace Obstacles.ArrowTrap
 {
-    [SerializeField] private ArrowSpawner[] _arrowSpawners;
-    [SerializeField] private BoolMatrix _arrowsShootingMatrix;
-    [SerializeField] private float _rate = 2f;
-
-
-    protected override IEnumerator OnShoot()
+    public class ArrowTrapGroup : ArrowTrapBase
     {
-        foreach (BoolArray boolArray in _arrowsShootingMatrix)
-        {
-            for (var i = 0 ; i < _arrowSpawners.Length; ++i)
-            {
-                if (boolArray[i])
-                {
-                    _arrowSpawners[i].SpawnArrow();
-                }
-            }
+        [SerializeField] private ArrowSpawner[] _arrowSpawners;
+        [SerializeField] private BoolMatrix _arrowsShootingMatrix;
+        [SerializeField] private float _rate = 2f;
 
-            yield return new WaitForSeconds(_rate);
+
+        protected override IEnumerator OnShoot()
+        {
+            foreach (BoolArray boolArray in _arrowsShootingMatrix)
+            {
+                for (var i = 0 ; i < _arrowSpawners.Length; ++i)
+                {
+                    if (boolArray[i])
+                    {
+                        _arrowSpawners[i].SpawnArrow();
+                    }
+                }
+
+                yield return new WaitForSeconds(_rate);
+            }
         }
     }
 }

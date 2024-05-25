@@ -2,35 +2,37 @@
 using DG.Tweening;
 using UnityEngine;
 
-
-public class WoodPointerAnimation : MonoBehaviour
+namespace Level.Tutorial
 {
-    [SerializeField] private UIDissolve _dissolveImage;
-    [SerializeField] private float _waitTime;
-    private const float _duration = 2f;
-    private const float _dissolveStartValue = 0;
-    private const float _dissolveTargetValue = 1;
+    public class WoodPointerAnimation : MonoBehaviour
+    {
+        [SerializeField] private UIDissolve _dissolveImage;
+        [SerializeField] private float _waitTime;
+        private const float _duration = 2f;
+        private const float _dissolveStartValue = 0;
+        private const float _dissolveTargetValue = 1;
 
     
-    private void OnTriggerEnter2D(Collider2D collider2d)
-    {
-        if (collider2d.GetComponent<Character>() != null)
+        private void OnTriggerEnter2D(Collider2D collider2d)
         {
-            ShowImage();
+            if (collider2d.GetComponent<Character.Character>() != null)
+            {
+                ShowImage();
+            }
         }
-    }
 
 
-    private void ShowImage()
-    {
-        Sequence sequence = DOTween.Sequence();
-
-        sequence.AppendInterval(_waitTime);
-        sequence.Append(DOTween.To(x => _dissolveImage.effectFactor = x, _dissolveStartValue, _dissolveTargetValue, _duration));
-            
-        sequence.onComplete += ()=>
+        private void ShowImage()
         {
-            _dissolveImage.gameObject.SetActive(false);
-        };
+            Sequence sequence = DOTween.Sequence();
+
+            sequence.AppendInterval(_waitTime);
+            sequence.Append(DOTween.To(x => _dissolveImage.effectFactor = x, _dissolveStartValue, _dissolveTargetValue, _duration));
+            
+            sequence.onComplete += ()=>
+            {
+                _dissolveImage.gameObject.SetActive(false);
+            };
+        }
     }
 }

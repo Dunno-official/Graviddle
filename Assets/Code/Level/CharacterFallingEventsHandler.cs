@@ -1,38 +1,46 @@
 ﻿
 
-public abstract class CharacterFallingEventsHandler : IRestart, ISubscriber
+using Character.CharacterStateMachine.States;
+using Character.CharacterStateMachine.StateTransitions;
+using Level.Restart;
+using Level.UnityCallbackWrappers;
+
+namespace Level
 {
-    private readonly Transition _fallToIdleTransition;
-    private readonly FallState _fallState;
-
-
-    protected CharacterFallingEventsHandler(Transition fallToIdleTransition, FallState fallState)
+    public abstract class CharacterFallingEventsHandler : IRestart, ISubscriber
     {
-        _fallToIdleTransition = fallToIdleTransition;
-        _fallState = fallState;
-    }
+        private readonly Transition _fallToIdleTransition;
+        private readonly FallState _fallState;
 
 
-    void ISubscriber.Subscribe()
-    {
-        _fallState.CharacterFalling += OnCharacterStartFalling;
-        _fallToIdleTransition.TransitionHappened += OnCharacterEndFalling;
-    }
+        protected CharacterFallingEventsHandler(Transition fallToIdleTransition, FallState fallState)
+        {
+            _fallToIdleTransition = fallToIdleTransition;
+            _fallState = fallState;
+        }
 
 
-    void ISubscriber.Unsubscribe()
-    {
-        _fallState.CharacterFalling -= OnCharacterStartFalling;
-        _fallToIdleTransition.TransitionHappened -= OnCharacterEndFalling;
-    }
+        void ISubscriber.Subscribe()
+        {
+            _fallState.CharacterFalling += OnCharacterStartFalling;
+            _fallToIdleTransition.TransitionHappened += OnCharacterEndFalling;
+        }
 
 
-    protected abstract void OnCharacterStartFalling();
-    protected abstract void OnCharacterEndFalling();
+        void ISubscriber.Unsubscribe()
+        {
+            _fallState.CharacterFalling -= OnCharacterStartFalling;
+            _fallToIdleTransition.TransitionHappened -= OnCharacterEndFalling;
+        }
+
+
+        protected abstract void OnCharacterStartFalling();
+        protected abstract void OnCharacterEndFalling();
 
     
-    void IRestart.Restart()
-    {
-        OnCharacterEndFalling();
+        void IRestart.Restart()
+        {
+            OnCharacterEndFalling();
+        }
     }
 }

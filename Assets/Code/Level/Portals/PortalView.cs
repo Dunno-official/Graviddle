@@ -1,15 +1,17 @@
 ﻿using System;
 using UnityEngine;
 
-
-[Serializable]
-public class PortalView
+namespace Level.Portals
 {
-    [SerializeField] private Material[] _materials;
-    [SerializeField] private SpriteRenderer _spriteRenderer;
-
-    public void Init()
+    [Serializable]
+    public class PortalView
     {
-        _spriteRenderer.materials = _materials;
+        [SerializeField] private Material[] _materials;
+        [SerializeField] private SpriteRenderer _spriteRenderer;
+
+        public void Init()
+        {
+            _spriteRenderer.materials = _materials;
+        }
     }
 }

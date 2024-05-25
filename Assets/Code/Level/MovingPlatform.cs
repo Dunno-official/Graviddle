@@ -1,25 +1,27 @@
 using UnityEngine;
 
-
-public class MovingPlatform : MonoBehaviour
+namespace Level
 {
-    private void OnTriggerEnter2D(Collider2D collider2d)
+    public class MovingPlatform : MonoBehaviour
     {
-        TieCharacterToTransform(collider2d, transform);
-    }
-
-
-    private void OnTriggerExit2D(Collider2D collider2d)
-    {
-        TieCharacterToTransform(collider2d, null);
-    }
-
-
-    private void TieCharacterToTransform(Collider2D collider2d , Transform parent)
-    {
-        if (collider2d.TryGetComponent(out Character character))
+        private void OnTriggerEnter2D(Collider2D collider2d)
         {
-            character.transform.SetParent(parent);
+            TieCharacterToTransform(collider2d, transform);
+        }
+
+
+        private void OnTriggerExit2D(Collider2D collider2d)
+        {
+            TieCharacterToTransform(collider2d, null);
+        }
+
+
+        private void TieCharacterToTransform(Collider2D collider2d , Transform parent)
+        {
+            if (collider2d.TryGetComponent(out Character.Character character))
+            {
+                character.transform.SetParent(parent);
+            }
         }
     }
 }
