@@ -6,6 +6,7 @@ using UnityEngine;
 public class UI : MonoBehaviour
 {
     [SerializeField] [ChildGameObjectsOnly] private Panel[] _states;
+    [SerializeField] [ChildGameObjectsOnly] private Panel _initialPanel;
     private Panel _current;
 
     public async UniTask Initialize()
@@ -14,6 +15,8 @@ public class UI : MonoBehaviour
         {
             await panel.Initialize();
         }
+
+        await Show(_initialPanel);
     }
 
     public async void ShowSync(Panel panel) // editor button

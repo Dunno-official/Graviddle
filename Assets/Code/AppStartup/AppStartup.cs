@@ -12,7 +12,6 @@ public class AppStartup : MonoBehaviour
         TryInitializeGame();
 
         await _ui.Initialize();
-        await _ui.Show<MainMenuPanel>();
     }
 
     private void TryInitializeGame()
