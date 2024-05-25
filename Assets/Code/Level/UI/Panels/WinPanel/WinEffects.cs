@@ -21,7 +21,7 @@ public class WinEffects
     public async UniTask ActivateEffects()
     {
         int collectedStars = _reward.CollectedStars;
-
+        
         for (int starIndex = 0; starIndex < collectedStars; ++starIndex)
         {
             await ActivateStar(starIndex);

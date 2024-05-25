@@ -31,6 +31,5 @@ public abstract class Panel : MonoBehaviour
     }
 
     protected virtual async UniTask OnShow() { await UniTask.Yield(); }
-
     protected virtual async UniTask OnHide() { await UniTask.Yield(); }
 }

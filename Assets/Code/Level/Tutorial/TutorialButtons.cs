@@ -3,7 +3,8 @@ using UnityEngine;
 public class TutorialButtons : MonoBehaviour
 {
     [SerializeField] private StoryTelling _storyTelling;
-    [SerializeField] private Canvas _ui;
+    [SerializeField] private InputButton _leftButton;
+    [SerializeField] private InputButton _rightButton;
 
     private void OnEnable()
     {
@@ -17,6 +18,7 @@ public class TutorialButtons : MonoBehaviour
 
     private void OnStoryEnded()
     {
-        _ui.gameObject.SetActive(true);
+        _leftButton.gameObject.SetActive(true);
+        _rightButton.gameObject.SetActive(true);
     }
 }
