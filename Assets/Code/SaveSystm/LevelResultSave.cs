@@ -1,40 +1,45 @@
 using System.Collections.Generic;
+using Level.Character.CharacterStateMachine.States;
+using Level.UI.Panels.WinPanel;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelResultSave : MonoBehaviour
+namespace SaveSystm
 {
-    [SerializeField] private Reward _reward;
-    private const string _saves = "Saves";
-    private WinState _characterWinState;
-
-    public void Initialize(WinState winState)
+    public class LevelResultSave : MonoBehaviour
     {
-        _characterWinState = winState;
-    }
+        [SerializeField] private Reward _reward;
+        private const string _saves = "Saves";
+        private WinState _characterWinState;
 
-    public void OnEnable()
-    {
-        _characterWinState.Entered += SaveLevelResult;
-    }
-
-    public void OnDisable()
-    {
-        _characterWinState.Entered -= SaveLevelResult;
-    }
-
-    private void SaveLevelResult()
-    {
-        Dictionary<int, int> saves = new();
-
-        if (PlayerPrefs.HasKey(_saves))
+        public void Initialize(WinState winState)
         {
-            saves = JsonConvert.DeserializeObject<Dictionary<int, int>>(PlayerPrefs.GetString(_saves));
+            _characterWinState = winState;
         }
 
-        saves[SceneManager.GetActiveScene().buildIndex] = _reward.CollectedStars;
+        public void OnEnable()
+        {
+            _characterWinState.Entered += SaveLevelResult;
+        }
 
-        PlayerPrefs.SetString(_saves, JsonConvert.SerializeObject(saves));
+        public void OnDisable()
+        {
+            _characterWinState.Entered -= SaveLevelResult;
+        }
+
+        private void SaveLevelResult()
+        {
+            Dictionary<int, int> saves = new();
+
+            if (PlayerPrefs.HasKey(_saves))
+            {
+                saves = JsonConvert.DeserializeObject<Dictionary<int, int>>(PlayerPrefs.GetString(_saves));
+            }
+
+            saves[SceneManager.GetActiveScene().buildIndex] = _reward.CollectedStars;
+
+            PlayerPrefs.SetString(_saves, JsonConvert.SerializeObject(saves));
+        }
     }
 }

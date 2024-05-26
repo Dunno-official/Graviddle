@@ -1,24 +1,28 @@
+using Level.UI.Panels.GameplayPanel.MovementButtons;
 using UnityEngine;
 
-public class TutorialButtons : MonoBehaviour
+namespace Level.Tutorial
 {
-    [SerializeField] private StoryTelling _storyTelling;
-    [SerializeField] private InputButton _leftButton;
-    [SerializeField] private InputButton _rightButton;
-
-    private void OnEnable()
+    public class TutorialButtons : MonoBehaviour
     {
-        _storyTelling.StoryEnded += OnStoryEnded;
-    }
+        [SerializeField] private StoryTelling _storyTelling;
+        [SerializeField] private InputButton _leftButton;
+        [SerializeField] private InputButton _rightButton;
+
+        private void OnEnable()
+        {
+            _storyTelling.StoryEnded += OnStoryEnded;
+        }
     
-    private void OnDisable()
-    {
-        _storyTelling.StoryEnded -= OnStoryEnded;
-    }
+        private void OnDisable()
+        {
+            _storyTelling.StoryEnded -= OnStoryEnded;
+        }
 
-    private void OnStoryEnded()
-    {
-        _leftButton.gameObject.SetActive(true);
-        _rightButton.gameObject.SetActive(true);
+        private void OnStoryEnded()
+        {
+            _leftButton.gameObject.SetActive(true);
+            _rightButton.gameObject.SetActive(true);
+        }
     }
 }

@@ -1,32 +1,36 @@
+using Extensions;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelButton : MonoBehaviour
+namespace Menu.LevelChoice
 {
-    [SerializeField] private Image[] _stars;
-    [SerializeField] private Image[] _nonStars;
-    [SerializeField] private Image _lockImage;
-    [SerializeField] private Button _button;
+    public class LevelButton : MonoBehaviour
+    {
+        [SerializeField] private Image[] _stars;
+        [SerializeField] private Image[] _nonStars;
+        [SerializeField] private Image _lockImage;
+        [SerializeField] private Button _button;
 
-    public void Initialize(UIBlocker uiBlocker)
-    {
-        _button.onClick.AddListener(uiBlocker.Enable);
-    }
-    
-    public void SetStars(int stars)
-    {
-        _nonStars.ForEach(nonStar => nonStar.gameObject.SetActive(true));
-        
-        for (int i = 0; i < stars; i++)
+        public void Initialize(UIBlocker uiBlocker)
         {
-            _stars[i].gameObject.SetActive(true);
-            _nonStars[i].gameObject.SetActive(false);
+            _button.onClick.AddListener(uiBlocker.Enable);
         }
-    }
+    
+        public void SetStars(int stars)
+        {
+            _nonStars.ForEach(nonStar => nonStar.gameObject.SetActive(true));
+        
+            for (int i = 0; i < stars; i++)
+            {
+                _stars[i].gameObject.SetActive(true);
+                _nonStars[i].gameObject.SetActive(false);
+            }
+        }
 
-    public void UnlockLevel()
-    {
-        _lockImage.gameObject.SetActive(false);
-        _button.interactable = true;
+        public void UnlockLevel()
+        {
+            _lockImage.gameObject.SetActive(false);
+            _button.interactable = true;
+        }
     }
 }

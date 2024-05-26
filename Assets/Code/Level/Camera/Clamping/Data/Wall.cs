@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
-public class Wall : MonoBehaviour
+namespace Level.Camera.Clamping.Data
 {
+    public class Wall : MonoBehaviour
+    {
+    }
 }

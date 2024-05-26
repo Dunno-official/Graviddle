@@ -123,12 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f730bae106d6414a82ae428a098c1789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterMovementDirection:
-    _inputButtons:
-    - {fileID: 2918516846925873886}
-    - {fileID: 6648851590239235327}
-    _characterSpriteFlipping:
-      _spriteRenderer: {fileID: 7559409932291032803}
   _transitionsConditions:
     _restartButton: {fileID: 5095809087917036308}
     _allCollisions: {fileID: 7749859406398825423}
@@ -144,6 +138,8 @@ MonoBehaviour:
   _laserTurrets: []
   _swipeHandler: {fileID: 1603758615754313137}
   _gravityBoxes: []
+  _rightButton: {fileID: 6648851590239235327}
+  _leftButton: {fileID: 2918516846925873886}
   _cameraData:
     _zoomInButton: {fileID: 5019780644004743343}
     _zoomOutButton: {fileID: 555827681909446976}
@@ -1083,12 +1079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8c51859e9378f4b9d5a84374b868f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &7559409932291032803 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 2684562040544259668, guid: a0ca5d21826335e4dae61dcad8de1703,
-    type: 3}
-  m_PrefabInstance: {fileID: 5596023511033784503}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7559409932762398649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2684562039941863182, guid: a0ca5d21826335e4dae61dcad8de1703,

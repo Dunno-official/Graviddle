@@ -1,35 +1,38 @@
 ﻿using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-public abstract class Panel : MonoBehaviour
+namespace Level.UI.Panels
 {
-    public virtual async UniTask Initialize()
+    public abstract class Panel : MonoBehaviour
     {
-        await UniTask.Yield();
-    }
+        public virtual async UniTask Initialize()
+        {
+            await UniTask.Yield();
+        }
     
-    public void Enable()
-    {
-        gameObject.SetActive(true);
-    }
+        public void Enable()
+        {
+            gameObject.SetActive(true);
+        }
 
-    public void Disable()
-    {
-        gameObject.SetActive(false);
-    }
+        public void Disable()
+        {
+            gameObject.SetActive(false);
+        }
 
-    public async UniTask Show()
-    {
-        Enable();
-        await OnShow();
-    }
+        public async UniTask Show()
+        {
+            Enable();
+            await OnShow();
+        }
 
-    public async UniTask Hide()
-    {
-        await OnHide();
-        Disable();
-    }
+        public async UniTask Hide()
+        {
+            await OnHide();
+            Disable();
+        }
 
-    protected virtual async UniTask OnShow() { await UniTask.Yield(); }
-    protected virtual async UniTask OnHide() { await UniTask.Yield(); }
+        protected virtual async UniTask OnShow() { await UniTask.Yield(); }
+        protected virtual async UniTask OnHide() { await UniTask.Yield(); }
+    }
 }

@@ -1,42 +1,49 @@
+using Level.Character.Helpers;
+using Level.Gravitation;
+using Level.Gravitation.SwipeHandler;
+using MonoBehaviourWrapper;
 using UnityEngine;
 
-public class CharacterRotationImpulse : ISubscriber
+namespace Level.Character.Physics
 {
-    private readonly Rigidbody2D _rigidbody;
-    private readonly SwipeHandler _swipeHandler;
-    private const int _straightAngle = 180;
-    private int _currentZRotation;
-
-    public CharacterRotationImpulse(Rigidbody2D rigidbody2D, SwipeHandler swipeHandler)
+    public class CharacterRotationImpulse : ISubscriber
     {
-        _rigidbody = rigidbody2D;
-        _swipeHandler = swipeHandler;
-    }
+        private readonly Rigidbody2D _rigidbody;
+        private readonly SwipeHandler _swipeHandler;
+        private const int _straightAngle = 180;
+        private int _currentZRotation;
 
-    void ISubscriber.Subscribe()
-    {
-        _swipeHandler.GravityChanged += TryImpulseCharacter;
-    }
-
-    void ISubscriber.Unsubscribe()
-    {
-        _swipeHandler.GravityChanged -= TryImpulseCharacter;
-    }
-
-    private void TryImpulseCharacter(GravityDirection gravityDirection)
-    {
-        int newZRotation = GravityDataPresenter.GravityData[gravityDirection].ZRotation;
-
-        if (IsRightAngleRotation(newZRotation))
+        public CharacterRotationImpulse(Rigidbody2D rigidbody2D, SwipeHandler swipeHandler)
         {
-            _rigidbody.AddForce(_rigidbody.transform.up, ForceMode2D.Impulse);
+            _rigidbody = rigidbody2D;
+            _swipeHandler = swipeHandler;
         }
 
-        _currentZRotation = newZRotation;
-    }
+        void ISubscriber.Subscribe()
+        {
+            _swipeHandler.GravityChanged += TryImpulseCharacter;
+        }
 
-    private bool IsRightAngleRotation(float zRotation)
-    {
-        return Mathf.Abs(zRotation - _currentZRotation) % _straightAngle != 0;
+        void ISubscriber.Unsubscribe()
+        {
+            _swipeHandler.GravityChanged -= TryImpulseCharacter;
+        }
+
+        private void TryImpulseCharacter(GravityDirection gravityDirection)
+        {
+            int newZRotation = GravityDataPresenter.GravityData[gravityDirection].ZRotation;
+
+            if (IsRightAngleRotation(newZRotation))
+            {
+                _rigidbody.AddForce(_rigidbody.transform.up, ForceMode2D.Impulse);
+            }
+
+            _currentZRotation = newZRotation;
+        }
+
+        private bool IsRightAngleRotation(float zRotation)
+        {
+            return Mathf.Abs(zRotation - _currentZRotation) % _straightAngle != 0;
+        }
     }
 }

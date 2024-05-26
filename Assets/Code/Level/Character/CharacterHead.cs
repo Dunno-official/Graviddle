@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
-public class CharacterHead : MonoBehaviour
+namespace Level.Character
 {
+    public class CharacterHead : MonoBehaviour
+    {
+    }
 }

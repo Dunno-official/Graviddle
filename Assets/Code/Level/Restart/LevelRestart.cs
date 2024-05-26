@@ -1,46 +1,54 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
+using Extensions;
+using Level.Character.CharacterStateMachine.States;
+using MonoBehaviourWrapper;
+using SceneTransitions;
+using Utils;
 
-public class LevelRestart : ISubscriber
+namespace Level.Restart
 {
-    private readonly RestartableComponents _restartableComponents = new();
-    private readonly Action _restartEvent;
-    private readonly DieState _dieState;
-    private const float _restartTime = 0.7f;
-
-    public LevelRestart(Action restartEvent, DieState dieState)
+    public class LevelRestart : ISubscriber
     {
-        _restartEvent = restartEvent;
-        _dieState = dieState;
-    }
+        private readonly RestartableComponents _restartableComponents = new();
+        private readonly Action _restartEvent;
+        private readonly DieState _dieState;
+        private const float _restartTime = 0.7f;
 
-    void ISubscriber.Subscribe()
-    {
-        _dieState.Entered += MakeRestart;
-    }
+        public LevelRestart(Action restartEvent, DieState dieState)
+        {
+            _restartEvent = restartEvent;
+            _dieState = dieState;
+        }
 
-    void ISubscriber.Unsubscribe()
-    {
-        _dieState.Entered -= MakeRestart;
-    }
+        void ISubscriber.Subscribe()
+        {
+            _dieState.Entered += MakeRestart;
+        }
 
-    private async void MakeRestart()
-    {
-        LoadingScreen deathScreen = await LocalAssetLoader.Load<LoadingScreen>("LevelRestart");
-        Backstage backstage = new(deathScreen, RestartObjects);
+        void ISubscriber.Unsubscribe()
+        {
+            _dieState.Entered -= MakeRestart;
+        }
 
-        await backstage.MakeTransition();
+        private async void MakeRestart()
+        {
+            LoadingScreen deathScreen = await LocalAssetLoader.Load<LoadingScreen>("LevelRestart");
+            Backstage backstage = new(deathScreen, RestartObjects);
 
-        _restartableComponents.AfterRestartComponents.RestartForEach();
+            await backstage.MakeTransition();
+
+            _restartableComponents.AfterRestartComponents.RestartForEach();
         
-        LocalAssetLoader.Unload(deathScreen.gameObject);
-    }
+            LocalAssetLoader.Unload(deathScreen.gameObject);
+        }
 
-    private async UniTask RestartObjects()
-    {
-        _restartableComponents.RestartComponents.RestartForEach();
-        _restartEvent();
+        private async UniTask RestartObjects()
+        {
+            _restartableComponents.RestartComponents.RestartForEach();
+            _restartEvent();
 
-        await UniTask.Delay(TimeSpan.FromSeconds(_restartTime));
+            await UniTask.Delay(TimeSpan.FromSeconds(_restartTime));
+        }
     }
 }

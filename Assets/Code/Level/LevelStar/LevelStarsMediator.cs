@@ -1,20 +1,25 @@
 ﻿using System;
+using Level.Gravitation;
+using Level.UI.Panels.WinPanel;
 using UnityEngine;
 
-[Serializable]
-public class LevelStarsMediator
+namespace Level.LevelStar
 {
-    [SerializeField] private LevelStar[] _levelStars;
-    [SerializeField] private StarPickupFeedback _starPickupFeedback;
-    [SerializeField] private Reward _reward;
-    
-    public void Resolve(CharacterGravityState characterCharacterGravityState)
+    [Serializable]
+    public class LevelStarsMediator
     {
-        foreach (LevelStar levelStar in _levelStars)
+        [SerializeField] private LevelStar[] _levelStars;
+        [SerializeField] private StarPickupFeedback _starPickupFeedback;
+        [SerializeField] private Reward _reward;
+    
+        public void Resolve(CharacterGravityState characterCharacterGravityState)
         {
-            levelStar.Initialize(_starPickupFeedback, characterCharacterGravityState);
-        }
+            foreach (LevelStar levelStar in _levelStars)
+            {
+                levelStar.Initialize(_starPickupFeedback, characterCharacterGravityState);
+            }
         
-        _reward.Initialize(_levelStars);
+            _reward.Initialize(_levelStars);
+        }
     }
 }

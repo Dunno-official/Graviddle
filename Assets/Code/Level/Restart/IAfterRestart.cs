@@ -1,5 +1,10 @@
 ﻿
-public interface IAfterRestart : IUnityCallback
+using MonoBehaviourWrapper;
+
+namespace Level.Restart
 {
-    void Restart();
+    public interface IAfterRestart : IUnityCallback
+    {
+        void Restart();
+    }
 }

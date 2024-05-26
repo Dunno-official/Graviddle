@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class GameQuit : MonoBehaviour
+namespace Menu.MainMenu
 {
-    public void Quit()
+    public class GameQuit : MonoBehaviour
     {
-        Application.Quit();
+        public void Quit()
+        {
+            Application.Quit();
+        }
     }
 }

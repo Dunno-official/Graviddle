@@ -1,11 +1,15 @@
-﻿using UnityEngine;
+﻿using Level.Restart;
+using UnityEngine;
 
-public class PhysicsRestart : MonoBehaviour, IRestart
+namespace Level.Character.Physics
 {
-    [SerializeField] private Rigidbody2D _rigidbody;
-
-    void IRestart.Restart()
+    public class PhysicsRestart : MonoBehaviour, IRestart
     {
-        _rigidbody.velocity = Vector2.zero;
+        [SerializeField] private Rigidbody2D _rigidbody;
+
+        void IRestart.Restart()
+        {
+            _rigidbody.velocity = Vector2.zero;
+        }
     }
 }

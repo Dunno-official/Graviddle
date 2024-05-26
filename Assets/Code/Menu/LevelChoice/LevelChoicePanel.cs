@@ -1,14 +1,18 @@
 ﻿using Cysharp.Threading.Tasks;
+using Menu.MainMenu.AnimatedPanel;
 
-public class LevelChoicePanel : AnimatedPanel
+namespace Menu.LevelChoice
 {
-    public override UniTask Initialize()
+    public class LevelChoicePanel : AnimatedPanel
     {
-        LevelButton[] buttons = GetComponentsInChildren<LevelButton>();
-        LevelButtonsPresenter buttonsPresenter = new(buttons, UIBlocker);
+        public override UniTask Initialize()
+        {
+            LevelButton[] buttons = GetComponentsInChildren<LevelButton>();
+            LevelButtonsPresenter buttonsPresenter = new(buttons, UIBlocker);
         
-        buttonsPresenter.Initialize();
+            buttonsPresenter.Initialize();
 
-        return base.Initialize();
+            return base.Initialize();
+        }
     }
 }

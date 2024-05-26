@@ -1,36 +1,39 @@
 using UnityEngine;
 
-public class LaserRaycast : MonoBehaviour
+namespace Level.Obstacles.Laser.LaserSetup
 {
-    [SerializeField] private bool _updateRaycast;
-    [SerializeField] private LaserSetup _laserSetup;
-    [SerializeField] private LayerMask _layerMask;
-    private const float _raycastDistance = 100f;
-
-    private void Update()
+    public class LaserRaycast : MonoBehaviour
     {
-        if (TryRaycast(out Vector2 hitPoint))
-        {
-            _laserSetup.Setup(hitPoint);
-            enabled = _updateRaycast;
-        }
-    }
+        [SerializeField] private bool _updateRaycast;
+        [SerializeField] private LaserSetup _laserSetup;
+        [SerializeField] private LayerMask _layerMask;
+        private const float _raycastDistance = 100f;
 
-    private bool TryRaycast(out Vector2 hitPoint)
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, _raycastDistance, _layerMask);
-        hitPoint = Vector2.zero;
-
-        if (hit.collider != null)
+        private void Update()
         {
-            hitPoint = hit.point;
+            if (TryRaycast(out Vector2 hitPoint))
+            {
+                _laserSetup.Setup(hitPoint);
+                enabled = _updateRaycast;
+            }
         }
 
-        else
+        private bool TryRaycast(out Vector2 hitPoint)
         {
-            Debug.LogError($"Laser cannot raycast");
-        }
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, _raycastDistance, _layerMask);
+            hitPoint = Vector2.zero;
 
-        return hit.collider != null;
+            if (hit.collider != null)
+            {
+                hitPoint = hit.point;
+            }
+
+            else
+            {
+                Debug.LogError($"Laser cannot raycast");
+            }
+
+            return hit.collider != null;
+        }
     }
 }

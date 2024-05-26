@@ -1,27 +1,30 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ButtonAnimation : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
+namespace Level.UI.Panels.GameplayPanel.MovementButtons
 {
-    private const float _verticalOffset = 8f;
-    private Vector2 _startPosition;
-
-    private void Start()
+    public class ButtonAnimation : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
     {
-        _startPosition = transform.position;
-    }
+        private const float _verticalOffset = 8f;
+        private Vector2 _startPosition;
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        transform.position +=  _verticalOffset * transform.up;
-    }
+        private void Start()
+        {
+            _startPosition = transform.position;
+        }
 
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        transform.position = _startPosition;
-    }
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            transform.position +=  _verticalOffset * transform.up;
+        }
 
-    public void OnDrag(PointerEventData eventData)
-    {
+        public void OnPointerUp(PointerEventData eventData)
+        {
+            transform.position = _startPosition;
+        }
+
+        public void OnDrag(PointerEventData eventData)
+        {
+        }
     }
 }

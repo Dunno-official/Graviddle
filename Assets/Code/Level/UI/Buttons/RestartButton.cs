@@ -1,18 +1,22 @@
-﻿using UnityEngine;
+﻿using Level.Character;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class RestartButton : MonoBehaviour
+namespace Level.UI.Buttons
 {
-    [SerializeField] private Button _button;
-    private readonly PollingEvent _eventTransit = new();
+    public class RestartButton : MonoBehaviour
+    {
+        [SerializeField] private Button _button;
+        private readonly PollingEvent _eventTransit = new();
 
-    private void Start()
-    {
-        _button.onClick.AddListener(_eventTransit.Invoke);
-    }
+        private void Start()
+        {
+            _button.onClick.AddListener(_eventTransit.Invoke);
+        }
     
-    public bool CheckIfPressed()
-    {
-        return _eventTransit.CheckIfEventHappened();
+        public bool CheckIfPressed()
+        {
+            return _eventTransit.CheckIfEventHappened();
+        }
     }
 }

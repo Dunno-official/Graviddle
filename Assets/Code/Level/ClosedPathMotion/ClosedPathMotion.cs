@@ -1,29 +1,33 @@
-﻿using UnityEngine;
+﻿using Level.Restart;
+using UnityEngine;
 
-public class ClosedPathMotion : MonoBehaviour, IRestart
+namespace Level.ClosedPathMotion
 {
-    [SerializeField] private ClosedPathMotionCalculator _motionCalculator;
-    [SerializeField] private Transform _targetTransform;
-
-    private Vector2 _startPosition = Vector2.zero;
-    private Vector2 _targetPosition = Vector2.zero;
-
-    private void Start()
+    public class ClosedPathMotion : MonoBehaviour, IRestart
     {
-        _targetPosition = _targetTransform.position;
-        _startPosition = transform.position;
+        [SerializeField] private ClosedPathMotionCalculator _motionCalculator;
+        [SerializeField] private Transform _targetTransform;
 
-        _motionCalculator.Initialize();
-    }
+        private Vector2 _startPosition = Vector2.zero;
+        private Vector2 _targetPosition = Vector2.zero;
 
-    private void Update()
-    {
-        float lerp = _motionCalculator.EvaluateLerpPosition();
-        transform.position = Vector2.Lerp(_startPosition, _targetPosition, lerp);
-    }
+        private void Start()
+        {
+            _targetPosition = _targetTransform.position;
+            _startPosition = transform.position;
+
+            _motionCalculator.Initialize();
+        }
+
+        private void Update()
+        {
+            float lerp = _motionCalculator.EvaluateLerpPosition();
+            transform.position = Vector2.Lerp(_startPosition, _targetPosition, lerp);
+        }
     
-    void IRestart.Restart()
-    {
-        _motionCalculator.Restart();
+        void IRestart.Restart()
+        {
+            _motionCalculator.Restart();
+        }
     }
 }

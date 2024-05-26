@@ -1,25 +1,30 @@
+using Level.Character.CharacterStateMachine.States;
+using Level.Character.CharacterStateMachine.StateTransitions;
 using UnityEngine;
 
-public class CharacterVFX : CharacterFallingEventsHandler
+namespace Level.Character.Effects
 {
-    private readonly ParticleSystem _fallingDust;
-    private readonly TrailRenderer _trailRenderer;
-
-    public CharacterVFX(ParticleSystem fallingDust, TrailRenderer trailRenderer, Transition fallToIdleTransition, FallState fallState) 
-        : base(fallToIdleTransition, fallState)
+    public class CharacterVFX : CharacterFallingEventsHandler
     {
-        _fallingDust = fallingDust;
-        _trailRenderer = trailRenderer;
-    }
+        private readonly ParticleSystem _fallingDust;
+        private readonly TrailRenderer _trailRenderer;
 
-    protected override void OnStartFalling()
-    {
-        _trailRenderer.emitting = true;
-    }
+        public CharacterVFX(ParticleSystem fallingDust, TrailRenderer trailRenderer, Transition fallToIdleTransition, FallState fallState) 
+            : base(fallToIdleTransition, fallState)
+        {
+            _fallingDust = fallingDust;
+            _trailRenderer = trailRenderer;
+        }
 
-    protected override void OnEndFalling()
-    {
-        _fallingDust.Play();
-        _trailRenderer.emitting = false;
+        protected override void OnStartFalling()
+        {
+            _trailRenderer.emitting = true;
+        }
+
+        protected override void OnEndFalling()
+        {
+            _fallingDust.Play();
+            _trailRenderer.emitting = false;
+        }
     }
 }

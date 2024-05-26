@@ -1,61 +1,66 @@
 using System;
 using Cysharp.Threading.Tasks;
+using Extensions;
+using Level.UI.Panels;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class UI : MonoBehaviour
+namespace Level.UI
 {
-    [SerializeField] [ChildGameObjectsOnly] private Panel[] _states;
-    [SerializeField] [ChildGameObjectsOnly] private Panel _initialPanel;
-    private Panel _current;
-
-    public async UniTask Initialize()
+    public class UI : MonoBehaviour
     {
-        foreach (Panel panel in _states)
+        [SerializeField] [ChildGameObjectsOnly] private Panel[] _states;
+        [SerializeField] [ChildGameObjectsOnly] private Panel _initialPanel;
+        private Panel _current;
+
+        public async UniTask Initialize()
         {
-            await panel.Initialize();
-        }
-
-        await Show(_initialPanel);
-    }
-
-    public async void ShowSync(Panel panel) // editor button
-    {
-        await Show(panel);
-    }
-    
-    public async UniTask Show<T>() where T : Panel
-    {
-        await Show(Find<T>());
-    }
-    
-    private async UniTask Show(Panel panel)
-    {
-        if (_current != null)
-        {
-            await _current.Hide();
-        }
-        
-        await panel.Show();
-        
-        _current = panel;
-    }
-    
-    public void DisableAll()
-    {
-        _states.ForEach(state => state.Disable());
-    }
-
-    private T Find<T>() where T : Panel
-    {
-        foreach (Panel uiState in _states)
-        {
-            if (uiState is T result)
+            foreach (Panel panel in _states)
             {
-                return result;
+                await panel.Initialize();
             }
+
+            await Show(_initialPanel);
         }
 
-        throw new Exception("No such ui component");
+        public async void ShowSync(Panel panel) // editor button
+        {
+            await Show(panel);
+        }
+    
+        public async UniTask Show<T>() where T : Panel
+        {
+            await Show(Find<T>());
+        }
+    
+        private async UniTask Show(Panel panel)
+        {
+            if (_current != null)
+            {
+                await _current.Hide();
+            }
+        
+            await panel.Show();
+        
+            _current = panel;
+        }
+    
+        public void DisableAll()
+        {
+            _states.ForEach(state => state.Disable());
+        }
+
+        private T Find<T>() where T : Panel
+        {
+            foreach (Panel uiState in _states)
+            {
+                if (uiState is T result)
+                {
+                    return result;
+                }
+            }
+
+            throw new Exception("No such ui component");
+        }
     }
 }

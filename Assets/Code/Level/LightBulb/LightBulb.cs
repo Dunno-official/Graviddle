@@ -1,38 +1,41 @@
 using UnityEngine;
 
-public class LightBulb : MonoBehaviour
+namespace Level.LightBulb
 {
-    [SerializeField] private MonoBehaviour _switcherMonoBehaviour;
-    [SerializeField] private Animator _animator;
-    private ISwitcher _switcher;
-    private const string _switchingOnAnimationName = "SwitchingOn";
-    private const string _switchingOffAnimationName = "SwitchingOff";
-
-    private void OnValidate()
+    public class LightBulb : MonoBehaviour
     {
-        if (_switcherMonoBehaviour is ISwitcher == false)
+        [SerializeField] private MonoBehaviour _switcherMonoBehaviour;
+        [SerializeField] private Animator _animator;
+        private ISwitcher _switcher;
+        private const string _switchingOnAnimationName = "SwitchingOn";
+        private const string _switchingOffAnimationName = "SwitchingOff";
+
+        private void OnValidate()
         {
-            _switcherMonoBehaviour = null;
+            if (_switcherMonoBehaviour is ISwitcher == false)
+            {
+                _switcherMonoBehaviour = null;
+            }
         }
-    }
 
-    private void Awake()
-    {
-        _switcher = _switcherMonoBehaviour as ISwitcher;
-    }
+        private void Awake()
+        {
+            _switcher = _switcherMonoBehaviour as ISwitcher;
+        }
 
-    private void OnEnable()
-    {
-        _switcher.Toggled += ToggleLightBulb;
-    }
+        private void OnEnable()
+        {
+            _switcher.Toggled += ToggleLightBulb;
+        }
 
-    private void OnDisable()
-    {
-        _switcher.Toggled -= ToggleLightBulb;
-    }
+        private void OnDisable()
+        {
+            _switcher.Toggled -= ToggleLightBulb;
+        }
     
-    private void ToggleLightBulb(bool activate)
-    {
-        _animator.Play(activate ? _switchingOnAnimationName : _switchingOffAnimationName);
+        private void ToggleLightBulb(bool activate)
+        {
+            _animator.Play(activate ? _switchingOnAnimationName : _switchingOffAnimationName);
+        }
     }
 }

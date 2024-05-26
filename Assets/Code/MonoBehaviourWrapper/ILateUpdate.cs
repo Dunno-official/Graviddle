@@ -1,5 +1,8 @@
 ﻿
-public interface ILateUpdate : IUnityCallback
+namespace MonoBehaviourWrapper
 {
-    void LateUpdate();
+    public interface ILateUpdate : IUnityCallback
+    {
+        void LateUpdate();
+    }
 }

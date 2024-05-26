@@ -1,8 +1,11 @@
 ﻿
-public static class Algorithms
+namespace Extensions
 {
-    public static void Swap<T>(ref T firstElement, ref T secondElement)
+    public static class Algorithms
     {
-        (firstElement, secondElement) = (secondElement, firstElement);
+        public static void Swap<T>(ref T firstElement, ref T secondElement)
+        {
+            (firstElement, secondElement) = (secondElement, firstElement);
+        }
     }
 }

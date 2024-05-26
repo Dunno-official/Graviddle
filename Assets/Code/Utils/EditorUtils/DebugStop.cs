@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public class DebugStop : MonoBehaviour
+namespace Utils.EditorUtils
 {
-    private void Update()
+    public class DebugStop : MonoBehaviour
     {
-        if(Input.GetKey(KeyCode.Space))
+        private void Update()
         {
-            Debug.Break();
+            if(Input.GetKey(KeyCode.Space))
+            {
+                Debug.Break();
+            }
         }
     }
 }

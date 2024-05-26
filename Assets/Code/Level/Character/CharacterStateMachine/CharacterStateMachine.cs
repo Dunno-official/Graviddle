@@ -1,34 +1,44 @@
-﻿
-public class CharacterStateMachine : IUpdate
+﻿using Level.Character.CharacterStateMachine.StateTransitions;
+using MonoBehaviourWrapper;
+
+namespace Level.Character.CharacterStateMachine
 {
-    private readonly TransitionsPresenter _transitionsPresenter;
-    private CharacterState _state;
-
-    public CharacterStateMachine(TransitionsPresenter transitionsPresenter, CharacterState initialState)
+    public class CharacterStateMachine : IUpdate, IGizmo
     {
-        _transitionsPresenter = transitionsPresenter;
-        _state = initialState;
-    }
+        private readonly TransitionsPresenter _transitionsPresenter;
+        private CharacterState _state;
 
-    void IUpdate.Update()
-    {
-        _state.Update();
-        TryTransit();
-    }
-
-    private void TryTransit()
-    {
-        CharacterState newState = _transitionsPresenter.Transit(_state);
-        
-        if (newState != _state)
+        public CharacterStateMachine(TransitionsPresenter transitionsPresenter, CharacterState initialState)
         {
-            SwitchState(newState);
+            _transitionsPresenter = transitionsPresenter;
+            _state = initialState;
         }
-    }
 
-    private void SwitchState(CharacterState newState)
-    {
-        _state = newState;
-        _state.Enter();
+        void IUpdate.Update()
+        {
+            _state.Update();
+            TryTransit();
+        }
+
+        private void TryTransit()
+        {
+            CharacterState newState = _transitionsPresenter.Transit(_state);
+        
+            if (newState != _state)
+            {
+                SwitchState(newState);
+            }
+        }
+
+        private void SwitchState(CharacterState newState)
+        {
+            _state = newState;
+            _state.Enter();
+        }
+
+        public void DrawGizmo()
+        {
+            _state.DrawGizmo();
+        }
     }
 }

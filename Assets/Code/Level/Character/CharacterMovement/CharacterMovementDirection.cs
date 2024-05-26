@@ -1,36 +1,42 @@
-﻿using System;
+﻿using Level.Character.Helpers;
+using Level.Gravitation;
+using Level.UI.Panels.GameplayPanel.MovementButtons;
+using MonoBehaviourWrapper;
 using UnityEngine;
 
-[Serializable]
-public class CharacterMovementDirection : IUpdate
+namespace Level.Character.CharacterMovement
 {
-    [SerializeField] private InputButton[] _inputButtons;
-    [SerializeField] private CharacterSpriteFlipping _characterSpriteFlipping;
-    private IGravityState _gravityState;
-
-    public Vector2 Direction { get; private set; }
-
-    public void Initialize(IGravityState gravityState)
+    public class CharacterMovementDirection : IUpdate
     {
-        _gravityState = gravityState;
-    }
-    
-    void IUpdate.Update()
-    {
-        MovementState state = MovementState.Stop;
-        
-        TryRun(0, ref state, MovementState.Left);
-        TryRun(1, ref state, MovementState.Right);
-        
-        Direction = _gravityState.Data.Rotation * (Vector2.right * (int) state);
-    }
+        private readonly IGravityState _gravityState;
+        private readonly InputButton _rightButton;
+        private readonly InputButton _leftButton;
 
-    private void TryRun(int buttonIndex, ref MovementState state, MovementState targetState)
-    {
-        if (_inputButtons[buttonIndex].IsTouching)
+        public CharacterMovementDirection(IGravityState gravityState, InputButton rightButton, InputButton leftButton)
         {
-            state = targetState;
-            _characterSpriteFlipping.FlipCharacter(state);
+            _gravityState = gravityState;
+            _rightButton = rightButton;
+            _leftButton = leftButton;
+        }
+
+        public Vector2 Direction { get; private set; }
+
+        void IUpdate.Update()
+        {
+            MovementState state = MovementState.Stop;
+        
+            TryChangeState(_leftButton, ref state, MovementState.Left);
+            TryChangeState(_rightButton, ref state, MovementState.Right);
+
+            Direction = _gravityState.Data.Rotation * (Vector2.right * (int) state);
+        }
+
+        private void TryChangeState(InputButton inputButton, ref MovementState state, MovementState targetState)
+        {
+            if (inputButton.IsTouching)
+            {
+                state = targetState;
+            }
         }
     }
 }

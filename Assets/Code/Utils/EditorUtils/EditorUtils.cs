@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public static class EditorUtils 
+namespace Utils.EditorUtils
 {
-    [RuntimeInitializeOnLoadMethod]
-    private static void OnRuntimeMethodLoad()
+    public static class EditorUtils 
     {
-        #if UNITY_EDITOR
-
-        UI ui = Object.FindObjectOfType<UI>();
-        
-        if (ui != null)
+        [RuntimeInitializeOnLoadMethod]
+        private static void OnRuntimeMethodLoad()
         {
-            //ui.Show<GameplayPanel>();
-        }
+#if UNITY_EDITOR
 
-        #endif  
+            Level.UI.UI ui = Object.FindObjectOfType<Level.UI.UI>();
+        
+            if (ui != null)
+            {
+                //ui.Show<GameplayPanel>();
+            }
+
+#endif  
+        }
     }
 }

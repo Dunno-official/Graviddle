@@ -1,39 +1,46 @@
 ﻿using DG.Tweening;
+using Level.Character.CharacterStateMachine.States;
+using Level.Gravitation;
+using MonoBehaviourWrapper;
 using UnityEngine;
+using Utils.Physics;
 
-public class CharacterToPortalPulling : ISubscriber
+namespace Level.Portals.FinishPortal
 {
-    private readonly float _animationDuration = 1.25f;
-    private readonly GravityRotation _gravityRotation;
-    private readonly CollisionsList _collisions;
-    private readonly Transform _character;
-    private readonly WinState _winState;
-
-    public CharacterToPortalPulling(WinState winState, Transform character, CollisionsList collisions, GravityRotation gravityRotation)
+    public class CharacterToPortalPulling : ISubscriber
     {
-        _winState = winState;
-        _character = character;
-        _collisions = collisions;
-        _gravityRotation = gravityRotation;
-    }
+        private readonly float _animationDuration = 1.25f;
+        private readonly GravityRotation _gravityRotation;
+        private readonly CollisionsList _collisions;
+        private readonly Transform _character;
+        private readonly WinState _winState;
 
-    public void Subscribe()
-    {
-        _winState.Entered += PullToPortal;
-    }
+        public CharacterToPortalPulling(WinState winState, Transform character, CollisionsList collisions, GravityRotation gravityRotation)
+        {
+            _winState = winState;
+            _character = character;
+            _collisions = collisions;
+            _gravityRotation = gravityRotation;
+        }
 
-    public void Unsubscribe()
-    {
-        _winState.Entered -= PullToPortal;
-    }
+        public void Subscribe()
+        {
+            _winState.Entered += PullToPortal;
+        }
 
-    private void PullToPortal()
-    {
-        _gravityRotation.IsActive = false;
+        public void Unsubscribe()
+        {
+            _winState.Entered -= PullToPortal;
+        }
 
-        FinishPortal finishPortal = _collisions.GetComponentFromList<FinishPortal>();
+        private void PullToPortal()
+        {
+            _gravityRotation.IsActive = false;
+
+            FinishPortal finishPortal = _collisions.GetComponentFromList<FinishPortal>();
         
-        _character.DOMove(finishPortal.PullingPoint.position, _animationDuration);
-        _character.DORotate(finishPortal.PullingPoint.eulerAngles, _animationDuration);
+            _character.DOMove(finishPortal.PullingPoint.position, _animationDuration);
+            _character.DORotate(finishPortal.PullingPoint.eulerAngles, _animationDuration);
+        }
     }
 }

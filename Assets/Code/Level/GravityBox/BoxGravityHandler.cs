@@ -1,47 +1,54 @@
 ﻿
-public class BoxGravityHandler : TogglingComponent, IRestart
+using Level.Gravitation;
+using Level.Restart;
+using Utils;
+
+namespace Level.GravityBox
 {
-    private readonly BoxGravitySelection _selection;
-    private readonly BoxGravityState _state;
-    private readonly Gravity _gravity;
-
-    public BoxGravityHandler(Gravity gravity, BoxGravitySelection selection, BoxGravityState state)
+    public class BoxGravityHandler : TogglingComponent, IRestart
     {
-        _selection = selection;
-        _gravity = gravity;
-        _state = state;
-        IsActive = false;
-    }
+        private readonly BoxGravitySelection _selection;
+        private readonly BoxGravityState _state;
+        private readonly Gravity _gravity;
 
-    protected override void OnUpdate()
-    {
-        _state.Update();
-        UpdateUI();
-    }
-
-    public void TryChangeDirection()
-    {
-        if (_state.DirectionChanged)
+        public BoxGravityHandler(Gravity gravity, BoxGravitySelection selection, BoxGravityState state)
         {
-            _state.UpdateDirection();
-            _gravity.SetDirection(_state.TargetGlobalDirection);
+            _selection = selection;
+            _gravity = gravity;
+            _state = state;
+            IsActive = false;
         }
-    }
 
-    private void UpdateUI()
-    {
-        if (_state.DirectionChanged)
+        protected override void OnUpdate()
         {
-            _selection.TrySelectDirection(_state.Direction, _state.TargetGlobalDirection);
+            _state.Update();
+            UpdateUI();
         }
-        else
-        {
-            _selection.DeselectAll();
-        }
-    }
 
-    public void Restart()
-    {
-        _state.Reset();
+        public void TryChangeDirection()
+        {
+            if (_state.DirectionChanged)
+            {
+                _state.UpdateDirection();
+                _gravity.SetDirection(_state.TargetGlobalDirection);
+            }
+        }
+
+        private void UpdateUI()
+        {
+            if (_state.DirectionChanged)
+            {
+                _selection.TrySelectDirection(_state.Direction, _state.TargetGlobalDirection);
+            }
+            else
+            {
+                _selection.DeselectAll();
+            }
+        }
+
+        public void Restart()
+        {
+            _state.Reset();
+        }
     }
 }

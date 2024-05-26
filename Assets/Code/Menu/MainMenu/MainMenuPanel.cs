@@ -2,16 +2,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainMenuPanel : AnimatedPanel
+namespace Menu.MainMenu
 {
-    [SerializeField] private VerticalLayoutGroup _group;
-    
-    public override async UniTask Initialize()
+    public class MainMenuPanel : AnimatedPanel.AnimatedPanel
     {
-        Enable();
-        await UniTask.Yield();
-        LayoutRebuilder.ForceRebuildLayoutImmediate(_group.transform as RectTransform);
+        [SerializeField] private VerticalLayoutGroup _group;
+    
+        public override async UniTask Initialize()
+        {
+            Enable();
+            await UniTask.Yield();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(_group.transform as RectTransform);
 
-        await base.Initialize();
+            await base.Initialize();
+        }
     }
 }

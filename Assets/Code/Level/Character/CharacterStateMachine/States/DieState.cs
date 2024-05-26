@@ -1,12 +1,16 @@
-﻿using UnityEngine;
+﻿using Level.Character.Helpers;
+using UnityEngine;
 
-public class DieState : CharacterState
+namespace Level.Character.CharacterStateMachine.States
 {
-    public DieState(Animator character) : base(character, AnimationsName.Die)
+    public class DieState : CharacterState
     {
-    }
+        public DieState(Animator character) : base(character, AnimationsName.Die)
+        {
+        }
 
-    protected override void OnEnterState()
-    {
+        protected override void OnEnterState()
+        {
+        }
     }
 }

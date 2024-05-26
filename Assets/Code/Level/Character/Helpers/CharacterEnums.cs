@@ -1,15 +1,17 @@
-﻿
-public enum GravityDirection
+﻿namespace Level.Character.Helpers
 {
-    Down,
-    Right,
-    Up,
-    Left
-}
+    public enum GravityDirection
+    {
+        Down,
+        Right,
+        Up,
+        Left
+    }
 
-public enum MovementState
-{
-    Stop = 0,
-    Left = -1,
-    Right = 1,
+    public enum MovementState
+    {
+        Stop = 0,
+        Left = -1,
+        Right = 1,
+    }
 }

@@ -1,29 +1,33 @@
+using Level.Gravitation.GravityButton;
 using UnityEngine;
 
-public class ButtonLaser : MonoBehaviour
+namespace Level.Obstacles.Laser
 {
-    [SerializeField] private LaserSwitcher _laserSwitcher;
-    [SerializeField] private GravityButton _gravityButton;
-    
-    private void Start()
+    public class ButtonLaser : MonoBehaviour
     {
-        _laserSwitcher.Initialize(true);
-    }
+        [SerializeField] private LaserSwitcher _laserSwitcher;
+        [SerializeField] private GravityButton _gravityButton;
     
-    private void OnEnable()
-    {
-        _gravityButton.Toggled += ToggleLaser;
-    }
+        private void Start()
+        {
+            _laserSwitcher.Initialize(true);
+        }
     
-    private void OnDisable()
-    {
-        _gravityButton.Toggled -= ToggleLaser;
-    }
+        private void OnEnable()
+        {
+            _gravityButton.Toggled += ToggleLaser;
+        }
+    
+        private void OnDisable()
+        {
+            _gravityButton.Toggled -= ToggleLaser;
+        }
 
-    private void ToggleLaser(bool isButtonPressed)
-    {
-        StopAllCoroutines();
-        _laserSwitcher.StopAnimation();
-        StartCoroutine(_laserSwitcher.ToggleLaser(isButtonPressed == false));
+        private void ToggleLaser(bool isButtonPressed)
+        {
+            StopAllCoroutines();
+            _laserSwitcher.StopAnimation();
+            StartCoroutine(_laserSwitcher.ToggleLaser(isButtonPressed == false));
+        }
     }
 }

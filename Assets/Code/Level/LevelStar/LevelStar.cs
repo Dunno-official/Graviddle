@@ -1,22 +1,28 @@
 using System;
+using Level.Gravitation;
+using MonoBehaviourWrapper;
 using UnityEngine;
+using Utils.Physics.PhysicsEventBroadcaster;
 
-public class LevelStar : MonoBehaviourWrapper
+namespace Level.LevelStar
 {
-    [SerializeField] private PhysicsEventBroadcaster _physics;
-    public event Action StarCollected;
-
-    public void Initialize(StarPickupFeedback pickupFeedback, CharacterGravityState characterCharacterGravityState)
+    public class LevelStar : MonoBehaviourWrapper.MonoBehaviourWrapper
     {
-        SetDependencies(new IUnityCallback[]
+        [SerializeField] private PhysicsEventBroadcaster _physics;
+        public event Action StarCollected;
+
+        public void Initialize(StarPickupFeedback pickupFeedback, CharacterGravityState characterCharacterGravityState)
         {
-            new LevelStarPickup(_physics, pickupFeedback, transform, CollectStar),
-            new GravityRotation(characterCharacterGravityState, transform),
-        });
-    }
+            SetDependencies(new IUnityCallback[]
+            {
+                new LevelStarPickup(_physics, pickupFeedback, transform, CollectStar),
+                new GravityRotation(characterCharacterGravityState, transform),
+            });
+        }
 
-    private void CollectStar()
-    {
-        StarCollected?.Invoke();
+        private void CollectStar()
+        {
+            StarCollected?.Invoke();
+        }
     }
 }

@@ -1,19 +1,22 @@
 ﻿
-public class PollingEvent
+namespace Level.Character
 {
-    private bool _eventHappened;
-
-    public bool CheckIfEventHappened()
+    public class PollingEvent
     {
-        bool result = _eventHappened;
+        private bool _eventHappened;
 
-        _eventHappened = false;
+        public bool CheckIfEventHappened()
+        {
+            bool result = _eventHappened;
 
-        return result;
-    }
+            _eventHappened = false;
 
-    public void Invoke()
-    {
-        _eventHappened = true;
+            return result;
+        }
+
+        public void Invoke()
+        {
+            _eventHappened = true;
+        }
     }
 }

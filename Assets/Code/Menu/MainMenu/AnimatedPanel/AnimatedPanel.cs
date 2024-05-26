@@ -1,44 +1,49 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Level.UI.Panels;
 using UnityEngine;
+using Utils.UI;
 
-public abstract class AnimatedPanel : Panel
+namespace Menu.MainMenu.AnimatedPanel
 {
-    [SerializeField] private Canvas _canvas;
-    [SerializeField] protected UIBlocker UIBlocker;
-    [SerializeField] private AnimatedUIElement[] _animatedElements;
-    private IEnumerable<UniTask> _onShowAnimation;
-    private IEnumerable<UniTask> _onHideAnimation;
-    
-    public override UniTask Initialize()
+    public abstract class AnimatedPanel : Panel
     {
-        foreach (AnimatedUIElement animatedElement in _animatedElements)
+        [SerializeField] private Canvas _canvas;
+        [SerializeField] protected UIBlocker UIBlocker;
+        [SerializeField] private AnimatedUIElement[] _animatedElements;
+        private IEnumerable<UniTask> _onShowAnimation;
+        private IEnumerable<UniTask> _onHideAnimation;
+    
+        public override UniTask Initialize()
         {
-            animatedElement.Initialize(_canvas);
+            foreach (AnimatedUIElement animatedElement in _animatedElements)
+            {
+                animatedElement.Initialize(_canvas);
+            }
+
+            _onShowAnimation = _animatedElements.Select(element => element.Show());
+            _onHideAnimation = _animatedElements.Select(element => element.Hide());
+
+            return base.Initialize();
         }
 
-        _onShowAnimation = _animatedElements.Select(element => element.Show());
-        _onHideAnimation = _animatedElements.Select(element => element.Hide());
+        protected override async UniTask OnShow()
+        {
+            await PlayAnimation(_onShowAnimation);
+        }
 
-        return base.Initialize();
-    }
+        protected override async UniTask OnHide()
+        {
+            await PlayAnimation(_onHideAnimation);
+        }
 
-    protected override async UniTask OnShow()
-    {
-        await PlayAnimation(_onShowAnimation);
-    }
+        private async UniTask PlayAnimation(IEnumerable<UniTask> tasks)
+        {
+            UIBlocker.Enable();
 
-    protected override async UniTask OnHide()
-    {
-        await PlayAnimation(_onHideAnimation);
-    }
+            await UniTask.WhenAll(tasks);
 
-    private async UniTask PlayAnimation(IEnumerable<UniTask> tasks)
-    {
-        UIBlocker.Enable();
-
-        await UniTask.WhenAll(tasks);
-
-        UIBlocker.Disable();
+            UIBlocker.Disable();
+        }
     }
 }

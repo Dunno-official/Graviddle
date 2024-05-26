@@ -1,24 +1,28 @@
 ﻿using System;
+using Level.Character.Helpers;
 using UnityEngine;
 
-public class ParallaxCameraPosition 
+namespace Level.UI.Parallax.GameParallax
 {
-    private readonly Transform _cameraTransform;
-
-    public ParallaxCameraPosition(Transform cameraTransform)
+    public class ParallaxCameraPosition 
     {
-        _cameraTransform = cameraTransform;
-    }
+        private readonly Transform _cameraTransform;
 
-    public float GetCameraPosition(GravityDirection gravityDirection)
-    {
-        return gravityDirection switch
+        public ParallaxCameraPosition(Transform cameraTransform)
         {
-            GravityDirection.Down => _cameraTransform.position.x,
-            GravityDirection.Up => -_cameraTransform.position.x,
-            GravityDirection.Left => -_cameraTransform.position.y,
-            GravityDirection.Right => _cameraTransform.position.y,
-            _ => throw new ArgumentOutOfRangeException()
-        };
+            _cameraTransform = cameraTransform;
+        }
+
+        public float GetCameraPosition(GravityDirection gravityDirection)
+        {
+            return gravityDirection switch
+            {
+                GravityDirection.Down => _cameraTransform.position.x,
+                GravityDirection.Up => -_cameraTransform.position.x,
+                GravityDirection.Left => -_cameraTransform.position.y,
+                GravityDirection.Right => _cameraTransform.position.y,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+        }
     }
 }

@@ -1,17 +1,20 @@
 ﻿using System;
 using UnityEngine;
 
-class OnTriggerEvent<T> : IOnTriggerEvent where T : MonoBehaviour 
+namespace Utils.Physics.PhysicsEventBroadcaster
 {
-    public readonly Action<T> Callback;
+    class OnTriggerEvent<T> : IOnTriggerEvent where T : MonoBehaviour 
+    {
+        public readonly Action<T> Callback;
 
-    public OnTriggerEvent(Action<T> callback)
-    {
-        Callback = callback;
-    }
+        public OnTriggerEvent(Action<T> callback)
+        {
+            Callback = callback;
+        }
     
-    public void Invoke(Component callbackObject)
-    {
-        Callback?.Invoke((T)callbackObject);
+        public void Invoke(Component callbackObject)
+        {
+            Callback?.Invoke((T)callbackObject);
+        }
     }
 }

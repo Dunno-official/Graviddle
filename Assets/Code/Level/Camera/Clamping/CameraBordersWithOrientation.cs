@@ -1,36 +1,44 @@
 ﻿
-public class CameraBordersWithOrientation : ISubscriber
+using Level.Camera.Clamping.Data;
+using Level.Character.Helpers;
+using Level.Gravitation.SwipeHandler;
+using MonoBehaviourWrapper;
+
+namespace Level.Camera.Clamping
 {
-    private readonly CameraClampingSettings _cameraClampingSettings;
-    private readonly SwipeHandler _swipeHandler;
-    private float _orientationOffset;
-
-    public CameraBordersWithOrientation(CameraClampingSettings clampingSettings, SwipeHandler swipeHandler)
+    public class CameraBordersWithOrientation : ISubscriber
     {
-        _cameraClampingSettings = clampingSettings;
-        _swipeHandler = swipeHandler;
-    }
+        private readonly CameraClampingSettings _cameraClampingSettings;
+        private readonly SwipeHandler _swipeHandler;
+        private float _orientationOffset;
 
-    public float Top => _cameraClampingSettings.CameraBorders.Top - _orientationOffset;
-    public float Down => _cameraClampingSettings.CameraBorders.Down + _orientationOffset;
-    public float Left => _cameraClampingSettings.CameraBorders.Left - _orientationOffset;
-    public float Right => _cameraClampingSettings.CameraBorders.Right + _orientationOffset;
+        public CameraBordersWithOrientation(CameraClampingSettings clampingSettings, SwipeHandler swipeHandler)
+        {
+            _cameraClampingSettings = clampingSettings;
+            _swipeHandler = swipeHandler;
+        }
 
-    void ISubscriber.Subscribe()
-    {
-        _swipeHandler.GravityChanged += OnGravityChanged;
-    }
+        public float Top => _cameraClampingSettings.CameraBorders.Top - _orientationOffset;
+        public float Down => _cameraClampingSettings.CameraBorders.Down + _orientationOffset;
+        public float Left => _cameraClampingSettings.CameraBorders.Left - _orientationOffset;
+        public float Right => _cameraClampingSettings.CameraBorders.Right + _orientationOffset;
 
-    void ISubscriber.Unsubscribe()
-    {
-        _swipeHandler.GravityChanged -= OnGravityChanged;
-    }
+        void ISubscriber.Subscribe()
+        {
+            _swipeHandler.GravityChanged += OnGravityChanged;
+        }
 
-    private void OnGravityChanged(GravityDirection gravityDirection)
-    {
-        bool isHorizontalOrientation = gravityDirection == GravityDirection.Down || 
-                                       gravityDirection == GravityDirection.Up;
+        void ISubscriber.Unsubscribe()
+        {
+            _swipeHandler.GravityChanged -= OnGravityChanged;
+        }
 
-        _orientationOffset = isHorizontalOrientation ? 0 : _cameraClampingSettings.OrientationOffset;
+        private void OnGravityChanged(GravityDirection gravityDirection)
+        {
+            bool isHorizontalOrientation = gravityDirection == GravityDirection.Down || 
+                                           gravityDirection == GravityDirection.Up;
+
+            _orientationOffset = isHorizontalOrientation ? 0 : _cameraClampingSettings.OrientationOffset;
+        }
     }
 }

@@ -1,35 +1,40 @@
 ﻿using Cysharp.Threading.Tasks;
+using SceneTransitions;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
+using Utils;
 
-public class WinPanel : Panel
+namespace Level.UI.Panels.WinPanel
 {
-    [SerializeField] private AssetReference _transitToLevelReference;
-    [SerializeField] private WinAnimation _winAnimation;
-
-    protected override UniTask OnShow()
+    public class WinPanel : Panel
     {
-        _winAnimation.Play();
+        [SerializeField] private AssetReference _transitToLevelReference;
+        [SerializeField] private WinAnimation _winAnimation;
 
-        return base.OnShow();
-    }
+        protected override UniTask OnShow()
+        {
+            _winAnimation.Play();
 
-    public async void RestartLevel()
-    {
-        await TransitToScene(0);
-    }
+            return base.OnShow();
+        }
 
-    public async void LaunchNextLevel()
-    {
-        await TransitToScene(1);
-    }
+        public async void RestartLevel()
+        {
+            await TransitToScene(0);
+        }
 
-    private async UniTask TransitToScene(int sceneIndex)
-    {
-        sceneIndex += SceneManager.GetActiveScene().buildIndex;
-        SceneTransit sceneTransit = await LocalAssetLoader.Load<SceneTransit>(_transitToLevelReference);
-        await sceneTransit.MakeTransition(sceneIndex);
-        LocalAssetLoader.Unload(sceneTransit.gameObject);
+        public async void LaunchNextLevel()
+        {
+            await TransitToScene(1);
+        }
+
+        private async UniTask TransitToScene(int sceneIndex)
+        {
+            sceneIndex += SceneManager.GetActiveScene().buildIndex;
+            SceneTransit sceneTransit = await LocalAssetLoader.Load<SceneTransit>(_transitToLevelReference);
+            await sceneTransit.MakeTransition(sceneIndex);
+            LocalAssetLoader.Unload(sceneTransit.gameObject);
+        }
     }
 }

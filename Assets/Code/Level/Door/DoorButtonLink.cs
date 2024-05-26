@@ -1,32 +1,36 @@
+using Level.Gravitation.GravityButton;
 using UnityEngine;
 
-public class DoorButtonLink : MonoBehaviour
+namespace Level.Door
 {
-    [SerializeField] private GravityButton _gravityButton;
-    [SerializeField] private bool _reverseInput;
-    [SerializeField] private Door _door;
+    public class DoorButtonLink : MonoBehaviour
+    {
+        [SerializeField] private GravityButton _gravityButton;
+        [SerializeField] private bool _reverseInput;
+        [SerializeField] private Door _door;
 
-    private void OnEnable()
-    {
-        _gravityButton.Toggled += OnButtonToggled;
-    }
-    
-    private void OnDisable()
-    {
-        _gravityButton.Toggled -= OnButtonToggled;
-    }
-
-    private void OnButtonToggled(bool buttonEnabled)
-    {
-        buttonEnabled = _reverseInput ? !buttonEnabled : buttonEnabled;
-        
-        if (buttonEnabled)
+        private void OnEnable()
         {
-            _door.Open();
+            _gravityButton.Toggled += OnButtonToggled;
         }
-        else
+    
+        private void OnDisable()
         {
-            _door.Close();
+            _gravityButton.Toggled -= OnButtonToggled;
+        }
+
+        private void OnButtonToggled(bool buttonEnabled)
+        {
+            buttonEnabled = _reverseInput ? !buttonEnabled : buttonEnabled;
+        
+            if (buttonEnabled)
+            {
+                _door.Open();
+            }
+            else
+            {
+                _door.Close();
+            }
         }
     }
 }

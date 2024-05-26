@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class ArrowTrap : ArrowTrapBase
+namespace Level.Obstacles.ArrowTrap
 {
-    [SerializeField] private ArrowSpawner _arrowSpawner;
-
-    protected override IEnumerator OnShoot()
+    public class ArrowTrap : ArrowTrapBase
     {
-        _arrowSpawner.SpawnArrow();
+        [SerializeField] private ArrowSpawner _arrowSpawner;
 
-        yield return null;
+        protected override IEnumerator OnShoot()
+        {
+            _arrowSpawner.SpawnArrow();
+
+            yield return null;
+        }
     }
 }

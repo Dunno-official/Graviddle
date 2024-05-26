@@ -1,5 +1,8 @@
 ﻿
-public interface IInitializable : IUnityCallback
+namespace MonoBehaviourWrapper
 {
-    void Initialize();
+    public interface IInitializable : IUnityCallback
+    {
+        void Initialize();
+    }
 }

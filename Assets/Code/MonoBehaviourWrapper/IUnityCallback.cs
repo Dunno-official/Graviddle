@@ -1,4 +1,7 @@
 ﻿
-public interface IUnityCallback
+namespace MonoBehaviourWrapper
 {
+    public interface IUnityCallback
+    {
+    }
 }

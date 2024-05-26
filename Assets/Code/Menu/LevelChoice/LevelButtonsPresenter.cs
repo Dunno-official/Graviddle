@@ -1,20 +1,23 @@
 ﻿
-public class LevelButtonsPresenter
+namespace Menu.LevelChoice
 {
-    private readonly LevelButton[] _buttons;
-    private readonly UIBlocker _blocker;
-
-    public LevelButtonsPresenter(LevelButton[] buttons, UIBlocker blocker)
+    public class LevelButtonsPresenter
     {
-        _buttons = buttons;
-        _blocker = blocker;
-    }
+        private readonly LevelButton[] _buttons;
+        private readonly UIBlocker _blocker;
 
-    public void Initialize()
-    {
-        foreach (LevelButton levelButton in _buttons)
+        public LevelButtonsPresenter(LevelButton[] buttons, UIBlocker blocker)
         {
-            levelButton.Initialize(_blocker);
+            _buttons = buttons;
+            _blocker = blocker;
+        }
+
+        public void Initialize()
+        {
+            foreach (LevelButton levelButton in _buttons)
+            {
+                levelButton.Initialize(_blocker);
+            }
         }
     }
 }

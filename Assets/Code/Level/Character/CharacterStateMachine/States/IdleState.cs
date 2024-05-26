@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+﻿using Level.Character.Helpers;
+using UnityEngine;
 
-public class IdleState : CharacterState
+namespace Level.Character.CharacterStateMachine.States
 {
-    public IdleState(Animator character) : base(character, AnimationsName.Idle)
+    public class IdleState : CharacterState
     {
+        public IdleState(Animator character) : base(character, AnimationsName.Idle)
+        {
+        }
     }
 }

@@ -1,12 +1,15 @@
 ﻿
-public class CameraClampingSettings
+namespace Level.Camera.Clamping.Data
 {
-    public readonly CameraBorders CameraBorders;
-    public readonly float OrientationOffset;
-
-    public CameraClampingSettings(CameraBorders cameraBorders, float orientationOffset)
+    public class CameraClampingSettings
     {
-        CameraBorders = cameraBorders;
-        OrientationOffset = orientationOffset;
+        public readonly CameraBorders CameraBorders;
+        public readonly float OrientationOffset;
+
+        public CameraClampingSettings(CameraBorders cameraBorders, float orientationOffset)
+        {
+            CameraBorders = cameraBorders;
+            OrientationOffset = orientationOffset;
+        }
     }
 }

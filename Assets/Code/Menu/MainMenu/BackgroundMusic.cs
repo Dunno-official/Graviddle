@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class BackgroundMusic : MonoBehaviour
+namespace Menu.MainMenu
 {
-    private void Start()
+    public class BackgroundMusic : MonoBehaviour
     {
-        DontDestroyOnLoad(gameObject);
+        private void Start()
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }

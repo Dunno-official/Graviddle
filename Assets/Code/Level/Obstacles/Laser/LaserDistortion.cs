@@ -1,28 +1,31 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
+using UnityEngine;
 
-[Serializable]
-public class LaserDistortion
+namespace Level.Obstacles.Laser
 {
-    [SerializeField] private LineRenderer _lineRenderer;
-    private MaterialPropertyBlock _propertyBlock;
-    private readonly string _noiseDistortionName = "_NoiseAmount";
-    private readonly string _noisePowerName = "_NoisePower";
-
-    public void Initialize()
+    [Serializable]
+    public class LaserDistortion
     {
-        _propertyBlock = new MaterialPropertyBlock();
-    }
+        [SerializeField] private LineRenderer _lineRenderer;
+        private MaterialPropertyBlock _propertyBlock;
+        private readonly string _noiseDistortionName = "_NoiseAmount";
+        private readonly string _noisePowerName = "_NoisePower";
 
-    public void SetDistortion(float distortion)
-    {
-        _propertyBlock.SetFloat(_noiseDistortionName, distortion);
-        _propertyBlock.SetFloat(_noisePowerName, EvaluateNoisePower(distortion));
-        _lineRenderer.SetPropertyBlock(_propertyBlock);
-    }
+        public void Initialize()
+        {
+            _propertyBlock = new MaterialPropertyBlock();
+        }
 
-    private float EvaluateNoisePower(float distortion)
-    {
-        return 4.4f * distortion + 0.9f;
+        public void SetDistortion(float distortion)
+        {
+            _propertyBlock.SetFloat(_noiseDistortionName, distortion);
+            _propertyBlock.SetFloat(_noisePowerName, EvaluateNoisePower(distortion));
+            _lineRenderer.SetPropertyBlock(_propertyBlock);
+        }
+
+        private float EvaluateNoisePower(float distortion)
+        {
+            return 4.4f * distortion + 0.9f;
+        }
     }
 }

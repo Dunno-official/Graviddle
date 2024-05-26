@@ -1,13 +1,16 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class TargetFPS : MonoBehaviour
+namespace Utils.EditorUtils
 {
-    [SerializeField] private int _target = 60;
-
-    [Button]
-    private void SetFps()
+    public class TargetFPS : MonoBehaviour
     {
-        Application.targetFrameRate = _target;
+        [SerializeField] private int _target = 60;
+
+        [Button]
+        private void SetFps()
+        {
+            Application.targetFrameRate = _target;
+        }
     }
 }

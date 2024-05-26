@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 
-public class AcceleratedMotion : ClosedPathMotionType
-{     
-    public override float Period => 2 * Mathf.PI / Speed;
+namespace Level.ClosedPathMotion.ClosedPathMotionConfigs
+{
+    public class AcceleratedMotion : ClosedPathMotionType
+    {     
+        public override float Period => 2 * Mathf.PI / Speed;
 
-    public override float EvaluateMotionFunction(float time)
-    {
-        return (1 - Mathf.Cos(Speed * time)) / 2;
+        public override float EvaluateMotionFunction(float time)
+        {
+            return (1 - Mathf.Cos(Speed * time)) / 2;
+        }
     }
 }

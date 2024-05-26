@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
-public class Obstacle : MonoBehaviour
-{ 
+namespace Level.Obstacles
+{
+    public class Obstacle : MonoBehaviour
+    { 
+    }
 }

@@ -1,42 +1,48 @@
 ﻿using System;
+using Level.Restart;
+using MonoBehaviourWrapper;
 using UnityEngine;
+using Utils.Physics.PhysicsEventBroadcaster;
 
-public class LevelStarPickup : ISubscriber, IRestart
+namespace Level.LevelStar
 {
-    private readonly PhysicsEventBroadcaster _physicsEvent;
-    private readonly StarPickupFeedback _feedback;
-    private readonly Action _onStarCollected;
-    private readonly Transform _transform;
-
-    public LevelStarPickup(PhysicsEventBroadcaster physicsEvent, StarPickupFeedback feedback, Transform transform, Action onStarCollected)
+    public class LevelStarPickup : ISubscriber, IRestart
     {
-        _onStarCollected = onStarCollected;
-        _physicsEvent = physicsEvent;
-        _transform = transform;
-        _feedback = feedback;
-    }
+        private readonly PhysicsEventBroadcaster _physicsEvent;
+        private readonly StarPickupFeedback _feedback;
+        private readonly Action _onStarCollected;
+        private readonly Transform _transform;
 
-    void ISubscriber.Subscribe()
-    {
-        _physicsEvent.RegisterOnTriggerEnter<Character>(OnCharacterEntered);
-    }
+        public LevelStarPickup(PhysicsEventBroadcaster physicsEvent, StarPickupFeedback feedback, Transform transform, Action onStarCollected)
+        {
+            _onStarCollected = onStarCollected;
+            _physicsEvent = physicsEvent;
+            _transform = transform;
+            _feedback = feedback;
+        }
 
-    void ISubscriber.Unsubscribe()
-    {
-        _physicsEvent.UnRegisterOnTriggerEnter<Character>(OnCharacterEntered);
-    }
+        void ISubscriber.Subscribe()
+        {
+            _physicsEvent.RegisterOnTriggerEnter<Character.Character>(OnCharacterEntered);
+        }
 
-    private void OnCharacterEntered(Character character)
-    {
-        _transform.gameObject.SetActive(false);
+        void ISubscriber.Unsubscribe()
+        {
+            _physicsEvent.UnRegisterOnTriggerEnter<Character.Character>(OnCharacterEntered);
+        }
+
+        private void OnCharacterEntered(Character.Character character)
+        {
+            _transform.gameObject.SetActive(false);
             
-        _feedback.Play(_transform.position);
+            _feedback.Play(_transform.position);
             
-        _onStarCollected?.Invoke();
-    }
+            _onStarCollected?.Invoke();
+        }
 
-    void IRestart.Restart()
-    {
-        _transform.gameObject.SetActive(true);
+        void IRestart.Restart()
+        {
+            _transform.gameObject.SetActive(true);
+        }
     }
 }

@@ -1,27 +1,35 @@
 ﻿
-public class CharacterGravity : ISubscriber
+using Level.Character.Helpers;
+using Level.Gravitation;
+using Level.Gravitation.SwipeHandler;
+using MonoBehaviourWrapper;
+
+namespace Level.Character
 {
-    private readonly SwipeHandler _swipeHandler;
-    private readonly Gravity _gravity;
-
-    public CharacterGravity(Gravity gravity, SwipeHandler swipeHandler)
+    public class CharacterGravity : ISubscriber
     {
-        _swipeHandler = swipeHandler;
-        _gravity = gravity;
-    }
+        private readonly SwipeHandler _swipeHandler;
+        private readonly Gravity _gravity;
 
-    public void Subscribe()
-    {
-        _swipeHandler.GravityChanged += OnGravityChanged;
-    }
+        public CharacterGravity(Gravity gravity, SwipeHandler swipeHandler)
+        {
+            _swipeHandler = swipeHandler;
+            _gravity = gravity;
+        }
 
-    public void Unsubscribe()
-    {
-        _swipeHandler.GravityChanged -= OnGravityChanged;
-    }
+        public void Subscribe()
+        {
+            _swipeHandler.GravityChanged += OnGravityChanged;
+        }
 
-    private void OnGravityChanged(GravityDirection direction)
-    {
-        _gravity.SetDirection(direction);
+        public void Unsubscribe()
+        {
+            _swipeHandler.GravityChanged -= OnGravityChanged;
+        }
+
+        private void OnGravityChanged(GravityDirection direction)
+        {
+            _gravity.SetDirection(direction);
+        }
     }
 }

@@ -1,22 +1,25 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
+using UnityEngine;
 
-[Serializable]
-public class LaserLine
+namespace Level.Obstacles.Laser.LaserSetup
 {
-    [SerializeField] private LineRenderer _lineRenderer;
-    [SerializeField] private bool _isLongLine;
-    private const float _hitPointLineOffset = 0.3f;
-
-    public void SetupLineDistance(Vector2 startPosition, Vector2 hitPoint)
+    [Serializable]
+    public class LaserLine
     {
-        if (_isLongLine)
-        {
-            Vector2 direction = (hitPoint - startPosition).normalized;
-            hitPoint += direction * _hitPointLineOffset;
-        }
+        [SerializeField] private LineRenderer _lineRenderer;
+        [SerializeField] private bool _isLongLine;
+        private const float _hitPointLineOffset = 0.3f;
 
-        _lineRenderer.SetPosition(0, startPosition);
-        _lineRenderer.SetPosition(1, hitPoint);
+        public void SetupLineDistance(Vector2 startPosition, Vector2 hitPoint)
+        {
+            if (_isLongLine)
+            {
+                Vector2 direction = (hitPoint - startPosition).normalized;
+                hitPoint += direction * _hitPointLineOffset;
+            }
+
+            _lineRenderer.SetPosition(0, startPosition);
+            _lineRenderer.SetPosition(1, hitPoint);
+        }
     }
 }

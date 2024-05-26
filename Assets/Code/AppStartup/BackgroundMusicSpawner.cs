@@ -1,14 +1,18 @@
 ﻿using System;
+using Menu.MainMenu;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-[Serializable]
-public class BackgroundMusicSpawner
+namespace AppStartup
 {
-    [SerializeField] private BackgroundMusic _backgroundMusic;
-
-    public void Initialize()
+    [Serializable]
+    public class BackgroundMusicSpawner
     {
-        Object.Instantiate(_backgroundMusic);
+        [SerializeField] private BackgroundMusic _backgroundMusic;
+
+        public void Initialize()
+        {
+            Object.Instantiate(_backgroundMusic);
+        }
     }
 }

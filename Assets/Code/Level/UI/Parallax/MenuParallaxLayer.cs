@@ -1,23 +1,26 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(RectTransform))]
-public class MenuParallaxLayer : MonoBehaviour
+namespace Level.UI.Parallax
 {
-    [SerializeField] private float _speed;
-    private RectTransform _transform;
-
-    private void Start()
+    [RequireComponent(typeof(RectTransform))]
+    public class MenuParallaxLayer : MonoBehaviour
     {
-        _transform = GetComponent<RectTransform>();
-    }
+        [SerializeField] private float _speed;
+        private RectTransform _transform;
 
-    public void Update()
-    {
-        _transform.anchoredPosition += Vector2.left * _speed * Time.deltaTime;
-
-        if (_transform.anchoredPosition.x <= -_transform.rect.width)
+        private void Start()
         {
-            _transform.anchoredPosition = new Vector2(0, _transform.anchoredPosition.y);
+            _transform = GetComponent<RectTransform>();
+        }
+
+        public void Update()
+        {
+            _transform.anchoredPosition += Vector2.left * _speed * Time.deltaTime;
+
+            if (_transform.anchoredPosition.x <= -_transform.rect.width)
+            {
+                _transform.anchoredPosition = new Vector2(0, _transform.anchoredPosition.y);
+            }
         }
     }
 }

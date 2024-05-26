@@ -1,25 +1,28 @@
 using Cysharp.Threading.Tasks;
 
-public class PausePanel : Panel
+namespace Level.UI.Panels.PausePanel
 {
-    private readonly TimeScale _timeScale = new();
+    public class PausePanel : Panel
+    {
+        private readonly TimeScale _timeScale = new();
     
-    protected override UniTask OnShow()
-    {
-        _timeScale.FreezeGame();
+        protected override UniTask OnShow()
+        {
+            _timeScale.FreezeGame();
         
-        return base.OnShow();
-    }
+            return base.OnShow();
+        }
 
-    protected override UniTask OnHide()
-    {
-        UnFreezeGame();
+        protected override UniTask OnHide()
+        {
+            UnFreezeGame();
         
-        return base.OnHide();
-    }
+            return base.OnHide();
+        }
 
-    public void UnFreezeGame()
-    {
-        _timeScale.UnfreezeGame();
+        public void UnFreezeGame()
+        {
+            _timeScale.UnfreezeGame();
+        }
     }
 }

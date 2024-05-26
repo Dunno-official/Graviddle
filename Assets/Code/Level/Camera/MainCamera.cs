@@ -1,23 +1,30 @@
-﻿using UnityEngine;
+﻿using Level.Camera.Animations;
+using Level.Camera.Clamping;
+using Level.Camera.Clamping.Data;
+using MonoBehaviourWrapper;
+using UnityEngine;
 
-public class MainCamera : MonoBehaviourWrapper
+namespace Level.Camera
 {
-    [SerializeField] private Camera _camera;
-
-    public void Initialize(CameraData data)
+    public class MainCamera : MonoBehaviourWrapper.MonoBehaviourWrapper
     {
-        CameraClampingSettingsFactory cameraClampingSettingsFactory = new(data.Borders, _camera);
-        CameraClampingSettings settings = cameraClampingSettingsFactory.Create();
-        CameraBordersWithOrientation borders = new(settings, data.SwipeHandler);
-        CharacterCapture characterCapture = new(data.Character, transform, borders);
-        CameraZoom cameraZoom = new(data, _camera, characterCapture);
-        
-        SetDependencies(new IUnityCallback[]
+        [SerializeField] private UnityEngine.Camera _camera;
+
+        public void Initialize(CameraData data)
         {
-            borders,
-            characterCapture,
-            cameraZoom,
-            new CameraRotation(transform, data.RotationData, data.SwipeHandler, this),
-        });
+            CameraClampingSettingsFactory cameraClampingSettingsFactory = new(data.Borders, _camera);
+            CameraClampingSettings settings = cameraClampingSettingsFactory.Create();
+            CameraBordersWithOrientation borders = new(settings, data.SwipeHandler);
+            CharacterCapture characterCapture = new(data.Character, transform, borders);
+            CameraZoom cameraZoom = new(data, _camera, characterCapture);
+        
+            SetDependencies(new IUnityCallback[]
+            {
+                borders,
+                characterCapture,
+                cameraZoom,
+                new CameraRotation(transform, data.RotationData, data.SwipeHandler, this),
+            });
+        }
     }
 }

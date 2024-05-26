@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
-public class PlatformGrabbable : MonoBehaviour
+namespace Level.MovingPlatform
 {
+    public class PlatformGrabbable : MonoBehaviour
+    {
+    }
 }

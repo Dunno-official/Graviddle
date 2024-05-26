@@ -1,4 +1,7 @@
 ﻿
-public class GameplayPanel : Panel
+namespace Level.UI.Panels.GameplayPanel
 {
+    public class GameplayPanel : Panel
+    {
+    }
 }

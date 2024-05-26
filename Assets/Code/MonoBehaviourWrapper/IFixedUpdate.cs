@@ -1,5 +1,8 @@
 ﻿
-public interface IFixedUpdate : IUnityCallback
+namespace MonoBehaviourWrapper
 {
-    void FixedUpdate();
+    public interface IFixedUpdate : IUnityCallback
+    {
+        void FixedUpdate();
+    }
 }

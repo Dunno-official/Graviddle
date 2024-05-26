@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class ButtonClamping : MonoBehaviour
+namespace Level.Gravitation.GravityButton
 {
-    private const float _topExtremePoint = 0.36f;
-    private const float _downExtremePoint = 0f;
-
-    public void FixedUpdate()
+    public class ButtonClamping : MonoBehaviour
     {
-        Vector2 clampedPosition = transform.localPosition;
-        clampedPosition.y = Mathf.Clamp(clampedPosition.y, _downExtremePoint, _topExtremePoint);
+        private const float _topExtremePoint = 0.36f;
+        private const float _downExtremePoint = 0f;
+
+        public void FixedUpdate()
+        {
+            Vector2 clampedPosition = transform.localPosition;
+            clampedPosition.y = Mathf.Clamp(clampedPosition.y, _downExtremePoint, _topExtremePoint);
         
-        transform.localPosition = clampedPosition;
+            transform.localPosition = clampedPosition;
+        }
     }
 }

@@ -1,29 +1,32 @@
 using TMPro;
 using UnityEngine;
 
-public class FPSCounter : MonoBehaviour
+namespace Utils.EditorUtils
 {
-    [SerializeField] private TMP_Text _fpsText;
-    private float _clock;
-    private int _frames;
-
-    private void Start()
+    public class FPSCounter : MonoBehaviour
     {
-        if (FindObjectsOfType<FPSCounter>().Length == 1)
+        [SerializeField] private TMP_Text _fpsText;
+        private float _clock;
+        private int _frames;
+
+        private void Start()
         {
-            DontDestroyOnLoad(gameObject);
+            if (FindObjectsOfType<FPSCounter>().Length == 1)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
         }
-    }
 
-    private void Update()
-    {
-        ++_frames;
-        
-        if (Time.time > _clock + 1)
+        private void Update()
         {
-            _fpsText.text = "FPS = " + _frames;
-            _clock = Time.time;
-            _frames = 0;
+            ++_frames;
+        
+            if (Time.time > _clock + 1)
+            {
+                _fpsText.text = "FPS = " + _frames;
+                _clock = Time.time;
+                _frames = 0;
+            }
         }
     }
 }

@@ -1,46 +1,54 @@
 ﻿
-public abstract class CharacterFallingEventsHandler : IRestart, ISubscriber
+using Level.Character.CharacterStateMachine.States;
+using Level.Character.CharacterStateMachine.StateTransitions;
+using Level.Restart;
+using MonoBehaviourWrapper;
+
+namespace Level.Character
 {
-    private readonly Transition _fallToIdleTransition;
-    private readonly FallState _fallState;
-
-    protected CharacterFallingEventsHandler(Transition fallToIdleTransition, FallState fallState)
+    public abstract class CharacterFallingEventsHandler : IRestart, ISubscriber
     {
-        _fallToIdleTransition = fallToIdleTransition;
-        _fallState = fallState;
-    }
+        private readonly Transition _fallToIdleTransition;
+        private readonly FallState _fallState;
 
-    protected bool IsFalling { get; private set; }
+        protected CharacterFallingEventsHandler(Transition fallToIdleTransition, FallState fallState)
+        {
+            _fallToIdleTransition = fallToIdleTransition;
+            _fallState = fallState;
+        }
 
-    void ISubscriber.Subscribe()
-    {
-        _fallState.CharacterFalling += OnCharacterFalling;
-        _fallToIdleTransition.TransitionHappened += OnCharacterFell;
-    }
+        protected bool IsFalling { get; private set; }
 
-    void ISubscriber.Unsubscribe()
-    {
-        _fallState.CharacterFalling -= OnCharacterFalling;
-        _fallToIdleTransition.TransitionHappened -= OnCharacterFell;
-    }
+        void ISubscriber.Subscribe()
+        {
+            _fallState.CharacterFalling += OnCharacterFalling;
+            _fallToIdleTransition.TransitionHappened += OnCharacterFell;
+        }
 
-    private void OnCharacterFalling()
-    {
-        IsFalling = true;
-        OnStartFalling();
-    }
+        void ISubscriber.Unsubscribe()
+        {
+            _fallState.CharacterFalling -= OnCharacterFalling;
+            _fallToIdleTransition.TransitionHappened -= OnCharacterFell;
+        }
 
-    private void OnCharacterFell()
-    {
-        IsFalling = false;
-        OnEndFalling();
-    }
+        private void OnCharacterFalling()
+        {
+            IsFalling = true;
+            OnStartFalling();
+        }
 
-    protected virtual void OnStartFalling() {}
-    protected virtual void OnEndFalling() {}
+        private void OnCharacterFell()
+        {
+            IsFalling = false;
+            OnEndFalling();
+        }
 
-    void IRestart.Restart()
-    {
-        OnEndFalling();
+        protected virtual void OnStartFalling() {}
+        protected virtual void OnEndFalling() {}
+
+        void IRestart.Restart()
+        {
+            OnEndFalling();
+        }
     }
 }

@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-interface IOnTriggerEvent
+namespace Utils.Physics.PhysicsEventBroadcaster
 {
-    void Invoke(Component component);
+    interface IOnTriggerEvent
+    {
+        void Invoke(Component component);
+    }
 }

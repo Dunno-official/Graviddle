@@ -3,23 +3,26 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-public static class LocalAssetLoader
+namespace Utils
 {
-    public static async UniTask<T> Load<T>(object key)
+    public static class LocalAssetLoader
     {
-        GameObject gameObject = await Addressables.InstantiateAsync(key).Task;
-
-        if (gameObject.TryGetComponent(out T component) == false)
+        public static async UniTask<T> Load<T>(object key)
         {
-            throw new NullReferenceException($"Failed to get {typeof(T)} from addressables");
-        }
+            GameObject gameObject = await Addressables.InstantiateAsync(key).Task;
 
-        return component;
-    }
+            if (gameObject.TryGetComponent(out T component) == false)
+            {
+                throw new NullReferenceException($"Failed to get {typeof(T)} from addressables");
+            }
+
+            return component;
+        }
     
-    public static void Unload(GameObject gameObjectToBeReleased)
-    {
-        gameObjectToBeReleased.SetActive(false);
-        Addressables.ReleaseInstance(gameObjectToBeReleased);
+        public static void Unload(GameObject gameObjectToBeReleased)
+        {
+            gameObjectToBeReleased.SetActive(false);
+            Addressables.ReleaseInstance(gameObjectToBeReleased);
+        }
     }
 }

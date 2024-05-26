@@ -1,6 +1,9 @@
 ﻿
-public interface ISubscriber : IUnityCallback
+namespace MonoBehaviourWrapper
 {
-    void Subscribe();
-    void Unsubscribe();
+    public interface ISubscriber : IUnityCallback
+    {
+        void Subscribe();
+        void Unsubscribe();
+    }
 }

@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 
-public class FinishPortal : MonoBehaviour
+namespace Level.Portals.FinishPortal
 {
-    [SerializeField] private Transform _pullingPoint;
+    public class FinishPortal : MonoBehaviour
+    {
+        [SerializeField] private Transform _pullingPoint;
 
-    public Transform PullingPoint => _pullingPoint;
+        public Transform PullingPoint => _pullingPoint;
+    }
 }

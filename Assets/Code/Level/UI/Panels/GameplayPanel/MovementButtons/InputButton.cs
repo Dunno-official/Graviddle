@@ -1,22 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InputButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+namespace Level.UI.Panels.GameplayPanel.MovementButtons
 {
-    public bool IsTouching { get; private set; }
-
-    public void OnPointerDown(PointerEventData eventData)
+    public class InputButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
-        IsTouching = true;
-    }
+        public bool IsTouching { get; private set; }
 
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        OnDisable();
-    }
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            IsTouching = true;
+        }
+
+        public void OnPointerUp(PointerEventData eventData)
+        {
+            OnDisable();
+        }
     
-    private void OnDisable()
-    {
-        IsTouching = false;
+        private void OnDisable()
+        {
+            IsTouching = false;
+        }
     }
 }

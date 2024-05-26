@@ -1,33 +1,36 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
+using UnityEngine;
 
-[Serializable]
-public class ClosedPathMotionCalculator 
+namespace Level.ClosedPathMotion
 {
-    [SerializeField] private ClosedPathMotionType _motionType;
-
-    private float _period;
-    private float _time;    
-
-    public void Initialize()
+    [Serializable]
+    public class ClosedPathMotionCalculator 
     {
-        _period = _motionType.Period;
-    }
+        [SerializeField] private ClosedPathMotionType _motionType;
 
-    public float EvaluateLerpPosition()
-    {
-        _time += Time.deltaTime;
+        private float _period;
+        private float _time;    
+
+        public void Initialize()
+        {
+            _period = _motionType.Period;
+        }
+
+        public float EvaluateLerpPosition()
+        {
+            _time += Time.deltaTime;
         
-        if (_time >= _period)
+            if (_time >= _period)
+            {
+                _time = 0;
+            }
+
+            return _motionType.EvaluateMotionFunction(_time);
+        }
+    
+        public void Restart()
         {
             _time = 0;
         }
-
-        return _motionType.EvaluateMotionFunction(_time);
-    }
-    
-    public void Restart()
-    {
-        _time = 0;
     }
 }

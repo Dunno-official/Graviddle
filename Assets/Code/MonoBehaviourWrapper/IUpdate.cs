@@ -1,5 +1,8 @@
 ﻿
-public interface IUpdate : IUnityCallback
+namespace MonoBehaviourWrapper
 {
-    void Update();
+    public interface IUpdate : IUnityCallback
+    {
+        void Update();
+    }
 }

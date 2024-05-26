@@ -1,20 +1,23 @@
 ﻿using UnityEngine;
 
-public class TimeScale
+namespace Level.UI.Panels.PausePanel
 {
-    public void FreezeGame()
+    public class TimeScale
     {
-        SetTimeScale(0);
-    }
+        public void FreezeGame()
+        {
+            SetTimeScale(0);
+        }
 
-    public void UnfreezeGame()
-    {
-        SetTimeScale(1);
-    }
+        public void UnfreezeGame()
+        {
+            SetTimeScale(1);
+        }
 
-    private void SetTimeScale(float timeScale)
-    {
-        Time.timeScale = timeScale;
+        private void SetTimeScale(float timeScale)
+        {
+            Time.timeScale = timeScale;
+        }
     }
 }
 
