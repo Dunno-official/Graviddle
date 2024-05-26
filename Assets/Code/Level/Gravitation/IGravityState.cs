@@ -1,5 +1,5 @@
 ﻿
-using Level.Character.Helpers;
+using Level.CharacterNM.Helpers;
 
 namespace Level.Gravitation
 {

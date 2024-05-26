@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Extensions;
-using Level.Camera.Clamping.Data;
+using Level.CameraNM.Clamping.Data;
 using Level.Restart;
 using UnityEngine;
 

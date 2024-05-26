@@ -526,10 +526,14 @@ MonoBehaviour:
       m_RotationOrder: 4
   _constantForce2d: {fileID: 6557157968497912336}
   _spriteRenderer: {fileID: 2684562040544259668}
+  _circleCastData:
+    _radius: 0.6
+    _distance: 1
   _trailRenderer: {fileID: 1101657790}
   _fallingDust: {fileID: 6422635034156707407}
   _collisions: {fileID: 2748349891216935800}
   _rigidbody2D: {fileID: 8393151776776714314}
+  _animator: {fileID: 2684562039941863170}
 --- !u!1 &2684562040544259670
 GameObject:
   m_ObjectHideFlags: 0

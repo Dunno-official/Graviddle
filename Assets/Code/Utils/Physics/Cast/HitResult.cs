@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Utils.Physics
+namespace Utils.Physics.Cast
 {
     public readonly struct HitResult<T> where T : MonoBehaviour
     {

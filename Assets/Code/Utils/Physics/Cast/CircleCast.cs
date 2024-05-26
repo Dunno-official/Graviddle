@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Utils.Physics
+namespace Utils.Physics.Cast
 {
     public class CircleCast<T> where T : MonoBehaviour
     {

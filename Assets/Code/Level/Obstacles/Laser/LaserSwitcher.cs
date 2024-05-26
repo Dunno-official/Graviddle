@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-using Level.LightBulb;
+using Level.LightBulbNM;
 using UnityEngine;
 using Utils;
 

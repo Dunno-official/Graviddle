@@ -1,5 +1,6 @@
 ﻿using System;
 using Extensions;
+using Level.LightBulbNM;
 using UnityEngine;
 
 namespace Level.Obstacles.Laser.LaserSetup
@@ -7,7 +8,7 @@ namespace Level.Obstacles.Laser.LaserSetup
     [Serializable]
     public class LaserHitObjectsPositions
     {
-        [SerializeField] private LightBulb.LightBulb _lightBulb;
+        [SerializeField] private LightBulb _lightBulb;
         [SerializeField] private ParticleSystem _hitEffect;
         [SerializeField] private bool _isLightBulbInRight = true;
 

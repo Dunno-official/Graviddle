@@ -1,5 +1,5 @@
 using Extensions;
-using Level.Character;
+using Level.CharacterNM;
 using Level.Gravitation;
 using Level.Obstacles.LaserTurretNM;
 using MonoBehaviourWrapper;

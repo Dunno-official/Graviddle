@@ -1,4 +1,4 @@
-﻿using Level.Character;
+﻿using Level.CharacterNM;
 using UnityEngine;
 
 namespace Level.Obstacles.LaserTurretNM

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Extensions;
+using Level.LevelStarNM;
 using Level.Restart;
 using UnityEngine;
 
@@ -7,13 +8,13 @@ namespace Level.UI.Panels.WinPanel
 {
     public class Reward : MonoBehaviour, IRestart
     {
-        private IReadOnlyCollection<LevelStar.LevelStar> _levelStars;
+        private IReadOnlyCollection<LevelStar> _levelStars;
         private const int _maxStars = 3;
 
         public int CollectedStars { get; private set; }
         public bool IsMaxStars => CollectedStars == _maxStars;
 
-        public void Initialize(IReadOnlyCollection<LevelStar.LevelStar> levelStars)
+        public void Initialize(IReadOnlyCollection<LevelStar> levelStars)
         {
             _levelStars = levelStars;
         }

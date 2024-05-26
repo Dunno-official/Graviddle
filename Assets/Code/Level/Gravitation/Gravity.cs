@@ -1,4 +1,4 @@
-﻿using Level.Character.Helpers;
+﻿using Level.CharacterNM.Helpers;
 using Level.Restart;
 using MonoBehaviourWrapper;
 using UnityEngine;

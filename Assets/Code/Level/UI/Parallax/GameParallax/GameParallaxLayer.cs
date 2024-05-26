@@ -1,5 +1,5 @@
-using Level.Character.Helpers;
-using Level.Gravitation.SwipeHandler;
+using Level.CharacterNM.Helpers;
+using Level.Gravitation.SwipeHandlerNM;
 using UnityEngine;
 
 namespace Level.UI.Parallax.GameParallax

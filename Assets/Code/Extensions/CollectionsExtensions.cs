@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Level.Restart;
 using MonoBehaviourWrapper;
+using UnityEngine;
 
 namespace Extensions
 {
@@ -63,7 +64,10 @@ namespace Extensions
         
         public static void DrawForEach(this IEnumerable<IGizmo> gizmos)
         {
-            gizmos.ForEach(update => update.DrawGizmo());
+            if (Application.isPlaying)
+            {
+                gizmos.ForEach(update => update.DrawGizmo());    
+            }
         }
     }
 }

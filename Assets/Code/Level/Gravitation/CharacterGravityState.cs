@@ -1,14 +1,14 @@
-
-using Level.Character.Helpers;
+using Level.CharacterNM.Helpers;
+using Level.Gravitation.SwipeHandlerNM;
 using MonoBehaviourWrapper;
 
 namespace Level.Gravitation
 {
     public class CharacterGravityState : ISubscriber, IGravityState
     {
-        private readonly SwipeHandler.SwipeHandler _swipeHandler;
+        private readonly SwipeHandler _swipeHandler;
 
-        public CharacterGravityState(SwipeHandler.SwipeHandler swipeHandler)
+        public CharacterGravityState(SwipeHandler swipeHandler)
         {
             _swipeHandler = swipeHandler;
         }

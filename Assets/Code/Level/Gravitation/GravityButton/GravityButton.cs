@@ -1,5 +1,5 @@
 ﻿using System;
-using Level.LightBulb;
+using Level.LightBulbNM;
 using UnityEngine;
 
 namespace Level.Gravitation.GravityButton

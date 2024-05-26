@@ -1,5 +1,5 @@
 ﻿using DG.Tweening;
-using Level.Character.CharacterStateMachine.States;
+using Level.CharacterNM.CharacterStateMachine.States;
 using Level.Gravitation;
 using MonoBehaviourWrapper;
 using UnityEngine;

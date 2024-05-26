@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Level.Character.CharacterStateMachine.States;
+using Level.CharacterNM.CharacterStateMachine.States;
 using Level.UI.Panels.WinPanel;
 using Newtonsoft.Json;
 using UnityEngine;

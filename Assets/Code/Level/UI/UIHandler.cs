@@ -1,5 +1,5 @@
-﻿
-using Level.Character.CharacterStateMachine;
+﻿using Level.CharacterNM;
+using Level.CharacterNM.CharacterStateMachine;
 using Level.UI.Panels.GameplayPanel;
 using Level.UI.Panels.WinPanel;
 using MonoBehaviourWrapper;
@@ -9,10 +9,10 @@ namespace Level.UI
     public class UIHandler : ISubscriber
     {
         private readonly CharacterStatesPresenter _states;
-        private readonly Character.Character _character;
+        private readonly Character _character;
         private readonly UI _ui;
 
-        public UIHandler(CharacterStatesPresenter states, Character.Character character, UI ui)
+        public UIHandler(CharacterStatesPresenter states, Character character, UI ui)
         {
             _character = character;
             _states = states;

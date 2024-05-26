@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Linq;
 using Extensions;
+using Level.CharacterNM;
 using Level.Restart;
 using UnityEngine;
 
@@ -23,7 +24,7 @@ namespace Level.Tutorial
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (_storyStarted == false && other.GetComponent<Character.Character>() != null)
+            if (_storyStarted == false && other.GetComponent<Character>() != null)
             {
                 StartCoroutine(StartStory());
             }

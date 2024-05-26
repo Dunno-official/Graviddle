@@ -1,5 +1,5 @@
 ﻿using System;
-using Level.Character.Helpers;
+using Level.CharacterNM.Helpers;
 using UnityEngine;
 
 namespace Level.UI.Parallax.GameParallax

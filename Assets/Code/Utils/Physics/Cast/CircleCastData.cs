@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Utils.Physics
+namespace Utils.Physics.Cast
 {
     [Serializable]
     public class CircleCastData
