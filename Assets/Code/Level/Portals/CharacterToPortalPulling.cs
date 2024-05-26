@@ -17,10 +17,10 @@ namespace Level.Portals.FinishPortal
 
         public CharacterToPortalPulling(WinState winState, Transform character, CollisionsList collisions, GravityRotation gravityRotation)
         {
-            _winState = winState;
-            _character = character;
-            _collisions = collisions;
             _gravityRotation = gravityRotation;
+            _collisions = collisions;
+            _character = character;
+            _winState = winState;
         }
 
         public void Subscribe()

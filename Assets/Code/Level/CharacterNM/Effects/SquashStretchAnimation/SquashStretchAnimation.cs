@@ -1,37 +1,29 @@
 using Level.CharacterNM.CharacterStateMachine.States;
 using Level.CharacterNM.CharacterStateMachine.StateTransitions;
-using MonoBehaviourWrapper;
 using UnityEngine;
 
 namespace Level.CharacterNM.Effects.SquashStretchAnimation
 {
-    public class SquashStretchAnimation : CharacterFallingEventsHandler, IFixedUpdate 
+    public class SquashStretchAnimation : CharacterFallingVelocityListener 
     {
-        private readonly Rigidbody2D _rigidbody;
-        private readonly Squash _squash;
         private readonly Stretch _stretch;
-        private float _velocity;
+        private readonly Squash _squash;
 
         public SquashStretchAnimation(Rigidbody2D rigidbody, SpriteRenderer sprite, Transition fallToIdleTransition, FallState fallState) 
-            : base(fallToIdleTransition, fallState)
+            : base(rigidbody, fallToIdleTransition, fallState)
         {
-            _rigidbody = rigidbody;
-            _squash = new Squash(sprite.transform);
             _stretch = new Stretch(sprite.transform);
-        }
-    
-        void IFixedUpdate.FixedUpdate()
-        {
-            if (IsFalling)
-            {
-                _velocity = _rigidbody.velocity.magnitude;
-                _stretch.SetStretch(_velocity);
-            }
+            _squash = new Squash(sprite.transform);
         }
 
-        protected override void OnEndFalling()
+        protected override void OnFalling(float velocity)
         {
-            _squash.Play(_velocity);
+            _stretch.SetStretch(velocity);
+        }
+
+        protected override void OnFell(float accumulatedVelocity)
+        {
+            _squash.Play(accumulatedVelocity);
         }
     }
 }

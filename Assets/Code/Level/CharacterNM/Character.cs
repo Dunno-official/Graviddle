@@ -53,7 +53,7 @@ namespace Level.CharacterNM
                 new CharacterStateMachine.CharacterStateMachine(transitionsPresenter, States.IdleState),
                 new SwipeHandlerSwitch(swipeHandler, fallToIdleTransition, States.FallState),
                 new CharacterToPortalPulling(States.WinState, transform, _collisions, gravityRotation),
-                new CharacterVFX(_fallingDust, _trailRenderer, fallToIdleTransition, States.FallState),
+                new CharacterVFX(_fallingDust, _trailRenderer, fallToIdleTransition, States.FallState, _rigidbody2D),
                 new TwistingAnimationHandler(_spriteRenderer, States.WinState, _twistingAnimationData, InvokeRespawnEvent),
                 new SquashStretchAnimation(_rigidbody2D, _spriteRenderer, fallToIdleTransition, States.FallState),
             });

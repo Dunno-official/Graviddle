@@ -51,7 +51,7 @@ namespace Level.CameraNM
                 time += Time.deltaTime;
                 float timelineLerp = time / _rotationData.Time;
                 float lerp = _rotationData.Curve.Evaluate(timelineLerp);
-                _transform.rotation = Quaternion.LerpUnclamped(initialRotation, targetRotation, lerp);
+                _transform.rotation = Quaternion.Lerp(initialRotation, targetRotation, lerp);
             
                 yield return null;
             }
