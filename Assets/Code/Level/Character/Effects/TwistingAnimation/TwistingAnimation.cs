@@ -3,24 +3,23 @@ using UnityEngine;
 
 public class TwistingAnimation
 {
-    private readonly TwistingAnimationData _data = new();
+    private readonly TwistingAnimationData _data;
     private readonly SpriteRenderer _spriteRenderer;
-    private readonly AnimationCurve _fadeCurve;
     private Sequence _animation;
     
-    public TwistingAnimation(SpriteRenderer spriteRenderer, AnimationCurve fadeCurve)
+    public TwistingAnimation(SpriteRenderer spriteRenderer, TwistingAnimationData data)
     {
         _spriteRenderer = spriteRenderer;
-        _fadeCurve = fadeCurve;
+        _data = data;
     }
 
     private Tween FadeAnimation => DOTween.To(value =>
     {
         SetFloat(_data.HSV, Mathf.Lerp(0, 270, EaseFunctions.OutQuart(value)));
-        SetFloat(_data.Rotation, Mathf.Lerp(0, Mathf.PI * 2, value));
+        SetFloat(_data.Rotation, _data.FadeRotationCurve.Evaluate(value));
         SetFloat(_data.Twist, Mathf.Lerp(0, Mathf.PI / 2f, value));
-        SetFloat(_data.Alpha, _fadeCurve.Evaluate(value));
-        SetScale(Mathf.Lerp(0.75f, 1f, EaseFunctions.InCirc(1 - value)));
+        SetFloat(_data.Alpha, _data.FadeCurve.Evaluate(value));
+        SetScale(_data.FadeScaleCurve.Evaluate(value));
     }, 0, 1, _data.FadeDuration);
 
     private Tween BrightenAnimation => DOTween.To(x =>

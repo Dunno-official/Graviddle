@@ -3,7 +3,7 @@ using UnityEngine;
 public class ButtonLaser : MonoBehaviour
 {
     [SerializeField] private LaserSwitcher _laserSwitcher;
-    [SerializeField] private ButtonPressing _buttonPressing;
+    [SerializeField] private GravityButton _gravityButton;
     
     private void Start()
     {
@@ -12,12 +12,12 @@ public class ButtonLaser : MonoBehaviour
     
     private void OnEnable()
     {
-        _buttonPressing.Toggled += ToggleLaser;
+        _gravityButton.Toggled += ToggleLaser;
     }
     
     private void OnDisable()
     {
-        _buttonPressing.Toggled -= ToggleLaser;
+        _gravityButton.Toggled -= ToggleLaser;
     }
 
     private void ToggleLaser(bool isButtonPressed)

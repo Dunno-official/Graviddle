@@ -1,8 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-public class ButtonPressing : MonoBehaviour, ISwitcher
+public class GravityButton : MonoBehaviour, ISwitcher
 {
+    [SerializeField] private AudioSource _toggleSound;
     private const float _downExtremePoint = 0.06f;
     private const float _topExtremePoint = 0.35f;
     private bool _isButtonTurnedOn;
@@ -20,6 +21,7 @@ public class ButtonPressing : MonoBehaviour, ISwitcher
         if (condition && _isButtonTurnedOn != isTurnedOn)
         {
             _isButtonTurnedOn = isTurnedOn;
+            _toggleSound.Play();
             Toggled?.Invoke(isTurnedOn);
         }
     }

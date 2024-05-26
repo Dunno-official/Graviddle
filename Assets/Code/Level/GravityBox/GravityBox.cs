@@ -19,7 +19,7 @@ public class GravityBox : MonoBehaviourWrapper
         GravityRotation rotation = new(boxGravityState, _arrow.transform, 180, 6);
         BoxMediator boxMediator = new(physicsInputTrigger, swipeHandler, gravityHandler, new IToggleable[]
         {
-            new ScalePopup(_canvas.transform, 0.5f, 0, 1),
+            new ScalePopup(_canvas.transform, 0.5f, 0, 1.25f),
             new ScalePopup(_outline.transform, 0.5f, 1, 1.15f)
         });
 

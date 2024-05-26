@@ -7,9 +7,9 @@ public class TwistingAnimationHandler : ISubscriber, IInitializable, IRestart
     private readonly TweenCallback _onRespawn;
     private readonly WinState _winState;
 
-    public TwistingAnimationHandler(SpriteRenderer spriteRenderer, WinState winState, AnimationCurve fadeCurve, TweenCallback onRespawn)
+    public TwistingAnimationHandler(SpriteRenderer spriteRenderer, WinState winState, TwistingAnimationData data, TweenCallback onRespawn)
     {
-        _portalAnimation = new TwistingAnimation(spriteRenderer, fadeCurve);
+        _portalAnimation = new TwistingAnimation(spriteRenderer, data);
         _onRespawn = onRespawn;
         _winState = winState;
     }
@@ -19,6 +19,11 @@ public class TwistingAnimationHandler : ISubscriber, IInitializable, IRestart
         Restart();
     }
 
+    public void Fade()
+    {
+        _portalAnimation.FadeOut();
+    }
+    
     void ISubscriber.Subscribe()
     {
         _winState.Entered += _portalAnimation.FadeOut;

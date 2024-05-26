@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class Character : MonoBehaviourWrapper
 {
+    [SerializeField] private TwistingAnimationData _twistingAnimationData;
     [SerializeField] private ConstantForce2D _constantForce2d;
-    [SerializeField] private Rigidbody2D _rigidbody2D;
     [SerializeField] private SpriteRenderer _spriteRenderer;
-    [SerializeField] private ParticleSystem _fallingDust;
     [SerializeField] private TrailRenderer _trailRenderer;
-    [SerializeField] private AnimationCurve _fadeCurve;
+    [SerializeField] private ParticleSystem _fallingDust;
     [SerializeField] private CollisionsList _collisions;
+    [SerializeField] private Rigidbody2D _rigidbody2D;
 
     public event Action Respawned;
     
@@ -30,7 +30,7 @@ public class Character : MonoBehaviourWrapper
             new SwipeHandlerSwitcher(swipeHandler, fallToIdleTransition, states.FallState),
             new CharacterToPortalPulling(states.WinState, transform, _collisions, gravityRotation),
             new CharacterVFX(_fallingDust, _trailRenderer, fallToIdleTransition, states.FallState),
-            new TwistingAnimationHandler(_spriteRenderer, states.WinState, _fadeCurve, InvokeRespawnEvent),
+            new TwistingAnimationHandler(_spriteRenderer, states.WinState, _twistingAnimationData, InvokeRespawnEvent),
             new SquashStretchAnimation(_rigidbody2D, _spriteRenderer, fallToIdleTransition, states.FallState),
         });
     }

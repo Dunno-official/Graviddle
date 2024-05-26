@@ -4,17 +4,17 @@ public class ButtonLiftForce : MonoBehaviour, IRestart
 {
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private float _speed = 0.05f;
-    [SerializeField] private ButtonPressing _buttonPressing;
+    [SerializeField] private GravityButton _gravityButton;
     private bool _isLifting;
     
     private void OnEnable()
     {
-        _buttonPressing.Toggled += OnButtonToggled;
+        _gravityButton.Toggled += OnGravityButtonToggled;
     }
 
     private void OnDisable()
     {
-        _buttonPressing.Toggled -= OnButtonToggled;
+        _gravityButton.Toggled -= OnGravityButtonToggled;
     }
     
     private void Update()
@@ -31,7 +31,7 @@ public class ButtonLiftForce : MonoBehaviour, IRestart
         _rigidbody.velocity = Vector2.zero;
     }
     
-    private void OnButtonToggled(bool isButtonTurnedOn)
+    private void OnGravityButtonToggled(bool isButtonTurnedOn)
     {
         ResetLiftForce(isButtonTurnedOn);
     }

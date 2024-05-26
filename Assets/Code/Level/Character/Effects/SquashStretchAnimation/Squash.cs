@@ -7,7 +7,8 @@ public class Squash
     private float _yScaleBeforeSquashing;
     private float _velocity;
     private const float _squashDuration = 0.45f;
-
+    private Tween _animation;
+    
     public Squash(Transform transform)
     {
         _transform = transform;
@@ -17,7 +18,8 @@ public class Squash
     {
         _velocity = velocity;
         _yScaleBeforeSquashing = _transform.localScale.y;
-        DOTween.To(SetSquash, 0, 1, _squashDuration).SetEase(Ease.Linear);
+        _animation?.Kill();
+        _animation = DOTween.To(SetSquash, 0, 1, _squashDuration).SetEase(Ease.Linear);
     }
     
     private void SetSquash(float normalizedValue)
@@ -45,7 +47,7 @@ public class Squash
 
     private float EvaluateSquashVelocity()
     {
-        return _velocity / 2f;
+        return _velocity / 3f;
     }
     
     private float EvaluateYOffset(float yScale)

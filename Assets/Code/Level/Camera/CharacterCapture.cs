@@ -14,7 +14,7 @@ public class CharacterCapture : TogglingComponent
         _transform = transform;
     }
 
-    protected override void OnLateUpdate()
+    protected override void OnFixedUpdate()
     {
         float captureTime = EvaluateCaptureTimeFunction(_character.velocity.magnitude);
         Vector3 clampedPosition = _cameraClamping.Clamp(_character.transform.position);
