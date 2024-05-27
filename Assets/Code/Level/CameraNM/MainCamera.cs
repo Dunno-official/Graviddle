@@ -1,14 +1,14 @@
 ﻿using Level.CameraNM.Animations;
 using Level.CameraNM.Clamping;
 using Level.CameraNM.Clamping.Data;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
 namespace Level.CameraNM
 {
-    public class MainCamera : MonoBehaviourWrapper.MonoBehaviourWrapper
+    public class MainCamera : MonoBehaviourWrapper
     {
-        [SerializeField] private UnityEngine.Camera _camera;
+        [SerializeField] private Camera _camera;
 
         public void Initialize(CameraData data)
         {

@@ -2,7 +2,7 @@ using Extensions;
 using Level.CharacterNM;
 using Level.Gravitation;
 using Level.Obstacles.LaserTurretNM;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
 namespace Level.Obstacles

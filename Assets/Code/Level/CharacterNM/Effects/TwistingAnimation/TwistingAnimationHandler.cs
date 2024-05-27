@@ -1,7 +1,7 @@
 using DG.Tweening;
 using Level.CharacterNM.CharacterStateMachine.States;
 using Level.Restart;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
 namespace Level.CharacterNM.Effects.TwistingAnimation

@@ -1,6 +1,6 @@
 ﻿using Level.CharacterNM.CharacterMovement.CharacterInputNM;
 using Level.CharacterNM.Helpers;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
 namespace Level.CharacterNM.CharacterMovement

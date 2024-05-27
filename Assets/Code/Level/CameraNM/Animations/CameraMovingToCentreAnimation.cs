@@ -11,7 +11,7 @@ namespace Level.CameraNM.Animations
         private readonly Transform _transform;
         private const float _duration = 1f;
 
-        public CameraMovingToCentreAnimation(LevelBorders levelBorders, UnityEngine.Camera mainCamera)
+        public CameraMovingToCentreAnimation(LevelBorders levelBorders, Camera mainCamera)
         {
             _transform = mainCamera.transform;
             _horizontalLevelCentre = (levelBorders.Right + levelBorders.Left) / 2f;

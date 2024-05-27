@@ -1,7 +1,7 @@
 ﻿using System;
 using Level.CharacterNM;
 using Level.Restart;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 using Utils.Physics.PhysicsEventBroadcaster;
 

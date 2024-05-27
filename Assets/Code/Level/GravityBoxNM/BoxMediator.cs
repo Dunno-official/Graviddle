@@ -1,6 +1,6 @@
 ﻿using Extensions;
 using Level.Gravitation.SwipeHandlerNM;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using Utils;
 using Utils.Physics;
 

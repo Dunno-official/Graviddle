@@ -1,5 +1,5 @@
 ﻿using System;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
 namespace Utils.Physics

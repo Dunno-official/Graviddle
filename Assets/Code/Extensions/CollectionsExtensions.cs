@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Level.Restart;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
 namespace Extensions

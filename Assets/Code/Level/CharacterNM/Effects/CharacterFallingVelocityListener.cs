@@ -1,6 +1,6 @@
 ﻿using Level.CharacterNM.CharacterStateMachine.States;
 using Level.CharacterNM.CharacterStateMachine.StateTransitions;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
 namespace Level.CharacterNM.Effects

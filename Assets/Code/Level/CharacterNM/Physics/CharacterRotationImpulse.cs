@@ -1,7 +1,7 @@
 using Level.CharacterNM.Helpers;
 using Level.Gravitation;
 using Level.Gravitation.SwipeHandlerNM;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
 namespace Level.CharacterNM.Physics

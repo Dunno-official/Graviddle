@@ -1,7 +1,7 @@
 ﻿using System;
 using Level.CharacterNM.Helpers;
 using Level.Gravitation.SwipeHandlerNM;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine.UI;
 
 namespace Level.CameraNM.Animations

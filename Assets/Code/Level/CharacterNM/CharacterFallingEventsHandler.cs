@@ -1,7 +1,7 @@
 ﻿using Level.CharacterNM.CharacterStateMachine.States;
 using Level.CharacterNM.CharacterStateMachine.StateTransitions;
 using Level.Restart;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 
 namespace Level.CharacterNM
 {

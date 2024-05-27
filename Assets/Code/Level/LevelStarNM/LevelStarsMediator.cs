@@ -1,6 +1,6 @@
 ﻿using System;
 using Level.Gravitation;
-using Level.UI.Panels.WinPanel;
+using Level.UserInterface.Panels.WinPanel;
 using UnityEngine;
 
 namespace Level.LevelStarNM

@@ -2,7 +2,7 @@
 using Cysharp.Threading.Tasks;
 using Extensions;
 using Level.CharacterNM.CharacterStateMachine.States;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using SceneTransitions;
 using Utils;
 

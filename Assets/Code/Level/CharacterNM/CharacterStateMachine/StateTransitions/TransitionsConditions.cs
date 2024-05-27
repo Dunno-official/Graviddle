@@ -2,8 +2,8 @@
 using Level.CameraNM.Clamping.Data;
 using Level.CharacterNM.CharacterMovement.CharacterInputNM;
 using Level.Obstacles;
-using Level.Portals.FinishPortal;
-using Level.UI.Buttons;
+using Level.Portals;
+using Level.UserInterface.Buttons;
 using UnityEngine;
 using Utils.Physics;
 

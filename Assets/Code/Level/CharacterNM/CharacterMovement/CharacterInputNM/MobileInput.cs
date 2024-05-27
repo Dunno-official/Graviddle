@@ -1,4 +1,4 @@
-﻿using Level.UI.Panels.GameplayPanel.MovementButtons;
+﻿using Level.UserInterface.Panels.GameplayPanel.MovementButtons;
 using UnityEngine;
 
 namespace Level.CharacterNM.CharacterMovement.CharacterInputNM

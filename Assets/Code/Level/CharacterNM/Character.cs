@@ -10,15 +10,15 @@ using Level.CharacterNM.Helpers;
 using Level.CharacterNM.Physics;
 using Level.Gravitation;
 using Level.Gravitation.SwipeHandlerNM;
-using Level.Portals.FinishPortal;
-using MonoBehaviourWrapper;
+using Level.Portals;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 using Utils.Physics;
 using Utils.Physics.Cast;
 
 namespace Level.CharacterNM
 {
-    public class Character : MonoBehaviourWrapper.MonoBehaviourWrapper
+    public class Character : MonoBehaviourWrapper
     {
         [SerializeField] private TwistingAnimationData _twistingAnimationData;
         [SerializeField] private ConstantForce2D _constantForce2d;

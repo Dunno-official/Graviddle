@@ -1,12 +1,12 @@
 using System;
 using Level.Gravitation;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 using Utils.Physics.PhysicsEventBroadcaster;
 
 namespace Level.LevelStarNM
 {
-    public class LevelStar : MonoBehaviourWrapper.MonoBehaviourWrapper
+    public class LevelStar : MonoBehaviourWrapper
     {
         [SerializeField] private PhysicsEventBroadcaster _physics;
         public event Action StarCollected;

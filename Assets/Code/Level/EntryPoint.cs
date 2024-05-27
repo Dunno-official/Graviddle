@@ -10,15 +10,16 @@ using Level.GravityBoxNM;
 using Level.LevelStarNM;
 using Level.Obstacles;
 using Level.Restart;
-using Level.UI;
-using Level.UI.Panels.GameplayPanel.MovementButtons;
-using MonoBehaviourWrapper;
-using SaveSystm;
+using Level.UserInterface;
+using Level.UserInterface.Panels.GameplayPanel;
+using Level.UserInterface.Panels.GameplayPanel.MovementButtons;
+using MonoBehaviourWrapperNM;
+using SaveSystem;
 using UnityEngine;
 
 namespace Level
 {
-    public class EntryPoint : MonoBehaviourWrapper.MonoBehaviourWrapper
+    public class EntryPoint : MonoBehaviourWrapper
     {
         [SerializeField] private TransitionsConditions _transitionsConditions;
         [SerializeField] private LevelStarsMediator _levelStarsMediator;
@@ -32,7 +33,7 @@ namespace Level
         [SerializeField] private MainCamera _mainCamera;
         [SerializeField] private LevelBorders _borders;
         [SerializeField] private Character _character;
-        [SerializeField] private UI.UI _ui;
+        [SerializeField] private UI _ui;
 
         private void Awake()
         {
@@ -53,6 +54,7 @@ namespace Level
             {
                 new LevelRestart(restartEvent.Invoke, _character.States.DieState),
                 new UIHandler(_character.States, _character, _ui),
+                new UIGravityBoxCover(_gravityBoxes, _ui.Find<GameplayPanel>())
             });
         }
     }

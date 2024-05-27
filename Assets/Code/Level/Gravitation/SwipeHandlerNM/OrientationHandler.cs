@@ -40,6 +40,7 @@ namespace Level.Gravitation.SwipeHandlerNM
         public void Reset()
         {
             LocalDirection = GravityDirection.Down;
+            _lastDirection = GravityDirection.Down;
         }
     }
 }

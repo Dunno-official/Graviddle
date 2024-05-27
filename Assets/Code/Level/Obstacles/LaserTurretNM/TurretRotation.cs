@@ -1,4 +1,4 @@
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
 namespace Level.Obstacles.LaserTurretNM

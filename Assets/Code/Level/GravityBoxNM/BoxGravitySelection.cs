@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Level.CharacterNM.Helpers;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 using UnityEngine.UI;
 

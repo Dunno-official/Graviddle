@@ -1,6 +1,6 @@
 ﻿using Level.CharacterNM.Helpers;
 using Level.Restart;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
 namespace Level.Gravitation

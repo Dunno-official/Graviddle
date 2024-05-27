@@ -1,7 +1,7 @@
 ﻿using Level.CameraNM.Clamping.Data;
 using Level.CharacterNM.Helpers;
 using Level.Gravitation.SwipeHandlerNM;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 
 namespace Level.CameraNM.Clamping
 {

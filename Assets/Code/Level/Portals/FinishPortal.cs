@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Level.Portals.FinishPortal
+namespace Level.Portals
 {
     public class FinishPortal : MonoBehaviour
     {

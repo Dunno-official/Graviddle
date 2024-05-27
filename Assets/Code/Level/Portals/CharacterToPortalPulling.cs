@@ -1,11 +1,11 @@
 ﻿using DG.Tweening;
 using Level.CharacterNM.CharacterStateMachine.States;
 using Level.Gravitation;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 using Utils.Physics;
 
-namespace Level.Portals.FinishPortal
+namespace Level.Portals
 {
     public class CharacterToPortalPulling : ISubscriber
     {

@@ -9,7 +9,7 @@ namespace Utils.EditorUtils
         {
 #if UNITY_EDITOR
 
-            Level.UI.UI ui = Object.FindObjectOfType<Level.UI.UI>();
+            Level.UserInterface.UI ui = Object.FindObjectOfType<Level.UserInterface.UI>();
         
             if (ui != null)
             {

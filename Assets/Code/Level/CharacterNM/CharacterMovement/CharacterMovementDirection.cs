@@ -1,7 +1,7 @@
 ﻿using Level.CharacterNM.Helpers;
 using Level.Gravitation;
-using Level.UI.Panels.GameplayPanel.MovementButtons;
-using MonoBehaviourWrapper;
+using Level.UserInterface.Panels.GameplayPanel.MovementButtons;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
 namespace Level.CharacterNM.CharacterMovement

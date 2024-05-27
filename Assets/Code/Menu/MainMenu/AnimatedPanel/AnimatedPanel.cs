@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using Level.UI.Panels;
+using Level.UserInterface.Panels;
 using UnityEngine;
 using Utils.UI;
 

@@ -10,14 +10,14 @@ namespace Level.GravityBoxNM
         private readonly OrientationHandler _orientation = new(0.75f);
         private readonly GravityDirection _initialDirection;
         private readonly Transform _transform;
-        private readonly UnityEngine.Camera _camera;
+        private readonly Camera _camera;
 
         public BoxGravityState(Transform transform, GravityDirection gravityDirection)
         {
             _initialDirection = gravityDirection;
             Direction = gravityDirection;
             _transform = transform;
-            _camera = UnityEngine.Camera.main;
+            _camera = Camera.main;
         }
 
         public bool DirectionChanged { get; private set; }

@@ -1,5 +1,5 @@
 ﻿using Level.CharacterNM.CharacterStateMachine.StateTransitions;
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 
 namespace Level.CharacterNM.CharacterStateMachine
 {

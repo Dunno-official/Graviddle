@@ -1,5 +1,5 @@
 ﻿
-using MonoBehaviourWrapper;
+using MonoBehaviourWrapperNM;
 
 namespace Utils
 {
