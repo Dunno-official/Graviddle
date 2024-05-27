@@ -1,4 +1,5 @@
-﻿using Level.CharacterNM.Helpers;
+﻿using System;
+using Level.CharacterNM.Helpers;
 using Level.Gravitation;
 using Level.Gravitation.SwipeHandlerNM;
 using UnityEngine;
@@ -20,20 +21,22 @@ namespace Level.GravityBoxNM
             _camera = Camera.main;
         }
 
-        public bool DirectionChanged { get; private set; }
+        public event Action DirectionChanged;
+        public bool IsDirectionChanged { get; private set; }
         public GravityDirection Direction { get; private set; }
         public GravityDirection TargetGlobalDirection => _orientation.LocalDirection;
-    
+
         public void UpdateDirection()
         {
             Direction = _orientation.LocalDirection;
+            DirectionChanged?.Invoke();
         }
 
         public void Update()
         {
             Vector2 delta = GetDelta();
             _orientation.TryChangeDirection(delta);
-            DirectionChanged = delta.magnitude > _orientation.Sensitivity;
+            IsDirectionChanged = delta.magnitude > _orientation.Sensitivity;
         }
 
         private Vector2 GetDelta()

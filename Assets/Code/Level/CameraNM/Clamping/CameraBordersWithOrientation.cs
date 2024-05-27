@@ -1,6 +1,6 @@
 ﻿using Level.CameraNM.Clamping.Data;
 using Level.CharacterNM.Helpers;
-using Level.Gravitation.SwipeHandlerNM;
+using Level.Gravitation;
 using MonoBehaviourWrapperNM;
 
 namespace Level.CameraNM.Clamping
@@ -8,13 +8,13 @@ namespace Level.CameraNM.Clamping
     public class CameraBordersWithOrientation : ISubscriber
     {
         private readonly CameraClampingSettings _cameraClampingSettings;
-        private readonly SwipeHandler _swipeHandler;
+        private readonly IGravityState _gravityState;
         private float _orientationOffset;
 
-        public CameraBordersWithOrientation(CameraClampingSettings clampingSettings, SwipeHandler swipeHandler)
+        public CameraBordersWithOrientation(CameraClampingSettings clampingSettings, IGravityState gravityState)
         {
             _cameraClampingSettings = clampingSettings;
-            _swipeHandler = swipeHandler;
+            _gravityState = gravityState;
         }
 
         public float Top => _cameraClampingSettings.CameraBorders.Top - _orientationOffset;
@@ -24,18 +24,18 @@ namespace Level.CameraNM.Clamping
 
         void ISubscriber.Subscribe()
         {
-            _swipeHandler.GravityChanged += OnGravityChanged;
+            _gravityState.DirectionChanged += OnGravityChanged;
         }
 
         void ISubscriber.Unsubscribe()
         {
-            _swipeHandler.GravityChanged -= OnGravityChanged;
+            _gravityState.DirectionChanged -= OnGravityChanged;
         }
 
-        private void OnGravityChanged(GravityDirection gravityDirection)
+        private void OnGravityChanged()
         {
-            bool isHorizontalOrientation = gravityDirection == GravityDirection.Down || 
-                                           gravityDirection == GravityDirection.Up;
+            bool isHorizontalOrientation = _gravityState.Direction == GravityDirection.Down || 
+                                           _gravityState.Direction == GravityDirection.Up;
 
             _orientationOffset = isHorizontalOrientation ? 0 : _cameraClampingSettings.OrientationOffset;
         }

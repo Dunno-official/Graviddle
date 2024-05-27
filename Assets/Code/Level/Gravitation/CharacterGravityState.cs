@@ -1,3 +1,4 @@
+using System;
 using Level.CharacterNM.Helpers;
 using Level.Gravitation.SwipeHandlerNM;
 using MonoBehaviourWrapperNM;
@@ -7,6 +8,7 @@ namespace Level.Gravitation
     public class CharacterGravityState : ISubscriber, IGravityState
     {
         private readonly SwipeHandler _swipeHandler;
+        public event Action DirectionChanged;
 
         public CharacterGravityState(SwipeHandler swipeHandler)
         {
@@ -28,6 +30,7 @@ namespace Level.Gravitation
         private void OnGravityChanged(GravityDirection gravityDirection)
         {
             Direction = gravityDirection;
+            DirectionChanged?.Invoke();
         }
     }
 }

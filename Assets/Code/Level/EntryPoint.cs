@@ -42,9 +42,9 @@ namespace Level
             PollingEvent restartEvent = new();
 
             _transitionsConditions.Initialize(input, _character, _borders, restartEvent.CheckIfEventHappened);
-            _character.Initialize(_transitionsConditions, _swipeHandler, characterGravityState, input);
+            _character.Initialize(_transitionsConditions, characterGravityState, input, _swipeHandler);
             _laserTurrets.ForEach(laserTurret => laserTurret.Initialize(characterGravityState));
-            _cameraData.Initialize(_swipeHandler, _borders, characterGravityState, _character);
+            _cameraData.Initialize(_borders, characterGravityState, _character);
             _gravityBoxes.ForEach(gravityBox => gravityBox.Initialize(_swipeHandler));
             _levelStarsMediator.Resolve(characterGravityState);
             _levelResultSave.Initialize(_character.States.WinState);

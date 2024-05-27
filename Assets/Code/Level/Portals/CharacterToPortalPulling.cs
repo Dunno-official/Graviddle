@@ -15,9 +15,8 @@ namespace Level.Portals
         private readonly Transform _character;
         private readonly WinState _winState;
 
-        public CharacterToPortalPulling(WinState winState, Transform character, CollisionsList collisions, GravityRotation gravityRotation)
+        public CharacterToPortalPulling(WinState winState, Transform character, CollisionsList collisions)
         {
-            _gravityRotation = gravityRotation;
             _collisions = collisions;
             _character = character;
             _winState = winState;
@@ -35,8 +34,6 @@ namespace Level.Portals
 
         private void PullToPortal()
         {
-            _gravityRotation.IsActive = false;
-
             FinishPortal finishPortal = _collisions.GetComponentFromList<FinishPortal>();
         
             _character.DOMove(finishPortal.PullingPoint.position, _animationDuration);

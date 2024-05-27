@@ -1,29 +1,29 @@
 ﻿using System;
-using Level.CharacterNM.Helpers;
-using Level.Gravitation.SwipeHandlerNM;
+using Level.Gravitation;
 using MonoBehaviourWrapperNM;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Level.CameraNM.Animations
 {
     public class CameraZoom : ISubscriber, IDisposable
     {
+        private readonly IGravityState _gravityState;
         private readonly CameraAnimation _animation;
-        private readonly SwipeHandler _swipeHandler;
         private readonly CharacterCapture _capture;
         private readonly Button _zoomOutButton;
         private readonly Button _zoomInButton;
 
-        public CameraZoom(CameraData data, UnityEngine.Camera camera, CharacterCapture capture)
+        public CameraZoom(CameraData data, Camera camera, CharacterCapture capture)
         {
             CameraMovingToCentreAnimation movingToCentreAnimation = new(data.Borders, camera);
             LevelZoomCalculator zoomCalculator = new(camera, data.Borders, data.CharacterGravityState);
             CameraZoomAnimation zoomAnimation = new(camera, zoomCalculator);
         
             _animation = new CameraAnimation(movingToCentreAnimation, zoomAnimation);
+            _gravityState = data.CharacterGravityState;
             _zoomOutButton = data.ZoomOutButton;
             _zoomInButton = data.ZoomInButton;
-            _swipeHandler = data.SwipeHandler;
             _capture = capture;
         }
 
@@ -31,14 +31,14 @@ namespace Level.CameraNM.Animations
         {
             _zoomInButton.onClick.AddListener(ZoomIn);
             _zoomOutButton.onClick.AddListener(ZoomOut);
-            _swipeHandler.GravityChanged += TryRecalculateZoom;
+            _gravityState.DirectionChanged += TryRecalculateZoom;
         }
 
         void ISubscriber.Unsubscribe()
         {
             _zoomInButton.onClick.RemoveListener(ZoomIn);
             _zoomOutButton.onClick.RemoveListener(ZoomOut);
-            _swipeHandler.GravityChanged -= TryRecalculateZoom;
+            _gravityState.DirectionChanged -= TryRecalculateZoom;
         }
 
         private void ZoomIn()
@@ -53,7 +53,7 @@ namespace Level.CameraNM.Animations
             _capture.IsActive = false;
         }
 
-        private void TryRecalculateZoom(GravityDirection direction)
+        private void TryRecalculateZoom()
         {
             if (_capture.IsActive == false)
             {

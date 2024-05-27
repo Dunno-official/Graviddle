@@ -14,7 +14,7 @@ namespace Level.CameraNM
         {
             CameraClampingSettingsFactory cameraClampingSettingsFactory = new(data.Borders, _camera);
             CameraClampingSettings settings = cameraClampingSettingsFactory.Create();
-            CameraBordersWithOrientation borders = new(settings, data.SwipeHandler);
+            CameraBordersWithOrientation borders = new(settings, data.CharacterGravityState);
             CharacterCapture characterCapture = new(data.Character, transform, borders);
             CameraZoom cameraZoom = new(data, _camera, characterCapture);
         
@@ -23,7 +23,7 @@ namespace Level.CameraNM
                 borders,
                 characterCapture,
                 cameraZoom,
-                new CameraRotation(transform, data.RotationData, data.SwipeHandler, this),
+                new SingleGravityRotation(transform, data.RotationData, data.CharacterGravityState, this),
             });
         }
     }

@@ -1,6 +1,4 @@
-using Level.CharacterNM.Helpers;
 using Level.Gravitation;
-using Level.Gravitation.SwipeHandlerNM;
 using MonoBehaviourWrapperNM;
 using UnityEngine;
 
@@ -8,30 +6,30 @@ namespace Level.CharacterNM.Physics
 {
     public class CharacterRotationImpulse : ISubscriber
     {
+        private readonly IGravityState _gravityState;
         private readonly Rigidbody2D _rigidbody;
-        private readonly SwipeHandler _swipeHandler;
         private const int _straightAngle = 180;
         private int _currentZRotation;
 
-        public CharacterRotationImpulse(Rigidbody2D rigidbody2D, SwipeHandler swipeHandler)
+        public CharacterRotationImpulse(Rigidbody2D rigidbody2D, IGravityState gravityState)
         {
             _rigidbody = rigidbody2D;
-            _swipeHandler = swipeHandler;
+            _gravityState = gravityState;
         }
 
         void ISubscriber.Subscribe()
         {
-            _swipeHandler.GravityChanged += TryImpulseCharacter;
+            _gravityState.DirectionChanged += TryImpulseCharacter;
         }
 
         void ISubscriber.Unsubscribe()
         {
-            _swipeHandler.GravityChanged -= TryImpulseCharacter;
+            _gravityState.DirectionChanged -= TryImpulseCharacter;
         }
 
-        private void TryImpulseCharacter(GravityDirection gravityDirection)
+        private void TryImpulseCharacter()
         {
-            int newZRotation = GravityDataPresenter.GravityData[gravityDirection].ZRotation;
+            int newZRotation = _gravityState.Data.ZRotation;
 
             if (IsRightAngleRotation(newZRotation))
             {

@@ -1,50 +1,48 @@
 using System.Collections;
-using Level.CharacterNM.Helpers;
 using Level.Gravitation;
-using Level.Gravitation.SwipeHandlerNM;
 using MonoBehaviourWrapperNM;
 using UnityEngine;
 using Utils.CoroutineHelpers;
 
 namespace Level.CameraNM
 {
-    public class CameraRotation : ISubscriber
+    public class SingleGravityRotation : ISubscriber
     {
-        private readonly CameraRotationData _rotationData;
+        private readonly CurveAnimationData _rotationData;
         private readonly ICoroutineRunner _coroutineRunner;
-        private readonly SwipeHandler _swipeHandler;
+        private readonly IGravityState _gravityState;
         private readonly Transform _transform;
         private Coroutine _animation;
     
-        public CameraRotation(Transform transform, CameraRotationData rotationData, SwipeHandler swipeHandler, ICoroutineRunner coroutineRunner)
+        public SingleGravityRotation(Transform transform, CurveAnimationData rotationData, IGravityState gravityState, ICoroutineRunner coroutineRunner)
         {
             _coroutineRunner = coroutineRunner;
             _rotationData = rotationData;
-            _swipeHandler = swipeHandler;
+            _gravityState = gravityState;
             _transform = transform;
         }
 
         public void Subscribe()
         {
-            _swipeHandler.GravityChanged += InvokeRotationAnimation;
+            _gravityState.DirectionChanged += InvokeRotationAnimation;
         }
 
         public void Unsubscribe()
         {
-            _swipeHandler.GravityChanged -= InvokeRotationAnimation;
+            _gravityState.DirectionChanged -= InvokeRotationAnimation;
         }
 
-        private void InvokeRotationAnimation(GravityDirection gravityDirection)
+        private void InvokeRotationAnimation()
         {
             _animation.TryStop(_coroutineRunner);
-            _animation = _coroutineRunner.StartCoroutine(PlayAnimationAnimation(gravityDirection));
+            _animation = _coroutineRunner.StartCoroutine(PlayAnimationAnimation());
         }
 
-        private IEnumerator PlayAnimationAnimation(GravityDirection gravityDirection)
+        private IEnumerator PlayAnimationAnimation()
         {
             float time = 0;
             Quaternion initialRotation = _transform.rotation;
-            Quaternion targetRotation = GravityDataPresenter.GravityData[gravityDirection].Rotation;
+            Quaternion targetRotation = _gravityState.Data.Rotation;
         
             while (time < _rotationData.Time)
             {

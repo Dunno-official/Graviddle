@@ -26,7 +26,7 @@ namespace Level.GravityBoxNM
 
         public void TryChangeDirection()
         {
-            if (_state.DirectionChanged)
+            if (_state.IsDirectionChanged)
             {
                 _state.UpdateDirection();
                 _gravity.SetDirection(_state.TargetGlobalDirection);
@@ -35,7 +35,7 @@ namespace Level.GravityBoxNM
 
         private void UpdateUI()
         {
-            if (_state.DirectionChanged)
+            if (_state.IsDirectionChanged)
             {
                 _selection.TrySelectDirection(_state.Direction, _state.TargetGlobalDirection);
             }

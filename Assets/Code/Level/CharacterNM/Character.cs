@@ -1,4 +1,5 @@
 ﻿using System;
+using Level.CameraNM;
 using Level.CharacterNM.CharacterMovement;
 using Level.CharacterNM.CharacterMovement.CharacterInputNM;
 using Level.CharacterNM.CharacterStateMachine;
@@ -22,6 +23,7 @@ namespace Level.CharacterNM
     {
         [SerializeField] private TwistingAnimationData _twistingAnimationData;
         [SerializeField] private ConstantForce2D _constantForce2d;
+        [SerializeField] private CurveAnimationData _rotationData;
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private CircleCastData _circleCastData;
         [SerializeField] private TrailRenderer _trailRenderer;
@@ -29,15 +31,14 @@ namespace Level.CharacterNM
         [SerializeField] private CollisionsList _collisions;
         [SerializeField] private Rigidbody2D _rigidbody2D;
         [SerializeField] private Animator _animator;
-
         public CharacterStatesPresenter States { get; private set; }
         public event Action Respawned;
 
-        public void Initialize(TransitionsConditions conditions, SwipeHandler swipeHandler, CharacterGravityState characterGravityState, CharacterInput input)
+        public void Initialize(TransitionsConditions conditions, CharacterGravityState gravityState, CharacterInput input, SwipeHandler swipeHandler)
         {
             States = new CharacterStatesPresenter(_animator, input, _circleCastData);
             Gravity gravity = new(_constantForce2d, 15, GravityDirection.Down);
-            GravityRotation gravityRotation = new(characterGravityState, transform);
+            SingleGravityRotation gravityRotation = new(transform, _rotationData, gravityState, this);
             TransitionsPresenterFactory transitionsPresenterFactory = new(States, conditions);
             TransitionsPresenter transitionsPresenter = transitionsPresenterFactory.Create();
             Transition fallToIdleTransition = transitionsPresenter.GetTransition(States.FallState, States.IdleState);
@@ -46,13 +47,13 @@ namespace Level.CharacterNM
             {
                 gravity,
                 gravityRotation,
-                characterGravityState,
-                new CharacterGravity(gravity, swipeHandler),
+                gravityState,
+                new CharacterGravity(gravity, gravityState),
                 new CharacterSpriteFlipping(_spriteRenderer, input),
-                new CharacterRotationImpulse(_rigidbody2D, swipeHandler),
+                new CharacterRotationImpulse(_rigidbody2D, gravityState),
                 new CharacterStateMachine.CharacterStateMachine(transitionsPresenter, States.IdleState),
                 new SwipeHandlerSwitch(swipeHandler, fallToIdleTransition, States.FallState),
-                new CharacterToPortalPulling(States.WinState, transform, _collisions, gravityRotation),
+                new CharacterToPortalPulling(States.WinState, transform, _collisions),
                 new CharacterVFX(_fallingDust, _trailRenderer, fallToIdleTransition, States.FallState, _rigidbody2D),
                 new TwistingAnimationHandler(_spriteRenderer, States.WinState, _twistingAnimationData, InvokeRespawnEvent),
                 new SquashStretchAnimation(_rigidbody2D, _spriteRenderer, fallToIdleTransition, States.FallState),
