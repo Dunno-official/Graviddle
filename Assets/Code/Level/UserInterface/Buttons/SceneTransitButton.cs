@@ -7,8 +7,8 @@ namespace Level.UserInterface.Buttons
 {
     public class SceneTransitButton : ButtonClick
     {
-        [SerializeField] private int _sceneIndex;
         [SerializeField] private AssetReference _transitReference;
+        [SerializeField] private int _sceneIndex;
 
         protected override async void OnButtonClick()
         {
@@ -17,6 +17,11 @@ namespace Level.UserInterface.Buttons
             await sceneTransit.MakeTransition(_sceneIndex);
         
             LocalAssetLoader.Unload(sceneTransit.gameObject);
+        }
+
+        public void SetTransitSceneIndex(int levelIndex)
+        {
+            _sceneIndex = levelIndex;
         }
     }
 }

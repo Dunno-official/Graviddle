@@ -104149,13 +104149,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 6891503042004876703}
-  _sceneIndex: 0
   _transitReference:
     m_AssetGUID: a1c9bd019de36b3488b4b97851461d7b
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  _sceneIndex: 0
 --- !u!1 &6891503042026673925
 GameObject:
   m_ObjectHideFlags: 0
@@ -105116,13 +105116,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 2317070121387082126}
-  _sceneIndex: 0
   _transitReference:
     m_AssetGUID: a1c9bd019de36b3488b4b97851461d7b
     m_SubObjectName: 
     m_SubObjectGUID: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  _sceneIndex: 0
 --- !u!1 &8129243315503718118
 GameObject:
   m_ObjectHideFlags: 0
