@@ -8,8 +8,7 @@ namespace AppStartup
     {
         [SerializeField] private BackgroundMusicSpawner _backgroundMusicSpawner;
         [SerializeField] private UI _ui;
-        private static bool _appWasInited;
-    
+
         private async void Start()
         {
             TryInitializeGame();
@@ -19,13 +18,15 @@ namespace AppStartup
 
         private void TryInitializeGame()
         {
-            if (_appWasInited == false)
+            bool isFirstTime = FindObjectsByType<AppStartup>(FindObjectsSortMode.None).Length == 1;
+            
+            if (isFirstTime)
             {
-                _appWasInited = true;
                 Application.targetFrameRate = 90;
                 Addressables.InitializeAsync();
                 _backgroundMusicSpawner.Initialize();
                 new MusicVolume().Initialize();
+                DontDestroyOnLoad(gameObject);
             }
         }
     }

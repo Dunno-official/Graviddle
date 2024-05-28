@@ -32,7 +32,7 @@ namespace Utils.Physics
             {
                 Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
             
-                int numColliders = Physics2D.OverlapPointNonAlloc(mousePosition, _results);
+                int numColliders = Physics2D.OverlapPoint(mousePosition, new ContactFilter2D(), _results);
             
                 for (int i = 0; i < numColliders; i++)
                 {

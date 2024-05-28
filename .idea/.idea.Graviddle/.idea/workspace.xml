@@ -6,55 +6,461 @@
   <component name="ChangeListManager">
     <list default="true" id="236f7ca0-e3d5-42cf-8bd1-4f65d9112fc7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/Animations/CameraZoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/Animations/CameraZoom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CameraData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CameraData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CameraRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/SingleGravityRotation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CameraRotation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/SingleGravityRotation.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CameraRotationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CurveAnimationData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CameraRotationData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CurveAnimationData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CharacterCapture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CharacterCapture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/Clamping/CameraBordersWithOrientation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/Clamping/CameraBordersWithOrientation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/MainCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/MainCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterGravity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterGravity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/CharacterState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/CharacterState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/CharacterState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/CharacterState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/CharacterStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/CharacterStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/CharacterStateMachine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/CharacterStateMachine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/CharacterStatesPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/CharacterStatesPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/CharacterStatesPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/CharacterStatesPresenter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/StateTransitions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/StateTransitions/Transition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/Transition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/StateTransitions/Transition.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/Transition.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/StateTransitions/TransitionsConditions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsConditions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/StateTransitions/TransitionsConditions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsConditions.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/StateTransitions/TransitionsPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/StateTransitions/TransitionsPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsPresenter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/StateTransitions/TransitionsPresenterFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsPresenterFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/StateTransitions/TransitionsPresenterFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsPresenterFactory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/States.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/States/DieState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/DieState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/States/DieState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/DieState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/States/FallState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/FallState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/States/FallState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/FallState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/States/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/IdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/States/IdleState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/IdleState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/States/RunState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/RunState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/States/RunState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/RunState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/States/WinState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/WinState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachine/States/WinState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/WinState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Physics/CharacterRotationImpulse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Physics/CharacterRotationImpulse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/EntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/CharacterGravityState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/CharacterGravityState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/IGravityState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/IGravityState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/GravityBoxNM/BoxGravityHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/GravityBoxNM/BoxGravityHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/GravityBoxNM/BoxGravityState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/GravityBoxNM/BoxGravityState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Portals/CharacterToPortalPulling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Portals/CharacterToPortalPulling.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Utils/TransformParentDetach.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Utils/TransformParentDetach.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level/Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Utils/EditorUtils/EditorUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Utils/EditorUtils/EditorUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Utils/EditorUtils/FPSCounter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Utils/EditorUtils/FPSCounter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/CHANGELOG.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/AccordionElementEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/AccordionElementEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/BezierLineRendererEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/BezierLineRendererEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/BoxSliderEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/BoxSliderEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/CUIBezierCurveEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/CUIBezierCurveEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/CUIGraphicEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/CUIGraphicEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/CUIImageEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/CUIImageEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/CUITextEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/CUITextEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/CanvasGroupActivator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/CanvasGroupActivator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/ColorPickerPresetsEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/ColorPickerPresetsEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/FancyScrollView.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/FancyScrollView/ScrollerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/FancyScrollView/ScrollerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/NonDrawingGraphicEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/NonDrawingGraphicEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/RangeSliderEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/RangeSliderEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/ReadOnlyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/ReadOnlyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/ScrollPositionControllerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/ScrollPositionControllerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/TextPicEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/TextPicEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/TextPicIconEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/TextPicIconEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/TextPicIconListCopier.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/TextPicIconListCopier.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/TextPicRenameEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/TextPicRenameEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/UIExtensionsMenuOptions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/UIExtensionsMenuOptions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/uGUITools.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Editor/uGUITools.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/LICENSE.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/SoftMaskShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/SoftMaskShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle Add.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle Add.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle AddMultiply.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle AddMultiply.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle AddSmooth.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle AddSmooth.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle Alpha Blend.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle Alpha Blend.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle Blend.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle Blend.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle Multiply.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle Multiply.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle MultiplyDouble.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle MultiplyDouble.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle Premultiply Blend.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle Premultiply Blend.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle VertexLit Blended.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UI Particle VertexLit Blended.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UIAdditive.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UIAdditive.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UIImageCrop.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UIImageCrop.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UILinearDodge.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UILinearDodge.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UIMultiply.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UIMultiply.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UIParticleHidden.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UIParticleHidden.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UIScreen.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UIScreen.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UISoftAdditive.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Resources/Shaders/UISoftAdditive.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion/Accordion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion/Accordion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion/AccordionElement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion/AccordionElement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion/Tweening.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion/Tweening/FloatTween.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion/Tweening/FloatTween.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion/Tweening/ITweenValue.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion/Tweening/ITweenValue.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion/Tweening/TweenRunner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Accordion/Tweening/TweenRunner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/BoxSlider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/BoxSlider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorImage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorImage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorLabel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorLabel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorPickerControl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorPickerControl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorPickerPresets.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorPickerPresets.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorPickerTester.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorPickerTester.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorSampler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorSampler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorSlider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorSlider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorSliderImage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorSliderImage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorValues.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/ColorValues.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/Events.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/Events/ColorChangedEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/Events/ColorChangedEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/Events/HSVChangedEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/Events/HSVChangedEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/HSVUtil.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/HSVUtil.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/HexColorField.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/HexColorField.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/SVBoxSlider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/SVBoxSlider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/TiltWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ColorPicker/TiltWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ComboBox.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ComboBox/AutoCompleteComboBox.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ComboBox/AutoCompleteComboBox.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ComboBox/ComboBox.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ComboBox/ComboBox.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ComboBox/DropDownList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ComboBox/DropDownList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ComboBox/DropDownListButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ComboBox/DropDownListButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ComboBox/DropDownListItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ComboBox/DropDownListItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/CooldownButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/CooldownButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/InputFocus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/InputFocus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/MultiTouchScrollRect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/MultiTouchScrollRect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/RadialSlider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/RadialSlider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/RangeSlider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/RangeSlider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ReorderableList.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ReorderableList/ReorderableList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ReorderableList/ReorderableList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ReorderableList/ReorderableListContent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ReorderableList/ReorderableListContent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ReorderableList/ReorderableListDebug.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ReorderableList/ReorderableListDebug.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ReorderableList/ReorderableListElement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/ReorderableList/ReorderableListElement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/RescalingPanels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/RescalingPanels/RescaleDragPanel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/RescalingPanels/RescaleDragPanel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/RescalingPanels/RescalePanel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/RescalingPanels/RescalePanel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/RescalingPanels/ResizePanel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/RescalingPanels/ResizePanel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Segment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Segment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/SegmentedControl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/SegmentedControl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/SelectionBox.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/SelectionBox/ExampleSelectable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/SelectionBox/ExampleSelectable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/SelectionBox/IBoxSelectable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/SelectionBox/IBoxSelectable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/SelectionBox/SelectionBox.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/SelectionBox/SelectionBox.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Stepper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/Stepper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/StepperSide.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/StepperSide.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/TextPic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/TextPic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/UI_Knob.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Controls/UI_Knob.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/BestFitOutline.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/BestFitOutline.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurlyUI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurlyUI/CUIBezierCurve.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurlyUI/CUIBezierCurve.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurlyUI/CUIGraphic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurlyUI/CUIGraphic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurlyUI/CUIImage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurlyUI/CUIImage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurlyUI/CUIMisc.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurlyUI/CUIMisc.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurlyUI/CUIText.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurlyUI/CUIText.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurvedText.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CurvedText.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CylinderText.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/CylinderText.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/Gradient.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/Gradient.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/Gradient2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/Gradient2.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/LetterSpacing.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/LetterSpacing.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/MonoSpacing.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/MonoSpacing.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/NicerOutline.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/NicerOutline.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/RaycastMask.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/RaycastMask.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UIAdditiveEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UIAdditiveEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UIImageCrop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UIImageCrop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UILinearDodgeEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UILinearDodgeEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UIMultiplyEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UIMultiplyEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UIScreenEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UIScreenEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UISoftAdditiveEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShaderEffects/UISoftAdditiveEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShineEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShineEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShineEffector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/ShineEffector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/SoftMaskScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/SoftMaskScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/UIFlippable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/UIFlippable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/UIParticleSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Effects/UIParticleSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/2D Cards.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/2D Cards/CardExpanding2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/2D Cards/CardExpanding2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/2D Cards/CardPopup2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/2D Cards/CardPopup2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/2D Cards/CardStack2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/2D Cards/CardStack2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/3D Cards.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/3D Cards/CardExpanding3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/3D Cards/CardExpanding3D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/Superellipse Creation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/Superellipse Creation/MeshCreator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/Superellipse Creation/MeshCreator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/Superellipse Creation/SuperellipsePoints.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/Superellipse Creation/SuperellipsePoints.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/Superellipse Creation/Triangulator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CardUI/Superellipse Creation/Triangulator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/ContentScrollSnapHorizontal.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/ContentScrollSnapHorizontal.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CurvedLayout.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/CurvedLayout.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Core/FancyCell.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Core/FancyCell.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Core/FancyScrollView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Core/FancyScrollView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/FancyCellGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/FancyCellGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/FancyGridView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/FancyGridView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/FancyGridViewCell.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/FancyGridViewCell.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/FancyGridViewContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/FancyGridViewContext.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/IFancyCellGroupContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/IFancyCellGroupContext.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/IFancyGridViewContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/GridView/IFancyGridViewContext.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/ScrollRect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/ScrollRect/FancyScrollRect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/ScrollRect/FancyScrollRect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/ScrollRect/FancyScrollRectCell.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/ScrollRect/FancyScrollRectCell.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/ScrollRect/FancyScrollRectContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/ScrollRect/FancyScrollRectContext.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/ScrollRect/IFancyScrollRectContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/ScrollRect/IFancyScrollRectContext.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Scroller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Scroller/EasingCore.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Scroller/EasingCore.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Scroller/MovementDirection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Scroller/MovementDirection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Scroller/MovementType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Scroller/MovementType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Scroller/ScrollDirection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Scroller/ScrollDirection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Scroller/Scroller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FancyScrollView/Scroller/Scroller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FlowLayoutGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/FlowLayoutGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/HorizontalScrollSnap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/HorizontalScrollSnap.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/IScrollSnap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/IScrollSnap.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/RadialLayout.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/RadialLayout.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/ScrollPositionController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/ScrollPositionController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/ScrollSnap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/ScrollSnap.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/ScrollSnapBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/ScrollSnapBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/ScrollSnapScrollbarHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/ScrollSnapScrollbarHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/TableLayoutGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/TableLayoutGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/TileSizeFitter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/TileSizeFitter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/UIVerticalScroller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/UIVerticalScroller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/VerticalScrollSnap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Layout/VerticalScrollSnap.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/MenuSystem.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/MenuSystem/Menu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/MenuSystem/Menu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/MenuSystem/MenuManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/MenuSystem/MenuManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/MenuSystem/SimpleMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/MenuSystem/SimpleMenu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/DiamondGraph.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/DiamondGraph.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UICircle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UICircle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UICornerCut.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UICornerCut.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UIGridRenderer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UIGridRenderer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UILineRenderer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UILineRenderer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UILineRendererList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UILineRendererList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UILineTextureRenderer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UILineTextureRenderer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UIPolygon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UIPolygon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UIPrimitiveBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UIPrimitiveBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UISquircle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Primitives/UISquircle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/TabNavigationHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/TabNavigationHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips/BoundTooltip.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips/BoundTooltip/BoundTooltipItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips/BoundTooltip/BoundTooltipItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips/BoundTooltip/BoundTooltipTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips/BoundTooltip/BoundTooltipTrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips/HoverTooltip.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips/HoverTooltip.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips/ToolTip.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips/ToolTip.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips/TooltipTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/ToolTips/TooltipTrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/UIWindowBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/UIWindowBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/BezierPath.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/BezierPath.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/CLFZ2-CompressionHelper-ReadME.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/CLFZ2-CompressionHelper-ReadME.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/CLZF2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/CLZF2.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/CableCurve.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/CableCurve.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/Circle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/Circle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/DragCorrector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/DragCorrector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ExtensionsToggle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ExtensionsToggle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ExtensionsToggleGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ExtensionsToggleGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ExtentionMethods.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ExtentionMethods.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/InputFieldEnterSubmit.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/InputFieldEnterSubmit.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/NonDrawingGraphic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/NonDrawingGraphic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/PPIViewer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/PPIViewer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/PaginationManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/PaginationManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ReadOnlyAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ReadOnlyAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ReturnKeyTriggersButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ReturnKeyTriggersButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ScrollConflictManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ScrollConflictManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ScrollRectEx.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ScrollRectEx.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ScrollRectExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ScrollRectExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ScrollRectLinker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ScrollRectLinker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ScrollRectTweener.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ScrollRectTweener.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/SelectableScaler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/SelectableScaler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/SetPropertyUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/SetPropertyUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ShaderLibrary.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/ShaderLibrary.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/TestCompression.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/TestCompression.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UIExtensionMethods.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UIExtensionMethods.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UIExtensionsInputManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UIExtensionsInputManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UIHighlightable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UIHighlightable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UILineConnector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UILineConnector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UIScrollToSelection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UIScrollToSelection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UIScrollToSelectionXY.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UIScrollToSelectionXY.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UISelectableExtension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UISelectableExtension.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UI_InfiniteScroll.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UI_InfiniteScroll.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UI_MagneticInfiniteScroll.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UI_MagneticInfiniteScroll.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UI_ScrollRectOcclusion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UI_ScrollRectOcclusion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UI_TweenScale.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/UI_TweenScale.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/switchToRectTransform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/Runtime/Scripts/Utilities/switchToRectTransform.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/com.unity.uiextensions/package.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,6 +651,7 @@
       <workItem from="1716723696944" duration="16392000" />
       <workItem from="1716755580685" duration="1663000" />
       <workItem from="1716821705209" duration="5348000" />
+      <workItem from="1716917621011" duration="1068000" />
     </task>
     <servers />
   </component>

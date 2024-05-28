@@ -1390,12 +1390,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 8390430117560287412}
-        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_TargetAssemblyTypeName: Level.UserInterface.UI, Assembly-CSharp
         m_MethodName: ShowSync
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 8390430116508932040}
-          m_ObjectArgumentAssemblyTypeName: Panel, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Level.UserInterface.Panels.Panel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3659,12 +3659,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 8390430117560287412}
-        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_TargetAssemblyTypeName: Level.UserInterface.UI, Assembly-CSharp
         m_MethodName: ShowSync
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 8390430117211291258}
-          m_ObjectArgumentAssemblyTypeName: Panel, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Level.UserInterface.Panels.Panel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4035,12 +4035,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 8390430117560287412}
-        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_TargetAssemblyTypeName: Level.UserInterface.UI, Assembly-CSharp
         m_MethodName: ShowSync
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 8390430116508932040}
-          m_ObjectArgumentAssemblyTypeName: Panel, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Level.UserInterface.Panels.Panel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4194,7 +4194,6 @@ GameObject:
   - component: {fileID: 8390430117560287405}
   - component: {fileID: 8390430117560287414}
   - component: {fileID: 8390430117560287415}
-  - component: {fileID: 8390430117560287401}
   - component: {fileID: 8390430117560287412}
   m_Layer: 5
   m_Name: Menu
@@ -4397,22 +4396,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8390430117560287401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8390430117560287404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c446645233cd9734d80775c815e7139f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _backgroundMusicSpawner:
-    _backgroundMusic: {fileID: -4962204472795951528, guid: 57c24b4c76a7e0e41ad9719cfaea905c,
-      type: 3}
-  _ui: {fileID: 8390430117560287412}
 --- !u!114 &8390430117560287412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5231,12 +5214,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 8390430117560287412}
-        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_TargetAssemblyTypeName: Level.UserInterface.UI, Assembly-CSharp
         m_MethodName: ShowSync
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 8390430117478979158}
-          m_ObjectArgumentAssemblyTypeName: Panel, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Level.UserInterface.Panels.Panel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

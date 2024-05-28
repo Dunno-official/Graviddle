@@ -60,7 +60,7 @@ namespace Level.UserInterface
                 }
             }
 
-            throw new Exception("No such ui component");
+            throw new Exception($"No such ui component with type {typeof(T).Name}");
         }
     }
 }

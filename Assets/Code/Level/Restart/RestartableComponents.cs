@@ -11,7 +11,7 @@ namespace Level.Restart
 
         public RestartableComponents()
         {
-            MonoBehaviour[] monoBehaviours = Object.FindObjectsOfType<MonoBehaviour>(true);
+            MonoBehaviour[] monoBehaviours = Object.FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             RestartComponents = monoBehaviours.OfType<IRestart>();
             AfterRestartComponents = monoBehaviours.OfType<IAfterRestart>();
         }
