@@ -49090,7 +49090,7 @@ ParticleSystemRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2750833116030899229}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -102119,7 +102119,6 @@ GameObject:
   - component: {fileID: 4963056786713715714}
   - component: {fileID: 2273698732136585216}
   - component: {fileID: 5926481213698172867}
-  - component: {fileID: 3951723879834969564}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -102260,18 +102259,6 @@ MonoBehaviour:
   - {fileID: 7267949387480676723}
   - {fileID: 1796410037419255072}
   _initialPanel: {fileID: 7875814575741539101}
---- !u!114 &3951723879834969564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4963056786713715717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 543781edf9576874bb0452ba6d55a057, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4963056787706363131
 GameObject:
   m_ObjectHideFlags: 0
@@ -103443,7 +103430,6 @@ GameObject:
   - component: {fileID: 6598216224234686828}
   - component: {fileID: 4692681449725758411}
   - component: {fileID: 3293338501425664978}
-  - component: {fileID: 8727500073091994562}
   - component: {fileID: 1796410037419255072}
   m_Layer: 5
   m_Name: WinPanel
@@ -103574,19 +103560,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8727500073091994562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6322899550606161253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0743415f9298e0d43bb303f0f5c36c60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _reward: {fileID: 3951723879834969564}
 --- !u!114 &1796410037419255072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103614,7 +103587,6 @@ MonoBehaviour:
       - {fileID: 2659638441748527501}
       _sunEffect: {fileID: 4032111733636548767}
       _confetti: {fileID: 7472254191445848443}
-      _reward: {fileID: 3951723879834969564}
     _levelScore: {fileID: 6891503043413075974}
     _buttons:
     - {fileID: 6891503042004876703}
@@ -105720,22 +105692,22 @@ PrefabInstance:
     - target: {fileID: 5659041334233288694, guid: 57576b6b1056a774ea69f6aec0ecbbad,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5659049963331770990, guid: 57576b6b1056a774ea69f6aec0ecbbad,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5659256856743941754, guid: 57576b6b1056a774ea69f6aec0ecbbad,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5659327075392748624, guid: 57576b6b1056a774ea69f6aec0ecbbad,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5659994311028921182, guid: 57576b6b1056a774ea69f6aec0ecbbad,
         type: 3}

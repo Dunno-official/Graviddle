@@ -12,6 +12,11 @@ namespace Level.UserInterface.Panels.WinPanel
         [SerializeField] private AssetReference _transitToLevelReference;
         [SerializeField] private WinAnimation _winAnimation;
 
+        public void Initialize(Reward reward)
+        {
+            _winAnimation.Initialize(reward);
+        }
+        
         protected override UniTask OnShow()
         {
             _winAnimation.Play();

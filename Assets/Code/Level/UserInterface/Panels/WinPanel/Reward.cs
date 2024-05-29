@@ -2,29 +2,28 @@
 using Extensions;
 using Level.LevelStarNM;
 using Level.Restart;
-using UnityEngine;
+using MonoBehaviourWrapperNM;
 
 namespace Level.UserInterface.Panels.WinPanel
 {
-    public class Reward : MonoBehaviour, IRestart
+    public class Reward : ISubscriber, IRestart
     {
-        private IReadOnlyCollection<LevelStar> _levelStars;
-        private const int _maxStars = 3;
+        private readonly IReadOnlyCollection<LevelStar> _levelStars;
 
-        public int CollectedStars { get; private set; }
-        public bool IsMaxStars => CollectedStars == _maxStars;
-
-        public void Initialize(IReadOnlyCollection<LevelStar> levelStars)
+        public Reward(IReadOnlyCollection<LevelStar> levelStars)
         {
             _levelStars = levelStars;
         }
-    
-        private void OnEnable()
+
+        public int CollectedStars { get; private set; }
+        public bool IsMaxStars => CollectedStars == _levelStars.Count;
+
+        public void Subscribe()
         {
             _levelStars.ForEach(levelStar => levelStar.StarCollected += OnStarCollected);
         }
 
-        private void OnDisable()
+        public void Unsubscribe()
         {
             _levelStars.ForEach(levelStar => levelStar.StarCollected -= OnStarCollected);
         }
@@ -33,7 +32,7 @@ namespace Level.UserInterface.Panels.WinPanel
         {
             ++CollectedStars;
         }
-    
+
         void IRestart.Restart()
         {
             CollectedStars = 0;

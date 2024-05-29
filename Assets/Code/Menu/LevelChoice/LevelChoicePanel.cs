@@ -11,6 +11,7 @@ namespace Menu.LevelChoice
     {
         [SerializeField] private LevelButton _levelButtonPrefab;
         [SerializeField] private GridLayoutGroup _levelsGrid;
+        private readonly int _numOfNonLevelScenes = 1;
         
         public override UniTask Initialize()
         {
@@ -23,16 +24,15 @@ namespace Menu.LevelChoice
             return base.Initialize();
         }
 
-        private static int GetNumOfLevels()
+        private int GetNumOfLevels()
         {
-            const int numOfNonLevelScenes = 1;
-            int numOfLevels = SceneManager.sceneCountInBuildSettings - numOfNonLevelScenes;
+            int numOfLevels = SceneManager.sceneCountInBuildSettings - _numOfNonLevelScenes;
             return numOfLevels;
         }
 
         private void InitializeLevelButtons(int numOfLevels, PlayerProgress playerProgress)
         {
-            for (int levelIndex = 0; levelIndex < numOfLevels; ++levelIndex)
+            for (int levelIndex = _numOfNonLevelScenes; levelIndex <= numOfLevels; ++levelIndex)
             {
                 LevelButton levelButton = Instantiate(_levelButtonPrefab, _levelsGrid.transform);
                 bool isUnlocked = levelIndex <= playerProgress.FinishedLevels;

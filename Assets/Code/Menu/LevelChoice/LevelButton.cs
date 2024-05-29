@@ -17,12 +17,12 @@ namespace Menu.LevelChoice
 
         public void Initialize(UIBlocker uiBlocker, int levelIndex, int numOfStars, bool isUnlocked)
         {
-            _levelIndex.text = (levelIndex + 1).ToString();
+            _levelIndex.text = levelIndex.ToString();
             _button.onClick.AddListener(uiBlocker.Enable);
-            SetStars(numOfStars);
-
+            
             if (isUnlocked)
             {
+                SetStars(numOfStars);
                 UnlockLevel();
             }
 

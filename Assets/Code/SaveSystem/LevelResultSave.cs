@@ -1,45 +1,40 @@
-using System.Collections.Generic;
+using DefaultNamespace;
 using Level.CharacterNM.CharacterStateMachine.States;
 using Level.UserInterface.Panels.WinPanel;
-using Newtonsoft.Json;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+using MonoBehaviourWrapperNM;
 
 namespace SaveSystem
 {
-    public class LevelResultSave : MonoBehaviour
+    public class LevelResultSave : ISubscriber, IInitializable
     {
-        [SerializeField] private Reward _reward;
-        private const string _saves = "Saves";
-        private WinState _characterWinState;
+        private readonly PlayerProgress _playerProgress = new();
+        private readonly WinState _characterWinState;
+        private readonly Reward _reward;
 
-        public void Initialize(WinState winState)
+        public LevelResultSave(WinState characterWinState, Reward reward)
         {
-            _characterWinState = winState;
+            _characterWinState = characterWinState;
+            _reward = reward;
         }
 
-        public void OnEnable()
+        public void Initialize()
+        {
+            _playerProgress.Initialize();
+        }
+
+        public void Subscribe()
         {
             _characterWinState.Entered += SaveLevelResult;
         }
 
-        public void OnDisable()
+        public void Unsubscribe()
         {
             _characterWinState.Entered -= SaveLevelResult;
         }
 
         private void SaveLevelResult()
         {
-            Dictionary<int, int> saves = new();
-
-            if (PlayerPrefs.HasKey(_saves))
-            {
-                saves = JsonConvert.DeserializeObject<Dictionary<int, int>>(PlayerPrefs.GetString(_saves));
-            }
-
-            saves[SceneManager.GetActiveScene().buildIndex] = _reward.CollectedStars;
-
-            PlayerPrefs.SetString(_saves, JsonConvert.SerializeObject(saves));
+            _playerProgress.SetStarsForCurrentScene(_reward.CollectedStars);
         }
     }
 }

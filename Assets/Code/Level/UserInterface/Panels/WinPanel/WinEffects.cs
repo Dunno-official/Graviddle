@@ -11,11 +11,12 @@ namespace Level.UserInterface.Panels.WinPanel
         [SerializeField] private ParticleSystem[] _starsParticles;
         [SerializeField] private ParticleSystem _sunEffect;
         [SerializeField] private ParticleSystem _confetti;
-        [SerializeField] private Reward _reward;
         private float _starsCoolDown;
+        private Reward _reward;
 
-        public void Initialize()
+        public void Initialize(Reward reward)
         {
+            _reward = reward;
             const float coolDown = 0.5f;
             _starsCoolDown = _starsParticles.First().main.duration + coolDown;
         }

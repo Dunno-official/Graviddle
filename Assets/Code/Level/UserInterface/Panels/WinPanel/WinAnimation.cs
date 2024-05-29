@@ -19,6 +19,11 @@ namespace Level.UserInterface.Panels.WinPanel
         private readonly float _targetFade = 0.6f;
         private readonly Vector2 _targetPosition = Vector2.zero;
 
+        public void Initialize(Reward reward)
+        {
+            _effects.Initialize(reward);
+        }
+        
         public void Play()
         {
             Sequence sequence = DOTween.Sequence();
@@ -31,7 +36,6 @@ namespace Level.UserInterface.Panels.WinPanel
 
         private async void ActivateEffects()
         {
-            _effects.Initialize();
             await _effects.ActivateEffects();
             _buttons.ForEach(button => button.interactable = true);
         }
