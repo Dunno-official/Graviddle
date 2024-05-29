@@ -1,7 +1,7 @@
 ﻿using Level.CharacterNM.Helpers;
 using UnityEngine;
 
-namespace Level.CharacterNM.CharacterStateMachine.States
+namespace Level.CharacterNM.CharacterStateMachineNM.States
 {
     public class IdleState : CharacterState
     {

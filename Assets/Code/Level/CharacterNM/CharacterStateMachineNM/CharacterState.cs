@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Level.CharacterNM.CharacterStateMachine
+namespace Level.CharacterNM.CharacterStateMachineNM
 {
     public abstract class CharacterState
     {

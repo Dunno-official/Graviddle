@@ -3,7 +3,7 @@ using Level.CharacterNM.Helpers;
 using UnityEngine;
 using Utils.Physics.Cast;
 
-namespace Level.CharacterNM.CharacterStateMachine.States
+namespace Level.CharacterNM.CharacterStateMachineNM.States
 {
     public class RunState : CharacterState
     {

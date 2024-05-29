@@ -1,7 +1,7 @@
-﻿using Level.CharacterNM.CharacterStateMachine.StateTransitions;
+﻿using Level.CharacterNM.CharacterStateMachineNM.StateTransitions;
 using MonoBehaviourWrapperNM;
 
-namespace Level.CharacterNM.CharacterStateMachine
+namespace Level.CharacterNM.CharacterStateMachineNM
 {
     public class CharacterStateMachine : IUpdate, IGizmo
     {

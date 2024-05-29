@@ -2,8 +2,8 @@
 using Level.CameraNM;
 using Level.CharacterNM.CharacterMovement;
 using Level.CharacterNM.CharacterMovement.CharacterInputNM;
-using Level.CharacterNM.CharacterStateMachine;
-using Level.CharacterNM.CharacterStateMachine.StateTransitions;
+using Level.CharacterNM.CharacterStateMachineNM;
+using Level.CharacterNM.CharacterStateMachineNM.StateTransitions;
 using Level.CharacterNM.Effects;
 using Level.CharacterNM.Effects.SquashStretchAnimation;
 using Level.CharacterNM.Effects.TwistingAnimation;
@@ -31,6 +31,8 @@ namespace Level.CharacterNM
         [SerializeField] private CollisionsList _collisions;
         [SerializeField] private Rigidbody2D _rigidbody2D;
         [SerializeField] private Animator _animator;
+        private CharacterLaserDeath _characterLaserDeath;
+        
         public CharacterStatesPresenter States { get; private set; }
         public event Action Respawned;
 
@@ -51,7 +53,7 @@ namespace Level.CharacterNM
                 new CharacterGravity(gravity, gravityState),
                 new CharacterSpriteFlipping(_spriteRenderer, input),
                 new CharacterRotationImpulse(_rigidbody2D, gravityState),
-                new CharacterStateMachine.CharacterStateMachine(transitionsPresenter, States.IdleState),
+                new CharacterStateMachine(transitionsPresenter, States.IdleState),
                 new SwipeHandlerSwitch(swipeHandler, fallToIdleTransition, States.FallState),
                 new CharacterToPortalPulling(States.WinState, transform, _collisions),
                 new CharacterVFX(_fallingDust, _trailRenderer, fallToIdleTransition, States.FallState, _rigidbody2D),

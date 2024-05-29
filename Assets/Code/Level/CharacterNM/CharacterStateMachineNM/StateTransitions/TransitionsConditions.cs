@@ -7,7 +7,7 @@ using Level.UserInterface.Buttons;
 using UnityEngine;
 using Utils.Physics;
 
-namespace Level.CharacterNM.CharacterStateMachine.StateTransitions
+namespace Level.CharacterNM.CharacterStateMachineNM.StateTransitions
 {
     [Serializable]
     public class TransitionsConditions
@@ -15,6 +15,7 @@ namespace Level.CharacterNM.CharacterStateMachine.StateTransitions
         [SerializeField] private RestartButton _restartButton;
         [SerializeField] private CollisionsList _allCollisions;
         [SerializeField] private CollisionsList _characterFeet;
+        private CharacterLaserDeath _laserDeath;
         private Func<bool> _restartCondition;
         private LevelBorders _levelBorders;
         private Character _character;
@@ -22,6 +23,7 @@ namespace Level.CharacterNM.CharacterStateMachine.StateTransitions
 
         public void Initialize(CharacterInput input, Character character, LevelBorders borders, Func<bool> restartCondition)
         {
+            _laserDeath = character.GetComponent<CharacterLaserDeath>();
             _restartCondition = restartCondition;
             _levelBorders = borders;
             _character = character;
@@ -30,7 +32,7 @@ namespace Level.CharacterNM.CharacterStateMachine.StateTransitions
     
         public bool CheckDeathByLevelBorders() => _levelBorders.CheckIfPositionNotWithinTheLevel(_character.transform.position);
 
-        public bool CheckDeathFromObstacle() => _allCollisions.CheckCollision<Obstacle>();
+        public bool CheckDeathFromObstacle() => _allCollisions.CheckCollision<Obstacle>() || _laserDeath.GetState();
 
         public bool CheckIfGrounded() => _characterFeet.CheckCollision<Ground>();
     

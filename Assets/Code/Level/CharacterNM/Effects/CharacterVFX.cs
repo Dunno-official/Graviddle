@@ -1,5 +1,5 @@
-using Level.CharacterNM.CharacterStateMachine.States;
-using Level.CharacterNM.CharacterStateMachine.StateTransitions;
+using Level.CharacterNM.CharacterStateMachineNM.States;
+using Level.CharacterNM.CharacterStateMachineNM.StateTransitions;
 using UnityEngine;
 
 namespace Level.CharacterNM.Effects

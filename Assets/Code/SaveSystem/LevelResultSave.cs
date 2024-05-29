@@ -1,5 +1,4 @@
-using DefaultNamespace;
-using Level.CharacterNM.CharacterStateMachine.States;
+using Level.CharacterNM.CharacterStateMachineNM.States;
 using Level.UserInterface.Panels.WinPanel;
 using MonoBehaviourWrapperNM;
 

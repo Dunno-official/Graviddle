@@ -1,5 +1,5 @@
 using DG.Tweening;
-using Level.CharacterNM.CharacterStateMachine.States;
+using Level.CharacterNM.CharacterStateMachineNM.States;
 using Level.Restart;
 using MonoBehaviourWrapperNM;
 using UnityEngine;

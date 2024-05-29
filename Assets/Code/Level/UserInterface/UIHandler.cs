@@ -1,5 +1,5 @@
 ﻿using Level.CharacterNM;
-using Level.CharacterNM.CharacterStateMachine;
+using Level.CharacterNM.CharacterStateMachineNM;
 using Level.UserInterface.Panels.GameplayPanel;
 using Level.UserInterface.Panels.WinPanel;
 using MonoBehaviourWrapperNM;

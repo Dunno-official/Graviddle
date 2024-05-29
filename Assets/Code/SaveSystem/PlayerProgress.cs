@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using SaveSystem;
 using UnityEngine.SceneManagement;
 
-namespace DefaultNamespace
+namespace SaveSystem
 {
     public class PlayerProgress
     {

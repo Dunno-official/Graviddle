@@ -1,7 +1,8 @@
-﻿using Level.CharacterNM.CharacterStateMachine.States;
-using Level.CharacterNM.CharacterStateMachine.StateTransitions;
+﻿using Level.CharacterNM.CharacterStateMachineNM.States;
+using Level.CharacterNM.CharacterStateMachineNM.StateTransitions;
 using Level.Restart;
 using MonoBehaviourWrapperNM;
+using UnityEngine;
 
 namespace Level.CharacterNM
 {
@@ -42,12 +43,12 @@ namespace Level.CharacterNM
             OnEndFalling();
         }
 
-        protected virtual void OnStartFalling() {}
-        protected virtual void OnEndFalling() {}
-
         void IRestart.Restart()
         {
-            OnEndFalling();
+            OnCharacterFell();
         }
+
+        protected virtual void OnStartFalling() {}
+        protected virtual void OnEndFalling() {}
     }
 }

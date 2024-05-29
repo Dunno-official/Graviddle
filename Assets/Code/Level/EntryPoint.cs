@@ -3,7 +3,7 @@ using Level.CameraNM;
 using Level.CameraNM.Clamping.Data;
 using Level.CharacterNM;
 using Level.CharacterNM.CharacterMovement.CharacterInputNM;
-using Level.CharacterNM.CharacterStateMachine.StateTransitions;
+using Level.CharacterNM.CharacterStateMachineNM.StateTransitions;
 using Level.Gravitation;
 using Level.Gravitation.SwipeHandlerNM;
 using Level.GravityBoxNM;

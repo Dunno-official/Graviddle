@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
-using DefaultNamespace;
 using Menu.MainMenu.AnimatedPanel;
+using SaveSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;

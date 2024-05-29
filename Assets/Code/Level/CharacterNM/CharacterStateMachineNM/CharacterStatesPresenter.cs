@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Level.CharacterNM.CharacterMovement.CharacterInputNM;
-using Level.CharacterNM.CharacterStateMachine.States;
+using Level.CharacterNM.CharacterStateMachineNM.States;
 using UnityEngine;
 using Utils.Physics.Cast;
 
-namespace Level.CharacterNM.CharacterStateMachine
+namespace Level.CharacterNM.CharacterStateMachineNM
 {
     public class CharacterStatesPresenter
     {

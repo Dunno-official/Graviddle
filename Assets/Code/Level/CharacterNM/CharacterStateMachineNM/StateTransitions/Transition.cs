@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Level.CharacterNM.CharacterStateMachine.StateTransitions
+namespace Level.CharacterNM.CharacterStateMachineNM.StateTransitions
 {
     public class Transition
     {

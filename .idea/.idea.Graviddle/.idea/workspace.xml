@@ -7,30 +7,66 @@
     <list default="true" id="236f7ca0-e3d5-42cf-8bd1-4f65d9112fc7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Materials/Level Choice/LevelStarShiny.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Materials/Level Choice/LevelStarShiny.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Materials/Level Choice/MPMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Materials/Level Choice/MPMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Materials/Level Choice/Outline.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Materials/Level Choice/Outline.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/EntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/LevelStarNM/LevelStarsMediator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/LevelStarNM/LevelStarsMediator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/UserInterface/Panels/WinPanel/Reward.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/UserInterface/Panels/WinPanel/Reward.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/UserInterface/Panels/WinPanel/WinAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/UserInterface/Panels/WinPanel/WinAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/UserInterface/Panels/WinPanel/WinEffects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/UserInterface/Panels/WinPanel/WinEffects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/UserInterface/Panels/WinPanel/WinPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/UserInterface/Panels/WinPanel/WinPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Menu/LevelChoice/LevelButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Menu/LevelChoice/LevelButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Menu/LevelChoice/LevelChoicePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Menu/LevelChoice/LevelChoicePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/SaveSystem/LevelResultSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/SaveSystem/LevelResultSave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LevelButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/LaserTexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/LaserTexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/Mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/Mask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/noiseTexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/noiseTexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterFallingEventsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterFallingEventsHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/CharacterStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/CharacterStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsConditions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsConditions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsPresenterFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsPresenterFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Effects/CharacterFallingVelocityListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Effects/CharacterFallingVelocityListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/.idea/.idea.Laser.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/.idea/.idea.Laser.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/.idea/.idea.Laser.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/.idea/.idea.Laser.dir/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/ButtonLaser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/ButtonLaser.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/Laser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/Laser.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserCollider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserCollider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserDistortion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserDistortion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserDistortionData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserDistortionData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserLineSwitcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserLineSwitcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserParticlesSwitcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserParticlesSwitcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserLine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserLine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserObjects.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserObjects.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserRaycast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserRaycast.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserSetup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserSetup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserVFX.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserVFX.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSwitcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSwitcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/2D Laser Beams/Prefabs/LOOPED/hit-5-LOOP.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/2D Laser Beams/Prefabs/LOOPED/hit-5-LOOP.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level/Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level/Main Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/LaserTurret .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/LaserTurret .prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial/Box_4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial/Box_4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -45,8 +81,10 @@
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.6/Editor/TimelineHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/15944cc78ddd407d94b0767405a493324000/84/48b0486c/UnityAdsSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3a14257c64894089b63c1600fe209a2d3200/15/422c52c0/UnityAdsSettings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/91/4c61e007/IAsyncResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8c037cac2c7d4986a1600f55b8499fec34400/bf/96ae61cc/AnimationState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/454b8adca03e44db8a0e3ace7093e9b81cb800/37/ce9d52d1/UnityEngine.CoreModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CharacterLaserDeath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButton/ButtonLiftForce.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Level/Obstacles/LaserTurretNM/TurretRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Level/Tutorial/TutorialButtons.cs" root0="FORCE_HIGHLIGHTING" />
@@ -69,29 +107,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.2409836&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.2409836",
+    "git-widget-placeholder": "GraviddleRebuilding",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.build.unityPlugin",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Dunno\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Dunno\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Dunno\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Dunno\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Dunno\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Dunno\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Tools\UnityEditors\6000.0.3f1\Editor\Unity.exe" />
@@ -205,7 +244,7 @@
       <workItem from="1716821705209" duration="5348000" />
       <workItem from="1716917621011" duration="5365000" />
       <workItem from="1717005375830" duration="162000" />
-      <workItem from="1717005559583" duration="2691000" />
+      <workItem from="1717005559583" duration="8592000" />
     </task>
     <servers />
   </component>
