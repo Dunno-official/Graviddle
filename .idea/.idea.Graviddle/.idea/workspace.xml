@@ -6,58 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="236f7ca0-e3d5-42cf-8bd1-4f65d9112fc7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Materials/Level Choice/LevelStarShiny.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Materials/Level Choice/LevelStarShiny.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/LaserTexture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/LaserTexture.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/Mask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/Mask.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/noiseTexture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Textures/Laser/noiseTexture.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterFallingEventsHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterFallingEventsHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/CharacterStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/CharacterStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsConditions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsConditions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsPresenterFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsPresenterFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Effects/CharacterFallingVelocityListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Effects/CharacterFallingVelocityListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/.idea/.idea.Laser.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/.idea/.idea.Laser.dir/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/.idea/.idea.Laser.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/.idea/.idea.Laser.dir/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/ButtonLaser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/ButtonLaser.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/Laser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/Laser.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserCollider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserCollider.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserDistortion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserDistortion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserDistortionData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserDistortionData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserLineSwitcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserLineSwitcher.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserParticlesSwitcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserParticlesSwitcher.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserLine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserLine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserObjects.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserObjects.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserRaycast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserRaycast.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserSetup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserSetup.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserVFX.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSetup/LaserVFX.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSwitcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Laser/LaserSwitcher.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/2D Laser Beams/Prefabs/LOOPED/hit-5-LOOP.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/2D Laser Beams/Prefabs/LOOPED/hit-5-LOOP.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level/Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level/Main Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/LaserTurret .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/LaserTurret .prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/StateTransitions/TransitionsPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level/GravityBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level/GravityBox.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial/Box_4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial/Box_4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +195,7 @@
       <workItem from="1716821705209" duration="5348000" />
       <workItem from="1716917621011" duration="5365000" />
       <workItem from="1717005375830" duration="162000" />
-      <workItem from="1717005559583" duration="8592000" />
+      <workItem from="1717005559583" duration="9334000" />
     </task>
     <servers />
   </component>

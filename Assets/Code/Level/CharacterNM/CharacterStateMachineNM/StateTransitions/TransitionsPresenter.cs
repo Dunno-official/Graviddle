@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Level.CharacterNM.CharacterStateMachine.StateTransitions
+namespace Level.CharacterNM.CharacterStateMachineNM.StateTransitions
 {
     public class TransitionsPresenter
     {
