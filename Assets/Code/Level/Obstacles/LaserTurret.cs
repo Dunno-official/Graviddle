@@ -15,7 +15,7 @@ namespace Level.Obstacles
         [SerializeField] private CharacterHead _target;
         private IUpdate[] _updatables;
 
-        public void Initialize(CharacterGravityState characterGravityState)
+        public void Initialize(IGravityState characterGravityState)
         {
             TurretRotationData turretRotationData = new(_target, _turret, 1.5f);
             TurretRotationData fasteningRotationData = new(_target, _fastening, 2f);

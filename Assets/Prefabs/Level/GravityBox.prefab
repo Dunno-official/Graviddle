@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2021827074985305453}
   - component: {fileID: 2259437409144636692}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1548155303057297832}
   - component: {fileID: 8018941016005791951}
   - component: {fileID: 6477845327220697028}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 2151827196178555821}
   - component: {fileID: 7766518476247141496}
   - component: {fileID: 4396912344874337917}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8090711242343311363}
   - component: {fileID: 5385497393732423902}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Outline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7312556478064159863}
   - component: {fileID: 3020810042631388745}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 7312556479469279465}
   - component: {fileID: 3668659899138975844}
   - component: {fileID: 3809320966340570501}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GravityBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 7764089186090385298}
   - component: {fileID: 5047553222196110932}
   - component: {fileID: 1074074254068399222}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 3542839914917204015}
   - component: {fileID: 6149482843187544880}
   - component: {fileID: 6940770756089139319}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

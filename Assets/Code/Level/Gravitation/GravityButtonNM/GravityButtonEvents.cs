@@ -6,11 +6,11 @@ namespace Level.Gravitation.GravityButton
 {
     public class GravityButtonEvents : IUpdate
     {
-        private GravityButtonData _data;
-        private Transform _button;
+        private readonly GravityButtonData _data;
+        private readonly Transform _button;
         private bool _state;
 
-        public void Initialize(GravityButtonData data, Transform button)
+        public GravityButtonEvents(GravityButtonData data, Transform button)
         {
             _button = button;
             _data = data;

@@ -128,9 +128,7 @@ MonoBehaviour:
     _allCollisions: {fileID: 7749859406398825423}
     _characterFeet: {fileID: 8059827198979699868}
   _starPickupFeedback: {fileID: 6485531706089109070}
-  _laserTurrets: []
   _swipeHandler: {fileID: 1603758615754313137}
-  _gravityBoxes: []
   _levelStars:
   - {fileID: 4252330658481351201}
   - {fileID: 4252330657674819984}

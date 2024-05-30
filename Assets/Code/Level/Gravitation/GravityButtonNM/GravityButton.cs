@@ -9,15 +9,16 @@ namespace Level.Gravitation.GravityButton
         [SerializeField] private GravityButtonData _data;
         [SerializeField] private AudioSource _toggleSound;
         [SerializeField] private Rigidbody2D _button;
-        public readonly GravityButtonEvents Events = new();
         
-        private void Awake()
+        public GravityButtonEvents Events { get; private set; }
+        public GravityButtonState State { get; private set; }
+        
+        public void Initialize()
         {
-            Events.Initialize(_data, _button.transform);
-            
             SetDependencies(new IUnityCallback[]
             {
-                Events,
+                Events = new GravityButtonEvents(_data, _button.transform), 
+                State = new GravityButtonState(Events),
                 new GravityButtonRigidbodyConstraints(_button, _orientation),
                 new GravityButtonPressFeedback(Events, _toggleSound),
                 new GravityButtonLiftForce(Events, _data, _button),

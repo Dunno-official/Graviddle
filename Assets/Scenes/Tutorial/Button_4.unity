@@ -367,7 +367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46598b4561c0394dbf2f36214cc2c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravityButton: {fileID: 1342043324}
+  _gravityButtons:
+  - {fileID: 1342043324}
   _reverseInput: 0
   _door: {fileID: 839814403}
 --- !u!1 &964564078
@@ -2796,6 +2797,21 @@ PrefabInstance:
       propertyPath: _gravityButton
       value: 
       objectReference: {fileID: 2016202718}
+    - target: {fileID: 133213295384612297, guid: 64b8d1216eb8d4444afcc39e4f9ad2e8,
+        type: 3}
+      propertyPath: _gravityButtons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 133213295384612297, guid: 64b8d1216eb8d4444afcc39e4f9ad2e8,
+        type: 3}
+      propertyPath: '_gravityButtons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2016202718}
+    - target: {fileID: 133213295384612297, guid: 64b8d1216eb8d4444afcc39e4f9ad2e8,
+        type: 3}
+      propertyPath: '_gravityButtons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1342043324}
     - target: {fileID: 3292660591111224700, guid: 64b8d1216eb8d4444afcc39e4f9ad2e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2910,7 +2926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c46598b4561c0394dbf2f36214cc2c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravityButton: {fileID: 1342043324}
+  _gravityButtons:
+  - {fileID: 1342043324}
   _reverseInput: 0
   _door: {fileID: 1886354921}
 --- !u!114 &2016202718 stripped
@@ -2938,6 +2955,21 @@ PrefabInstance:
       propertyPath: _gravityButton
       value: 
       objectReference: {fileID: 2016202718}
+    - target: {fileID: 133213295384612297, guid: 64b8d1216eb8d4444afcc39e4f9ad2e8,
+        type: 3}
+      propertyPath: _gravityButtons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 133213295384612297, guid: 64b8d1216eb8d4444afcc39e4f9ad2e8,
+        type: 3}
+      propertyPath: '_gravityButtons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2016202718}
+    - target: {fileID: 133213295384612297, guid: 64b8d1216eb8d4444afcc39e4f9ad2e8,
+        type: 3}
+      propertyPath: '_gravityButtons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1342043324}
     - target: {fileID: 3292660591111224700, guid: 64b8d1216eb8d4444afcc39e4f9ad2e8,
         type: 3}
       propertyPath: m_LocalPosition.x
