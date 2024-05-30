@@ -2,7 +2,6 @@
 using Level.CharacterNM.CharacterStateMachineNM.StateTransitions;
 using Level.Restart;
 using MonoBehaviourWrapperNM;
-using UnityEngine;
 
 namespace Level.CharacterNM
 {

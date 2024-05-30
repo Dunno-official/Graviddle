@@ -15,6 +15,7 @@ namespace Level.GravityBoxNM
         [SerializeField] private BoxGravitySelection _selection;
         [SerializeField] private SpriteRenderer _outline;
         [SerializeField] private SpriteRenderer _arrow;
+        [SerializeField] private Vector2 _outlineScale;
         [SerializeField] private Collider2D _collider;
         [SerializeField] private Canvas _canvas;
 
@@ -29,8 +30,8 @@ namespace Level.GravityBoxNM
             GravityRotation rotation = new(boxGravityState, _arrow.transform, 180, 6);
             BoxMediator boxMediator = new(PhysicsInputTrigger, swipeHandler, gravityHandler, new IToggleable[]
             {
-                new ScalePopup(_canvas.transform, 0.5f, 0, 1.25f),
-                new ScalePopup(_outline.transform, 0.5f, 1, 1.15f)
+                new ScalePopup(_canvas.transform, 0.5f, 0, new Vector2(1.25f, 1.25f)),
+                new ScalePopup(_outline.transform, 0.5f, 1, _outlineScale)
             });
 
             SetDependencies(new IUnityCallback[]

@@ -11,12 +11,12 @@ namespace Level.DoorNM
 
         private void OnEnable()
         {
-            _gravityButton.Toggled += OnButtonToggled;
+            _gravityButton.Events.Toggled += OnButtonToggled;
         }
     
         private void OnDisable()
         {
-            _gravityButton.Toggled -= OnButtonToggled;
+            _gravityButton.Events.Toggled -= OnButtonToggled;
         }
 
         private void OnButtonToggled(bool buttonEnabled)

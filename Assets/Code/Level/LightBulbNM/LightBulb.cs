@@ -1,41 +1,35 @@
+using Level.Gravitation.GravityButton;
 using UnityEngine;
 
 namespace Level.LightBulbNM
 {
     public class LightBulb : MonoBehaviour
     {
-        [SerializeField] private MonoBehaviour _switcherMonoBehaviour;
+        [SerializeField] private GravityButton _gravityButton;
         [SerializeField] private Animator _animator;
-        private ISwitcher _switcher;
-        private const string _switchingOnAnimationName = "SwitchingOn";
-        private const string _switchingOffAnimationName = "SwitchingOff";
-
-        private void OnValidate()
-        {
-            if (_switcherMonoBehaviour is ISwitcher == false)
-            {
-                _switcherMonoBehaviour = null;
-            }
-        }
-
-        private void Awake()
-        {
-            _switcher = _switcherMonoBehaviour as ISwitcher;
-        }
+        private readonly string _switchingOnAnimationName = "SwitchingOn";
+        private readonly string _switchingOffAnimationName = "SwitchingOff";
 
         private void OnEnable()
         {
-            _switcher.Toggled += ToggleLightBulb;
+            _gravityButton.Events.Disabled += DisableLightBulb;
+            _gravityButton.Events.Enabled += EnableLightBulb;
         }
 
         private void OnDisable()
         {
-            _switcher.Toggled -= ToggleLightBulb;
+            _gravityButton.Events.Disabled -= DisableLightBulb;
+            _gravityButton.Events.Enabled -= EnableLightBulb;
         }
-    
-        private void ToggleLightBulb(bool activate)
+
+        private void EnableLightBulb()
         {
-            _animator.Play(activate ? _switchingOnAnimationName : _switchingOffAnimationName);
+            _animator.Play(_switchingOnAnimationName);
+        }
+
+        private void DisableLightBulb()
+        {
+            _animator.Play(_switchingOffAnimationName);
         }
     }
 }

@@ -5,18 +5,18 @@ namespace Utils
 {
     public class ScalePopup : IToggleable
     {
-        private readonly float _duration;
-        private readonly float _startScale;
-        private readonly float _targetScale;
         private readonly Transform _transform;
+        private readonly Vector2 _targetScale;
+        private readonly float _startScale;
+        private readonly float _duration;
         private Tween _animation;
 
-        public ScalePopup(Transform transform, float duration, float startScale, float targetScale)
+        public ScalePopup(Transform transform, float duration, float startScale, Vector2 targetScale)
         {
-            _duration = duration;
-            _transform = transform;
-            _startScale = startScale;
             _targetScale = targetScale;
+            _startScale = startScale;
+            _transform = transform;
+            _duration = duration;
         }
     
         public void Show()
@@ -26,10 +26,10 @@ namespace Utils
 
         public void Hide()
         {
-            PlayScaleAnimation(_startScale);
+            PlayScaleAnimation(new Vector2(_startScale, _startScale));
         }
 
-        private void PlayScaleAnimation(float targetScale)
+        private void PlayScaleAnimation(Vector2 targetScale)
         {
             _animation?.Kill();
             _animation = _transform.DOScale(targetScale, _duration).SetLink(_transform.gameObject);

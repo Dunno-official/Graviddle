@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Level.CharacterNM.Effects
 {
-    public abstract class CharacterFallingVelocityListener : CharacterFallingEventsHandler, IFixedUpdate 
+    public abstract class CharacterFallingVelocityListener : CharacterFallingEventsHandler, IUpdate 
     {
         private readonly Rigidbody2D _rigidbody2D;
         private float _velocity;
@@ -15,7 +15,7 @@ namespace Level.CharacterNM.Effects
             _rigidbody2D = rigidbody2D;
         }
 
-        void IFixedUpdate.FixedUpdate()
+        void IUpdate.Update()
         {
             if (IsFalling)
             {

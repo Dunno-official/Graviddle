@@ -715,6 +715,7 @@ MonoBehaviour:
     _switchSound: {fileID: 8505798692831084864}
   _outline: {fileID: 5385497393732423902}
   _arrow: {fileID: 3020810042631388745}
+  _outlineScale: {x: 1.15, y: 1.15}
   _collider: {fileID: 1720171078449196381}
   _canvas: {fileID: 6149482843187544880}
 --- !u!1 &8607679329360938851
