@@ -4,7 +4,7 @@ using Level.Tutorial.PointerAnimation;
 using UnityEngine;
 using Utils.Physics;
 
-public class PointerAnimationView : MonoBehaviour, IRestart
+public class BoxPointerAnimationView : MonoBehaviour, IRestart
 {
     [SerializeField] private StoryTelling _storyTelling;
     [SerializeField] private PointerAnimationData _data;

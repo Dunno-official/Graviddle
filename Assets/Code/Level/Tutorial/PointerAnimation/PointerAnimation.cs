@@ -14,9 +14,9 @@ namespace Level.Tutorial.PointerAnimation
         public PointerAnimation(PointerAnimationData data)
         {
             _data = data;
-            _startPosition = _data.SpriteRenderer.transform.position;
+            _startPosition = _data.SpriteHolder.Transform.position;
             _targetSlidePosition = _startPosition + _data.TargetOffsetDistance;
-            _startRotation = _data.SpriteRenderer.transform.rotation;
+            _startRotation = _data.SpriteHolder.Transform.rotation;
         }
 
         public void Play()
@@ -31,26 +31,26 @@ namespace Level.Tutorial.PointerAnimation
             _animation.Join(SlidePointer());
             _animation.AppendInterval(_data.RestartTime);
             _animation.SetLoops(-1);
-            _animation.SetLink(_data.SpriteRenderer.gameObject);
+            _animation.SetLink(_data.SpriteHolder.Transform.gameObject);
         }
         
         private Tween RotatePointer()
         {
-            return _data.SpriteRenderer.transform
+            return _data.SpriteHolder.Transform
                 .DORotate(new Vector3(0, 0, _data.TargetRotationAngle), _data.RotationData.Time)
                 .SetEase(_data.RotationData.Curve);
         }
 
         private Tween SlidePointer()
         {
-            return _data.SpriteRenderer.transform
+            return _data.SpriteHolder.Transform
                 .DOMove(_targetSlidePosition, _data.SlidingData.Time)
                 .SetEase(_data.SlidingData.Curve);
         }
 
         private void PreparePointer()
         {
-            _data.SpriteRenderer.transform.SetPositionAndRotation(_startPosition, _startRotation);
+            _data.SpriteHolder.Transform.SetPositionAndRotation(_startPosition, _startRotation);
             SetSprite(_data.FingerUp);
         }
     
@@ -61,13 +61,13 @@ namespace Level.Tutorial.PointerAnimation
 
         private void SetSprite(Sprite sprite)
         {
-            _data.SpriteRenderer.sprite = sprite;
+            _data.SpriteHolder.Sprite = sprite;
         }
 
         public void Kill()
         {
             _animation.Kill();
-            _data.SpriteRenderer.sprite = null;
+            _data.SpriteHolder.Sprite = null;
         }
     }
 }
