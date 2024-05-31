@@ -2784,6 +2784,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _storyTelling: {fileID: 1580118390}
   _data:
+    _spriteHolder:
+      rid: 1985634057143451849
     _rotationData:
       _curve:
         serializedVersion: 2
@@ -2836,7 +2838,6 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
       _time: 0.6
-    _spriteRenderer: {fileID: 1214517160}
     _targetOffset: {x: 0, y: -1.5}
     _targetRotationAngle: 45
     _timeBeforeTapping: 0.4
@@ -2845,6 +2846,14 @@ MonoBehaviour:
     _fingerDown: {fileID: 21300000, guid: bd7af1067f735be4189e34d516db195c, type: 3}
     _fingerUp: {fileID: 21300000, guid: f7061569a7e03ad49b391b652e45544f, type: 3}
   _trigger: {fileID: 817168064}
+  references:
+    version: 2
+    RefIds:
+    - rid: 1985634057143451849
+      type: {class: SpriteRendererSpriteHolder, ns: Level.Tutorial.PointerAnimation,
+        asm: Assembly-CSharp}
+      data:
+        _spriteRenderer: {fileID: 1214517160}
 --- !u!212 &1214517160
 SpriteRenderer:
   m_ObjectHideFlags: 0
