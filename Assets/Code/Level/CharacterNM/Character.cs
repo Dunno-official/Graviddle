@@ -31,7 +31,6 @@ namespace Level.CharacterNM
         [SerializeField] private CollisionsList _collisions;
         [SerializeField] private Rigidbody2D _rigidbody2D;
         [SerializeField] private Animator _animator;
-        private CharacterLaserDeath _characterLaserDeath;
         
         public CharacterStatesPresenter States { get; private set; }
         public event Action Respawned;

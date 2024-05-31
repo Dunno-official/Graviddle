@@ -32,6 +32,7 @@ namespace Level.CharacterNM.CharacterStateMachineNM
 
         private void SwitchState(CharacterState newState)
         {
+            _state?.Exit();
             _state = newState;
             _state.Enter();
         }

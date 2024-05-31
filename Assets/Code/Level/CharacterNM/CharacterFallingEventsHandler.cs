@@ -22,12 +22,19 @@ namespace Level.CharacterNM
         {
             _fallToIdleTransition.TransitionHappened += OnCharacterFell;
             _fallState.Entered += OnCharacterFalling;
+            _fallState.Exited += OnStopFalling;
         }
 
         void ISubscriber.Unsubscribe()
         {
             _fallToIdleTransition.TransitionHappened -= OnCharacterFell;
             _fallState.Entered -= OnCharacterFalling;
+            _fallState.Exited -= OnStopFalling;
+        }
+
+        private void OnStopFalling()
+        {
+            IsFalling = false;
         }
 
         private void OnCharacterFalling()

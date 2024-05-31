@@ -15,17 +15,25 @@ namespace Level.CharacterNM.CharacterStateMachineNM
         }
 
         public event Action Entered;
+        public event Action Exited;
 
         public void Enter()
         {
             Entered?.Invoke();
             _animator.Play(_animationName);
 
-            OnEnterState();
+            OnEnter();
         }
 
-        public virtual void Update() { }
-        protected virtual void OnEnterState() { }
+        public void Exit()
+        {
+            Exited?.Invoke();
+            OnExit();
+        }
+
+        public virtual void Update() {}
+        protected virtual void OnEnter() {}
+        protected virtual void OnExit() {}
         public virtual void DrawGizmo() {}
     }
 }

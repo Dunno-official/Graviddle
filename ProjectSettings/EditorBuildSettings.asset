@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial/Platform_6.unity
     guid: 53e742177213b054ea39bb24ec11a8c2
   - enabled: 1
+    path: Assets/Scenes/Levels/DoubleButtonDoor_5.unity
+    guid: efa91b3adb6853a47bf37facbe33eb20
+  - enabled: 1
     path: Assets/Scenes/Levels/BoxButton.unity
     guid: c5998e17a954f5546af00d7e61fd7a57
   - enabled: 1

@@ -9,7 +9,7 @@ namespace Level.CharacterNM.CharacterStateMachineNM.States
         {
         }
 
-        protected override void OnEnterState()
+        protected override void OnEnter()
         {
         }
     }

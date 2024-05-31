@@ -20,7 +20,7 @@ namespace Utils.Physics
         public event Action Entered;
         public event Action Exited;
     
-        void IUpdate.Update()
+        public void Update()
         {
             TryInvokeEnterTrigger();
             TryInvokeExitTrigger();

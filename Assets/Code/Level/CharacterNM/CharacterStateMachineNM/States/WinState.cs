@@ -12,7 +12,7 @@ namespace Level.CharacterNM.CharacterStateMachineNM.States
             _rigidbody = character.GetComponent<Rigidbody2D>();
         }
 
-        protected override void OnEnterState()
+        protected override void OnEnter()
         {
             _rigidbody.velocity = Vector2.zero;
             _rigidbody.isKinematic = true;

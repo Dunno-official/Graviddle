@@ -23,11 +23,6 @@ namespace Level.CharacterNM.Effects.TwistingAnimation
         {
             Restart();
         }
-
-        public void Fade()
-        {
-            _portalAnimation.FadeOut();
-        }
     
         void ISubscriber.Subscribe()
         {
