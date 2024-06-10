@@ -35,7 +35,7 @@ namespace Menu.LevelChoice
             for (int levelIndex = _numOfNonLevelScenes; levelIndex <= numOfLevels; ++levelIndex)
             {
                 LevelButton levelButton = Instantiate(_levelButtonPrefab, _levelsGrid.transform);
-                bool isUnlocked = levelIndex <= playerProgress.FinishedLevels;
+                bool isUnlocked = levelIndex <= playerProgress.FinishedLevels + _numOfNonLevelScenes;
                 int starsForLevel = playerProgress.GetStarsForLevel(levelIndex);
 
                 levelButton.Initialize(UIBlocker, levelIndex, starsForLevel, isUnlocked);

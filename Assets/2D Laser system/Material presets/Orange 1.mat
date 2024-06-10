@@ -62,7 +62,7 @@ Material:
     - _SinSpeed: 8.22
     - _Size: 0.658
     - _Speed: 15
-    - _StartDistance: 0.9
+    - _StartDistance: 0.8
     - _Value: -0.25
     m_Colors:
     - _DissolveColor: {r: 20.155134, g: 2.427058, b: 0, a: 1}

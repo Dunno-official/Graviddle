@@ -8,7 +8,7 @@ namespace Level.Gravitation.GravityButton
         [SerializeField] private GravityButtonOrientation _orientation;
         [SerializeField] private GravityButtonData _data;
         [SerializeField] private AudioSource _toggleSound;
-        [SerializeField] private Rigidbody2D _button;
+        [SerializeField] private Rigidbody2D _buttonRigidbody2D;
         
         public GravityButtonEvents Events { get; private set; }
         public GravityButtonState State { get; private set; }
@@ -17,12 +17,12 @@ namespace Level.Gravitation.GravityButton
         {
             SetDependencies(new IUnityCallback[]
             {
-                Events = new GravityButtonEvents(_data, _button.transform), 
+                Events = new GravityButtonEvents(_data, _buttonRigidbody2D.transform), 
                 State = new GravityButtonState(Events),
-                new GravityButtonRigidbodyConstraints(_button, _orientation),
+                new GravityButtonRigidbodyConstraints(_buttonRigidbody2D, _orientation),
                 new GravityButtonPressFeedback(Events, _toggleSound),
-                new GravityButtonLiftForce(Events, _data, _button),
-                new GravityButtonClamping(_data, _button.transform),
+                new GravityButtonLiftForce(Events, _data, _buttonRigidbody2D),
+                new GravityButtonClamping(_data, _buttonRigidbody2D.transform, _buttonRigidbody2D),
             });
         }
     }
