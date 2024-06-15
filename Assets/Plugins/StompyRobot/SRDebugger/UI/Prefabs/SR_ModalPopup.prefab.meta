@@ -5,3 +5,10 @@ PrefabImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 27688
+  packageName: SRDebugger - Console & Tools On-Device
+  packageVersion: 1.12.1
+  assetPath: Assets/Plugins/StompyRobot/SRDebugger/UI/Prefabs/SR_ModalPopup.prefab
+  uploadId: 496367

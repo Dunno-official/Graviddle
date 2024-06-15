@@ -1,32 +1,36 @@
 ﻿using System.Collections;
+using Level.Restart;
 using UnityEngine;
 
-public abstract class ArrowTrapBase : MonoBehaviour, IRestart
+namespace Level.Obstacles.ArrowTrap
 {
-    [SerializeField] private float _startWaitTime;
-    [SerializeField] private float _coolDown = 2;
-
-    private void Start()
+    public abstract class ArrowTrapBase : MonoBehaviour, IRestart
     {
-        StartCoroutine(Shoot());
-    }
+        [SerializeField] private float _startWaitTime;
+        [SerializeField] private float _coolDown = 2;
 
-    private IEnumerator Shoot()
-    {
-        yield return new WaitForSeconds(_startWaitTime);
-
-        while (Application.isPlaying)
+        private void Start()
         {
-            yield return StartCoroutine(OnShoot());
-            yield return new WaitForSeconds(_coolDown);
+            StartCoroutine(Shoot());
         }
-    }
 
-    void IRestart.Restart()
-    {
-        StopAllCoroutines();
-        StartCoroutine(Shoot());
-    }
+        private IEnumerator Shoot()
+        {
+            yield return new WaitForSeconds(_startWaitTime);
 
-    protected abstract IEnumerator OnShoot();
+            while (Application.isPlaying)
+            {
+                yield return StartCoroutine(OnShoot());
+                yield return new WaitForSeconds(_coolDown);
+            }
+        }
+
+        void IRestart.Restart()
+        {
+            StopAllCoroutines();
+            StartCoroutine(Shoot());
+        }
+
+        protected abstract IEnumerator OnShoot();
+    }
 }

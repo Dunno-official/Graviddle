@@ -6,3 +6,10 @@ MonoImporter:
   executionOrder: -32000
   icon: {instanceID: 0}
   userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 27688
+  packageName: SRDebugger - Console & Tools On-Device
+  packageVersion: 1.12.1
+  assetPath: Assets/Plugins/StompyRobot/SRDebugger/Scripts/Profiler/ProfilerServiceImpl.cs
+  uploadId: 496367

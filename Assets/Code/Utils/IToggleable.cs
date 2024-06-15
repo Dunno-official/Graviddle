@@ -1,6 +1,9 @@
 ﻿
-public interface IToggleable
+namespace Utils
 {
-    void Show();
-    void Hide();
+    public interface IToggleable
+    {
+        void Show();
+        void Hide();
+    }
 }

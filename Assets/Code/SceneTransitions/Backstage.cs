@@ -2,23 +2,26 @@
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 
-public class Backstage
+namespace SceneTransitions
 {
-    private readonly LoadingScreen _loadingScreen;
-    private readonly Func<UniTask> _backstageAction;
-
-    public Backstage(LoadingScreen loadingScreen, Func<UniTask> backstageAction)
+    public class Backstage
     {
-        _loadingScreen = loadingScreen;
-        _backstageAction = backstageAction;
-    }
+        private readonly LoadingScreen _loadingScreen;
+        private readonly Func<UniTask> _backstageAction;
+
+        public Backstage(LoadingScreen loadingScreen, Func<UniTask> backstageAction)
+        {
+            _loadingScreen = loadingScreen;
+            _backstageAction = backstageAction;
+        }
     
-    public async UniTask MakeTransition()
-    {
-        await _loadingScreen.Appear().AsyncWaitForCompletion();
+        public async UniTask MakeTransition()
+        {
+            await _loadingScreen.Appear().AsyncWaitForCompletion();
 
-        await _backstageAction();
+            await _backstageAction();
 
-        await _loadingScreen.Disappear().AsyncWaitForCompletion();
+            await _loadingScreen.Disappear().AsyncWaitForCompletion();
+        }
     }
 }

@@ -1,7 +1,12 @@
-﻿
-public interface IGravityState
+﻿using System;
+using Level.CharacterNM.Helpers;
+
+namespace Level.Gravitation
 {
-    GravityDirection Direction { get; }
-    
-    public GravityData Data => GravityDataPresenter.GravityData[Direction];
+    public interface IGravityState
+    {
+        GravityDirection Direction { get; }
+        event Action DirectionChanged;
+        public GravityData Data => GravityDataPresenter.GravityData[Direction];
+    }
 }

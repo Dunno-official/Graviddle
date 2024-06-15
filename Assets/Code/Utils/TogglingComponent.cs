@@ -1,24 +1,38 @@
 ﻿
-public abstract class TogglingComponent : IUpdate, ILateUpdate
+using MonoBehaviourWrapperNM;
+
+namespace Utils
 {
-    public bool IsActive = true;
+    public abstract class TogglingComponent : IUpdate, ILateUpdate, IFixedUpdate
+    {
+        public bool IsActive = true;
     
-    void IUpdate.Update()
-    {
-        if (IsActive)
+        void IUpdate.Update()
         {
-            OnUpdate();
+            if (IsActive)
+            {
+                OnUpdate();
+            }
         }
-    }
 
-    public void LateUpdate()
-    {
-        if (IsActive)
+        public void LateUpdate()
         {
-            OnLateUpdate();
+            if (IsActive)
+            {
+                OnLateUpdate();
+            }
         }
-    }
 
-    protected virtual void OnUpdate() {}
-    protected virtual void OnLateUpdate() {}
+        public void FixedUpdate()
+        {
+            if (IsActive)
+            {
+                OnFixedUpdate();
+            }
+        }
+
+        protected virtual void OnFixedUpdate() {}
+        protected virtual void OnUpdate() {}
+        protected virtual void OnLateUpdate() {}
+    }
 }

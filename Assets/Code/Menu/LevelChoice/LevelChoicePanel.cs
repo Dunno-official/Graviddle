@@ -1,14 +1,45 @@
 ﻿using Cysharp.Threading.Tasks;
+using Menu.MainMenu.AnimatedPanel;
+using SaveSystem;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class LevelChoicePanel : AnimatedPanel
+namespace Menu.LevelChoice
 {
-    public override UniTask Init()
+    public class LevelChoicePanel : AnimatedPanel
     {
-        LevelButton[] buttons = GetComponentsInChildren<LevelButton>();
-        LevelButtonsPresenter buttonsPresenter = new(buttons, UIBlocker);
+        [SerializeField] private LevelButton _levelButtonPrefab;
+        [SerializeField] private GridLayoutGroup _levelsGrid;
+        private readonly int _numOfNonLevelScenes = 1;
         
-        buttonsPresenter.Init();
+        public override UniTask Initialize()
+        {
+            PlayerProgress playerProgress = new();
+            
+            playerProgress.Initialize();
+            int numOfLevels = GetNumOfLevels();
+            InitializeLevelButtons(numOfLevels, playerProgress);
 
-        return base.Init();
+            return base.Initialize();
+        }
+
+        private int GetNumOfLevels()
+        {
+            int numOfLevels = SceneManager.sceneCountInBuildSettings - _numOfNonLevelScenes;
+            return numOfLevels;
+        }
+
+        private void InitializeLevelButtons(int numOfLevels, PlayerProgress playerProgress)
+        {
+            for (int levelIndex = _numOfNonLevelScenes; levelIndex <= numOfLevels; ++levelIndex)
+            {
+                LevelButton levelButton = Instantiate(_levelButtonPrefab, _levelsGrid.transform);
+                bool isUnlocked = levelIndex <= playerProgress.FinishedLevels + _numOfNonLevelScenes;
+                int starsForLevel = playerProgress.GetStarsForLevel(levelIndex);
+
+                levelButton.Initialize(UIBlocker, levelIndex, starsForLevel, isUnlocked);
+            }
+        }
     }
 }

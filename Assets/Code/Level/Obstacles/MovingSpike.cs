@@ -1,30 +1,33 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-public class MovingSpike : MonoBehaviour
+namespace Level.Obstacles
 {
-    [SerializeField] private float _coolDown = 2f;
-    [SerializeField] private float _startWaitTime;
-    private const string _animationName = "Idle";
-    private Animator _animator;
-
-    private void Start()
+    [RequireComponent(typeof(Animator))]
+    public class MovingSpike : MonoBehaviour
     {
-        _animator = GetComponent<Animator>();
+        [SerializeField] private float _coolDown = 2f;
+        [SerializeField] private float _startWaitTime;
+        private const string _animationName = "Idle";
+        private Animator _animator;
 
-        StartCoroutine(AnimateSpike());
-    }
-
-    private IEnumerator AnimateSpike()
-    {
-        yield return new WaitForSeconds(_startWaitTime);
-
-        while (true)
+        private void Start()
         {
-            _animator.Play(_animationName);
+            _animator = GetComponent<Animator>();
+
+            StartCoroutine(AnimateSpike());
+        }
+
+        private IEnumerator AnimateSpike()
+        {
+            yield return new WaitForSeconds(_startWaitTime);
+
+            while (true)
+            {
+                _animator.Play(_animationName);
             
-            yield return new WaitForSeconds(_coolDown);
+                yield return new WaitForSeconds(_coolDown);
+            }
         }
     }
 }

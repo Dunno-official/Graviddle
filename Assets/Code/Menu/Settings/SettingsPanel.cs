@@ -1,4 +1,9 @@
 ﻿
-public class SettingsPanel : AnimatedPanel
+using Menu.MainMenu.AnimatedPanel;
+
+namespace Menu.Settings
 {
+    public class SettingsPanel : AnimatedPanel
+    {
+    }
 }

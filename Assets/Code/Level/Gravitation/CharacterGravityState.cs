@@ -1,27 +1,36 @@
+using System;
+using Level.CharacterNM.Helpers;
+using Level.Gravitation.SwipeHandlerNM;
+using MonoBehaviourWrapperNM;
 
-public class CharacterGravityState : ISubscriber, IGravityState
+namespace Level.Gravitation
 {
-    private readonly SwipeHandler _swipeHandler;
-
-    public CharacterGravityState(SwipeHandler swipeHandler)
+    public class CharacterGravityState : ISubscriber, IGravityState
     {
-        _swipeHandler = swipeHandler;
-    }
+        private readonly SwipeHandler _swipeHandler;
+        public event Action DirectionChanged;
 
-    public GravityDirection Direction { get; private set; } = GravityDirection.Down;
+        public CharacterGravityState(SwipeHandler swipeHandler)
+        {
+            _swipeHandler = swipeHandler;
+        }
 
-    void ISubscriber.Subscribe()
-    {
-        _swipeHandler.GravityChanged += OnGravityChanged;
-    }
+        public GravityDirection Direction { get; private set; } = GravityDirection.Down;
 
-    void ISubscriber.Unsubscribe()
-    {
-        _swipeHandler.GravityChanged -= OnGravityChanged;
-    }
+        void ISubscriber.Subscribe()
+        {
+            _swipeHandler.GravityChanged += OnGravityChanged;
+        }
 
-    private void OnGravityChanged(GravityDirection gravityDirection)
-    {
-        Direction = gravityDirection;
+        void ISubscriber.Unsubscribe()
+        {
+            _swipeHandler.GravityChanged -= OnGravityChanged;
+        }
+
+        private void OnGravityChanged(GravityDirection gravityDirection)
+        {
+            Direction = gravityDirection;
+            DirectionChanged?.Invoke();
+        }
     }
 }

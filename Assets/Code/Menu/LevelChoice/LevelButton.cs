@@ -1,32 +1,49 @@
+using Extensions;
+using Level.UserInterface.Buttons;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelButton : MonoBehaviour
+namespace Menu.LevelChoice
 {
-    [SerializeField] private Image[] _stars;
-    [SerializeField] private Image[] _nonStars;
-    [SerializeField] private Image _lockImage;
-    [SerializeField] private Button _button;
+    public class LevelButton : MonoBehaviour
+    {
+        [SerializeField] private SceneTransitButton _sceneTransitButton;
+        [SerializeField] private TMP_Text _levelIndex;
+        [SerializeField] private Image[] _nonStars;
+        [SerializeField] private Image _lockImage;
+        [SerializeField] private Image[] _stars;
+        [SerializeField] private Button _button;
 
-    public void Init(UIBlocker uiBlocker)
-    {
-        _button.onClick.AddListener(uiBlocker.Enable);
-    }
-    
-    public void SetStars(int stars)
-    {
-        _nonStars.ForEach(nonStar => nonStar.gameObject.SetActive(true));
-        
-        for (int i = 0; i < stars; i++)
+        public void Initialize(UIBlocker uiBlocker, int levelIndex, int numOfStars, bool isUnlocked)
         {
-            _stars[i].gameObject.SetActive(true);
-            _nonStars[i].gameObject.SetActive(false);
-        }
-    }
+            _levelIndex.text = levelIndex.ToString();
+            _button.onClick.AddListener(uiBlocker.Enable);
+            
+            if (isUnlocked)
+            {
+                SetStars(numOfStars);
+                UnlockLevel();
+            }
 
-    public void UnlockLevel()
-    {
-        _lockImage.gameObject.SetActive(false);
-        _button.interactable = true;
+            _sceneTransitButton.SetTransitSceneIndex(levelIndex);
+        }
+
+        private void SetStars(int stars)
+        {
+            _nonStars.ForEach(nonStar => nonStar.gameObject.SetActive(true));
+        
+            for (int i = 0; i < stars; i++)
+            {
+                _stars[i].gameObject.SetActive(true);
+                _nonStars[i].gameObject.SetActive(false);
+            }
+        }
+
+        private void UnlockLevel()
+        {
+            _lockImage.gameObject.SetActive(false);
+            _button.interactable = true;
+        }
     }
 }

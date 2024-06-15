@@ -2,15 +2,18 @@
 using System.Linq;
 using UnityEngine;
 
-public class RestartableComponents
+namespace Level.Restart
 {
-    public readonly IEnumerable<IRestart> RestartComponents;
-    public readonly IEnumerable<IAfterRestart> AfterRestartComponents;
-
-    public RestartableComponents()
+    public class RestartableComponents
     {
-        MonoBehaviour[] monoBehaviours = Object.FindObjectsOfType<MonoBehaviour>(true);
-        RestartComponents = monoBehaviours.OfType<IRestart>();
-        AfterRestartComponents = monoBehaviours.OfType<IAfterRestart>();
+        public readonly IEnumerable<IRestart> RestartComponents;
+        public readonly IEnumerable<IAfterRestart> AfterRestartComponents;
+
+        public RestartableComponents()
+        {
+            MonoBehaviour[] monoBehaviours = Object.FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            RestartComponents = monoBehaviours.OfType<IRestart>();
+            AfterRestartComponents = monoBehaviours.OfType<IAfterRestart>();
+        }
     }
 }

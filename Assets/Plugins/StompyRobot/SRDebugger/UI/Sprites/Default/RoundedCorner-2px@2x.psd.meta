@@ -86,3 +86,10 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 27688
+  packageName: SRDebugger - Console & Tools On-Device
+  packageVersion: 1.12.1
+  assetPath: Assets/Plugins/StompyRobot/SRDebugger/UI/Sprites/Default/RoundedCorner-2px@2x.psd
+  uploadId: 496367

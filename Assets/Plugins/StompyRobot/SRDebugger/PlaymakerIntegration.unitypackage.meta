@@ -6,3 +6,10 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 27688
+  packageName: SRDebugger - Console & Tools On-Device
+  packageVersion: 1.12.1
+  assetPath: Assets/Plugins/StompyRobot/SRDebugger/PlaymakerIntegration.unitypackage
+  uploadId: 496367

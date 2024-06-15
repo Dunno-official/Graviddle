@@ -1,31 +1,33 @@
+using Level.UserInterface;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-public class AppStartup : MonoBehaviour
+namespace AppStartup
 {
-    [SerializeField] private BackgroundMusicSpawner _backgroundMusicSpawner;
-    [SerializeField] private AdvertisementStartup _advertisementStartup;
-    [SerializeField] private UI _ui;
-    private static bool _appWasInited;
-    
-    private async void Start()
+    public class AppStartup : MonoBehaviour
     {
-        TryInitializeGame();
+        [SerializeField] private BackgroundMusicSpawner _backgroundMusicSpawner;
+        [SerializeField] private UI _ui;
 
-        await _ui.Init();
-        await _ui.Show<MainMenuPanel>();
-    }
-
-    private void TryInitializeGame()
-    {
-        if (_appWasInited == false)
+        private async void Start()
         {
-            _appWasInited = true;
-            Application.targetFrameRate = 90;
-            Addressables.InitializeAsync();
-            _backgroundMusicSpawner.Init();
-            _advertisementStartup.Init();
-            new MusicVolume().Init();
+            TryInitializeGame();
+
+            await _ui.Initialize();
+        }
+
+        private void TryInitializeGame()
+        {
+            bool isFirstTime = FindObjectsByType<AppStartup>(FindObjectsSortMode.None).Length == 1;
+            
+            if (isFirstTime)
+            {
+                Application.targetFrameRate = 90;
+                Addressables.InitializeAsync();
+                _backgroundMusicSpawner.Initialize();
+                new MusicVolume().Initialize();
+                DontDestroyOnLoad(gameObject);
+            }
         }
     }
 }

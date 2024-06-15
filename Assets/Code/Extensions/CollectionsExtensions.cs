@@ -1,66 +1,73 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Level.Restart;
+using MonoBehaviourWrapperNM;
+using UnityEngine;
 
-public static class CollectionsExtensions
+namespace Extensions
 {
-    public static void ForEach<T>(this IEnumerable<T> collection, Action<T> action)
+    public static class CollectionsExtensions
     {
-        foreach (T element in collection)
+        public static void ForEach<T>(this IEnumerable<T> collection, Action<T> action)
         {
-            action(element);
+            foreach (T element in collection)
+            {
+                action(element);
+            }
         }
-    }
     
-    public static bool IsEmpty<T>(this IEnumerable<T> collection)
-    {
-        return !collection.Any();
-    }
+        public static bool IsEmpty<T>(this IEnumerable<T> collection)
+        {
+            return !collection.Any();
+        }
 
-    public static T GetRandomElement<T>(this IList<T> collection)
-    {
-        int index = UnityEngine.Random.Range(0, collection.Count);
+        public static void SubscribeForEach(this IEnumerable<ISubscriber> subscribers)
+        {
+            subscribers.ForEach(subscriber => subscriber.Subscribe());
+        }
+    
+        public static void UnsubscribeForEach(this IEnumerable<ISubscriber> subscribers)
+        {
+            subscribers.ForEach(subscriber => subscriber.Unsubscribe());
+        }
+    
+        public static void RestartForEach(this IEnumerable<IRestart> restartComponents)
+        {
+            restartComponents.ForEach(restartComponent => restartComponent.Restart());
+        }
+    
+        public static void RestartForEach(this IEnumerable<IAfterRestart> afterRestartComponents)
+        {
+            afterRestartComponents.ForEach(afterRestartComponent => afterRestartComponent.Restart());
+        }
+    
+        public static void DisposeForEach(this IEnumerable<IDisposable> disposables)
+        {
+            disposables.ForEach(disposable => disposable.Dispose());
+        }
+    
+        public static void UpdateForEach(this IEnumerable<IUpdate> updatables)
+        {
+            updatables.ForEach(update => update.Update());
+        }
+    
+        public static void LateUpdateForEach(this IEnumerable<ILateUpdate> updatables)
+        {
+            updatables.ForEach(update => update.LateUpdate());
+        }
+
+        public static void FixedUpdateForEach(this IEnumerable<IFixedUpdate> fixedUpdates)
+        {
+            fixedUpdates.ForEach(update => update.FixedUpdate());
+        }
         
-        return collection[index];
-    }
-
-    public static void SubscribeForEach(this IEnumerable<ISubscriber> subscribers)
-    {
-        subscribers.ForEach(subscriber => subscriber.Subscribe());
-    }
-    
-    public static void UnsubscribeForEach(this IEnumerable<ISubscriber> subscribers)
-    {
-        subscribers.ForEach(subscriber => subscriber.Unsubscribe());
-    }
-    
-    public static void RestartForEach(this IEnumerable<IRestart> restartComponents)
-    {
-        restartComponents.ForEach(restartComponent => restartComponent.Restart());
-    }
-    
-    public static void RestartForEach(this IEnumerable<IAfterRestart> afterRestartComponents)
-    {
-        afterRestartComponents.ForEach(afterRestartComponent => afterRestartComponent.Restart());
-    }
-    
-    public static void DisposeForEach(this IEnumerable<IDisposable> disposables)
-    {
-        disposables.ForEach(disposable => disposable.Dispose());
-    }
-    
-    public static void UpdateForEach(this IEnumerable<IUpdate> updatables)
-    {
-        updatables.ForEach(update => update.Update());
-    }
-    
-    public static void LateUpdateForEach(this IEnumerable<ILateUpdate> updatables)
-    {
-        updatables.ForEach(update => update.LateUpdate());
-    }
-
-    public static void FixedUpdateForEach(this IEnumerable<IFixedUpdate> fixedUpdates)
-    {
-        fixedUpdates.ForEach(update => update.FixedUpdate());
+        public static void DrawForEach(this IEnumerable<IGizmo> gizmos)
+        {
+            if (Application.isPlaying)
+            {
+                gizmos.ForEach(update => update.DrawGizmo());    
+            }
+        }
     }
 }

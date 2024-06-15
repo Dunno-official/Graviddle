@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 
-public class AnimationPath
+namespace Menu.MainMenu.CharacterAnimation
 {
-    public readonly Vector2 StartPosition;
-    public readonly Vector2 EndPosition;
-
-    public AnimationPath(Vector2 startPosition, Vector2 endPosition)
+    public class AnimationPath
     {
-        StartPosition = startPosition;
-        EndPosition = endPosition;
+        public readonly Vector2 StartPosition;
+        public readonly Vector2 EndPosition;
+
+        public AnimationPath(Vector2 startPosition, Vector2 endPosition)
+        {
+            StartPosition = startPosition;
+            EndPosition = endPosition;
+        }
     }
 }

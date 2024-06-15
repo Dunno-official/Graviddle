@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 
-public static class TouchExtensions
+namespace Extensions
 {
-    public static Vector2 GetPreviousTouchPosition(this Touch touch)
+    public static class TouchExtensions
     {
-        return touch.position - touch.deltaPosition;
+        public static Vector2 GetPreviousTouchPosition(this Touch touch)
+        {
+            return touch.position - touch.deltaPosition;
+        }
     }
 }

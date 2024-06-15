@@ -89,3 +89,10 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 27688
+  packageName: SRDebugger - Console & Tools On-Device
+  packageVersion: 1.12.1
+  assetPath: Assets/Plugins/StompyRobot/SRDebugger/UI/Sprites/Default/Icons/outline-64.png
+  uploadId: 496367

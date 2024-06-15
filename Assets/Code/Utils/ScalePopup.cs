@@ -1,35 +1,38 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class ScalePopup : IToggleable
+namespace Utils
 {
-    private readonly float _duration;
-    private readonly float _startScale;
-    private readonly float _targetScale;
-    private readonly Transform _transform;
-    private Tween _animation;
-
-    public ScalePopup(Transform transform, float duration, float startScale, float targetScale)
+    public class ScalePopup : IToggleable
     {
-        _duration = duration;
-        _transform = transform;
-        _startScale = startScale;
-        _targetScale = targetScale;
-    }
+        private readonly Transform _transform;
+        private readonly Vector2 _targetScale;
+        private readonly float _startScale;
+        private readonly float _duration;
+        private Tween _animation;
+
+        public ScalePopup(Transform transform, float duration, float startScale, Vector2 targetScale)
+        {
+            _targetScale = targetScale;
+            _startScale = startScale;
+            _transform = transform;
+            _duration = duration;
+        }
     
-    public void Show()
-    {
-        PlayScaleAnimation(_targetScale);
-    }
+        public void Show()
+        {
+            PlayScaleAnimation(_targetScale);
+        }
 
-    public void Hide()
-    {
-        PlayScaleAnimation(_startScale);
-    }
+        public void Hide()
+        {
+            PlayScaleAnimation(new Vector2(_startScale, _startScale));
+        }
 
-    private void PlayScaleAnimation(float targetScale)
-    {
-        _animation?.Kill();
-        _animation = _transform.DOScale(targetScale, _duration).SetLink(_transform.gameObject);
+        private void PlayScaleAnimation(Vector2 targetScale)
+        {
+            _animation?.Kill();
+            _animation = _transform.DOScale(targetScale, _duration).SetLink(_transform.gameObject);
+        }
     }
 }

@@ -1,56 +1,62 @@
 using System;
 using System.Collections;
 using System.Linq;
+using Extensions;
+using Level.CharacterNM;
+using Level.Restart;
 using UnityEngine;
 
-[RequireComponent(typeof(CircleCollider2D))]
-public class StoryTelling : MonoBehaviour, IRestart
+namespace Level.Tutorial
 {
-    [SerializeField] private StoryPart[] _storyParts;
-    private CircleCollider2D _collider;
-    private bool _storyStarted;
-
-    public event Action StoryEnded;
-
-    private void Start()
+    [RequireComponent(typeof(CircleCollider2D))]
+    public class StoryTelling : MonoBehaviour, IRestart
     {
-        _collider = GetComponent<CircleCollider2D>();
-    }
+        [SerializeField] private StoryPart[] _storyParts;
+        private CircleCollider2D _collider;
+        private bool _storyStarted;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (_storyStarted == false && other.GetComponent<Character>() != null)
+        public event Action StoryEnded;
+
+        private void Start()
         {
-            StartCoroutine(StartStory());
+            _collider = GetComponent<CircleCollider2D>();
         }
-    }
 
-    private IEnumerator StartStory()
-    {
-        _storyStarted = true;
-
-        foreach (StoryPart storyPart in _storyParts)
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            yield return new WaitForSeconds(storyPart.WaitTime);
+            if (_storyStarted == false && other.GetComponent<Character>() != null)
+            {
+                StartCoroutine(StartStory());
+            }
+        }
+
+        private IEnumerator StartStory()
+        {
+            _storyStarted = true;
+
+            foreach (StoryPart storyPart in _storyParts)
+            {
+                yield return new WaitForSeconds(storyPart.WaitTime);
             
-            storyPart.Pointer.ShowHint();
+                storyPart.Pointer.ShowHint();
+            }
+        
+            yield return new WaitForSeconds(_storyParts.Last().Pointer.Duration);
+
+            StoryEnded?.Invoke();
         }
-        
-        yield return new WaitForSeconds(_storyParts.Last().Pointer.Duration);
 
-        StoryEnded?.Invoke();
-    }
-
-    void IRestart.Restart()
-    {
-        StopAllCoroutines();
-        
-        _storyStarted = false;
-        _collider.ClearCollisionList();
-
-        foreach (StoryPart storyPart in _storyParts)
+        void IRestart.Restart()
         {
-            storyPart.Pointer.ResetImage();
+            StopAllCoroutines();
+        
+            _storyStarted = false;
+            _collider.ClearCollisionList();
+
+            foreach (StoryPart storyPart in _storyParts)
+            {
+                storyPart.Pointer.ResetImage();
+            }
         }
     }
 }

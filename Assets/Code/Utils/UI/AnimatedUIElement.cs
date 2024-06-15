@@ -2,31 +2,34 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-[Serializable]
-public class AnimatedUIElement
+namespace Utils.UI
 {
-    [SerializeField] private Alignment _anchorPreset;
-    [SerializeField] private RectTransform _transform;
-    [SerializeField] private RectTransform _target;
-    [SerializeField] private UIAnimation _showAnimation;
-    [SerializeField] private UIAnimation _hideAnimation;
-
-    public void Init(Canvas canvas)
+    [Serializable]
+    public class AnimatedUIElement
     {
-        HiddenUIAlignment alignment = new(_transform, _target, _anchorPreset, canvas);
-        alignment.Execute();
+        [SerializeField] private Alignment _anchorPreset;
+        [SerializeField] private RectTransform _transform;
+        [SerializeField] private RectTransform _target;
+        [SerializeField] private UIAnimation _showAnimation;
+        [SerializeField] private UIAnimation _hideAnimation;
+
+        public void Initialize(Canvas canvas)
+        {
+            HiddenUIAlignment alignment = new(_transform, _target, _anchorPreset, canvas);
+            alignment.Execute();
         
-        _showAnimation.Init(_target.position, _transform);
-        _hideAnimation.Init(_transform.position, _transform);
-    }
+            _showAnimation.Initialize(_target.position, _transform);
+            _hideAnimation.Initialize(_transform.position, _transform);
+        }
 
-    public UniTask Show()
-    {
-        return _showAnimation.Play();
-    }
+        public UniTask Show()
+        {
+            return _showAnimation.Play();
+        }
     
-    public UniTask Hide()
-    {
-        return _hideAnimation.Play();
+        public UniTask Hide()
+        {
+            return _hideAnimation.Play();
+        }
     }
 }

@@ -1,17 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIBlocker : MonoBehaviour
+namespace Menu
 {
-    [SerializeField] private Image _image;
+    public class UIBlocker : MonoBehaviour
+    {
+        [SerializeField] private Image _image;
     
-    public void Enable()
-    {
-        _image.raycastTarget = true;
-    }
+        public void Enable()
+        {
+            _image.raycastTarget = true;
+        }
 
-    public void Disable()
-    {
-        _image.raycastTarget = false;
+        public void Disable()
+        {
+            _image.raycastTarget = false;
+        }
     }
 }

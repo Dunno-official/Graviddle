@@ -1,56 +1,60 @@
 ﻿using System;
+using MonoBehaviourWrapperNM;
 using UnityEngine;
 
-public class PhysicsInputTrigger : IUpdate
+namespace Utils.Physics
 {
-    private readonly Collider2D[] _results = new Collider2D[5];
-    private readonly Collider2D _targetCollider;
-    private readonly Camera _camera;
-    private bool _isHolding;
-
-    public PhysicsInputTrigger(Collider2D targetCollider)
+    public class PhysicsInputTrigger : IUpdate
     {
-        _targetCollider = targetCollider;
-        _camera = Camera.main;
-    }
+        private readonly Collider2D[] _results = new Collider2D[5];
+        private readonly Collider2D _targetCollider;
+        private readonly Camera _camera;
+        private bool _isHolding;
 
-    public event Action Entered;
-    public event Action Exited;
-    
-    void IUpdate.Update()
-    {
-        TryInvokeEnterTrigger();
-        TryInvokeExitTrigger();
-    }
-
-    private void TryInvokeEnterTrigger()
-    {
-        if (Input.GetMouseButtonDown(0))
+        public PhysicsInputTrigger(Collider2D targetCollider)
         {
-            Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
-            
-            int numColliders = Physics2D.OverlapPointNonAlloc(mousePosition, _results);
-            
-            for (int i = 0; i < numColliders; i++)
+            _targetCollider = targetCollider;
+            _camera = Camera.main;
+        }
+
+        public event Action Entered;
+        public event Action Exited;
+    
+        public void Update()
+        {
+            TryInvokeEnterTrigger();
+            TryInvokeExitTrigger();
+        }
+
+        private void TryInvokeEnterTrigger()
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                if (_results[i] == _targetCollider)
+                Vector2 mousePosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+            
+                int numColliders = Physics2D.OverlapPoint(mousePosition, new ContactFilter2D(), _results);
+            
+                for (int i = 0; i < numColliders; i++)
                 {
-                    Entered?.Invoke();
-                    _isHolding = true;
-                    break;
+                    if (_results[i] == _targetCollider)
+                    {
+                        Entered?.Invoke();
+                        _isHolding = true;
+                        break;
+                    }
                 }
             }
         }
-    }
 
-    private void TryInvokeExitTrigger()
-    {
-        if (Input.GetMouseButtonUp(0))
+        private void TryInvokeExitTrigger()
         {
-            if (_isHolding)
+            if (Input.GetMouseButtonUp(0))
             {
-                Exited?.Invoke();
-                _isHolding = false;
+                if (_isHolding)
+                {
+                    Exited?.Invoke();
+                    _isHolding = false;
+                }
             }
         }
     }

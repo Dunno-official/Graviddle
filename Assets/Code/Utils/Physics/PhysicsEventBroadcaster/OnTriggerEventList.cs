@@ -2,50 +2,53 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnTriggerEventList
+namespace Utils.Physics.PhysicsEventBroadcaster
 {
-    private readonly Dictionary<Type, List<IOnTriggerEvent>> _onTriggerEvents = new();
-        
-    public void RegisterEvent<T>(Action<T> callBack) where T : MonoBehaviour 
+    public class OnTriggerEventList
     {
-        Type type = typeof(T);
+        private readonly Dictionary<Type, List<IOnTriggerEvent>> _onTriggerEvents = new();
         
-        if (_onTriggerEvents.ContainsKey(type) == false)
+        public void RegisterEvent<T>(Action<T> callBack) where T : MonoBehaviour 
         {
-            _onTriggerEvents[type] = new List<IOnTriggerEvent>();
-        }
+            Type type = typeof(T);
         
-        _onTriggerEvents[type].Add(new OnTriggerEvent<T>(callBack));
-    }
-    
-    public void UnRegisterEvent<T>(Action<T> callBack) where T : MonoBehaviour
-    {
-        List<IOnTriggerEvent> callbacks = _onTriggerEvents[typeof(T)];
-        
-        for (int i = 0; i < callbacks.Count; ++i)
-        {
-            OnTriggerEvent<T> triggerEvent = (OnTriggerEvent<T>)callbacks[i];
-        
-            if (triggerEvent.Callback == callBack)
+            if (_onTriggerEvents.ContainsKey(type) == false)
             {
-                callbacks.RemoveAt(i);
-                break;
+                _onTriggerEvents[type] = new List<IOnTriggerEvent>();
+            }
+        
+            _onTriggerEvents[type].Add(new OnTriggerEvent<T>(callBack));
+        }
+    
+        public void UnRegisterEvent<T>(Action<T> callBack) where T : MonoBehaviour
+        {
+            List<IOnTriggerEvent> callbacks = _onTriggerEvents[typeof(T)];
+        
+            for (int i = 0; i < callbacks.Count; ++i)
+            {
+                OnTriggerEvent<T> triggerEvent = (OnTriggerEvent<T>)callbacks[i];
+        
+                if (triggerEvent.Callback == callBack)
+                {
+                    callbacks.RemoveAt(i);
+                    break;
+                }
             }
         }
-    }
     
-    public void TryInvokeEvents(Collider2D collider2d)
-    {
-        foreach (Type type in _onTriggerEvents.Keys)
+        public void TryInvokeEvents(Collider2D collider2d)
         {
-            if (collider2d.TryGetComponent(type, out Component component))
+            foreach (Type type in _onTriggerEvents.Keys)
             {
-                List<IOnTriggerEvent> callbacks = _onTriggerEvents[type];
-                
-                for (int i = 0; i < callbacks.Count; ++i)
+                if (collider2d.TryGetComponent(type, out Component component))
                 {
-                    callbacks[i].Invoke(component);
-                }                
+                    List<IOnTriggerEvent> callbacks = _onTriggerEvents[type];
+                
+                    for (int i = 0; i < callbacks.Count; ++i)
+                    {
+                        callbacks[i].Invoke(component);
+                    }                
+                }
             }
         }
     }

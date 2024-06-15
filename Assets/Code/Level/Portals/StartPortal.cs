@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
-public class StartPortal : MonoBehaviour
+namespace Level.Portals
 {
+    public class StartPortal : MonoBehaviour
+    {
+    }
 }
