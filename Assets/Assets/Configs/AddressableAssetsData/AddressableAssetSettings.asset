@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 5d849fbed73f15d4ca9ae2ad4a5abf13
   m_currentHash:
     serializedVersion: 2
-    Hash: 12f3142d21bf483cc7f443de30da8c33
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -82,19 +82,19 @@ MonoBehaviour:
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
     m_ProfileEntryNames:
     - m_Id: 69c327a4dbb4e624bad01a8b25006ac1
-      m_Name: RemoteLoadPath
+      m_Name: Remote.LoadPath
       m_InlineUsage: 0
     - m_Id: 753c52225d8cf584a80131976c9af983
       m_Name: BuildTarget
       m_InlineUsage: 0
     - m_Id: 8d8b63a8cc62ccc46a6537163cc74085
-      m_Name: RemoteBuildPath
+      m_Name: Remote.BuildPath
       m_InlineUsage: 0
     - m_Id: c1f80da06490ea948913fc6a9a6abb82
-      m_Name: LocalBuildPath
+      m_Name: Local.BuildPath
       m_InlineUsage: 0
     - m_Id: d264b9fc26ea06548a07e603f55a28d3
-      m_Name: LocalLoadPath
+      m_Name: Local.LoadPath
       m_InlineUsage: 0
     m_ProfileVersion: 1
   m_LabelTable:
