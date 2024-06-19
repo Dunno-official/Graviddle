@@ -1,5 +1,6 @@
 ﻿using System;
 using Level.CameraNM;
+using Level.Tutorial.SpriteHolder;
 using UnityEngine;
 
 namespace Level.Tutorial.PointerAnimation

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-using LaserSystem2D;
+using _2D_Laser_system.Code.Laser.Laser;
+using _2D_Laser_system.Code.Laser.Laser.Components.Interaction;
 using UnityEngine;
 
 namespace Level.CharacterNM

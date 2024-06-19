@@ -1,7 +1,7 @@
 ﻿using System;
 using MonoBehaviourWrapperNM;
 
-namespace Level.Gravitation.GravityButton
+namespace Level.Gravitation.GravityButtonNM
 {
     public class GravityButtonState : IInitializable, IDisposable
     {

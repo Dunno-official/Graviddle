@@ -1,12 +1,14 @@
-﻿using Level.Tutorial.PointerAnimation;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SwipePointerAnimationView : MonoBehaviour
+namespace Level.Tutorial.PointerAnimation
 {
-    [SerializeField] private PointerAnimationData _data;
-
-    private void Awake()
+    public class SwipePointerAnimationView : MonoBehaviour
     {
-        new PointerAnimation(_data).Play();
+        [SerializeField] private PointerAnimationData _data;
+
+        private void Awake()
+        {
+            new PointerAnimation(_data).Play();
+        }
     }
 }

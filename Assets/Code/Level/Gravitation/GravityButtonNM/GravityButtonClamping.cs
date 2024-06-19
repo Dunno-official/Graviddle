@@ -1,7 +1,7 @@
 using MonoBehaviourWrapperNM;
 using UnityEngine;
 
-namespace Level.Gravitation.GravityButton
+namespace Level.Gravitation.GravityButtonNM
 {
     public class GravityButtonClamping : IUpdate
     {

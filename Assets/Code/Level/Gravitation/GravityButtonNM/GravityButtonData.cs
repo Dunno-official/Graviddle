@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Level.Gravitation.GravityButton
+namespace Level.Gravitation.GravityButtonNM
 {
     [Serializable]
     public class GravityButtonData

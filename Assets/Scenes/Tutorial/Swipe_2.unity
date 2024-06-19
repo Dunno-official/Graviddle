@@ -2662,7 +2662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _spriteHolder:
-      rid: 1985634060044861514
+      rid: 3970859206219661384
     _rotationData:
       _curve:
         serializedVersion: 2
@@ -2725,8 +2725,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1985634060044861514
-      type: {class: ImageSpriteHolder, ns: Level.Tutorial.PointerAnimation, asm: Assembly-CSharp}
+    - rid: 3970859206219661384
+      type: {class: ImageSpriteHolder, ns: Level.Tutorial.SpriteHolder, asm: Assembly-CSharp}
       data:
         _image: {fileID: 1130332756}
 --- !u!114 &1130332756
@@ -3327,7 +3327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _spriteHolder:
-      rid: 1985634060044861514
+      rid: 3970859206219661382
     _rotationData:
       _curve:
         serializedVersion: 2
@@ -3390,8 +3390,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1985634060044861514
-      type: {class: ImageSpriteHolder, ns: Level.Tutorial.PointerAnimation, asm: Assembly-CSharp}
+    - rid: 3970859206219661382
+      type: {class: ImageSpriteHolder, ns: Level.Tutorial.SpriteHolder, asm: Assembly-CSharp}
       data:
         _image: {fileID: 1617456558}
 --- !u!114 &1617456561
@@ -3985,7 +3985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _spriteHolder:
-      rid: 1985634060044861514
+      rid: 3970859206219661383
     _rotationData:
       _curve:
         serializedVersion: 2
@@ -4048,8 +4048,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1985634060044861514
-      type: {class: ImageSpriteHolder, ns: Level.Tutorial.PointerAnimation, asm: Assembly-CSharp}
+    - rid: 3970859206219661383
+      type: {class: ImageSpriteHolder, ns: Level.Tutorial.SpriteHolder, asm: Assembly-CSharp}
       data:
         _image: {fileID: 1948228404}
 --- !u!114 &1948228404
@@ -4228,12 +4228,12 @@ PrefabInstance:
     - target: {fileID: 711716987984909793, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 160
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 852435444486479202, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1761496302009652104, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
@@ -4458,12 +4458,12 @@ PrefabInstance:
     - target: {fileID: 7765117089892189390, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 174
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8637867634674840944, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -160
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8730521293657802603, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}

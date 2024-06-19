@@ -1,4 +1,5 @@
 ﻿using Extensions;
+using Level.AnalyticsNM;
 using Level.CameraNM;
 using Level.CameraNM.Clamping.Data;
 using Level.CharacterNM;
@@ -16,7 +17,7 @@ using MonoBehaviourWrapperNM;
 using SaveSystem;
 using UnityEngine;
 
-namespace Level
+namespace Level.CompositionRoot
 {
     public class EntryPoint : MonoBehaviourWrapper
     {
@@ -56,6 +57,7 @@ namespace Level
                 new UIHandler(_character.States, _character, _ui),
                 new UIGravityBoxCover(levelItems.GravityBoxes, _ui.Find<GameplayPanel>()),
                 new LevelResultSave(_character.States.WinState, reward),
+                new Analytics(new PrefsSaveLoadSystem(), _character.States.WinState, _character.States.DieState, reward),
                 reward,
             });
         }

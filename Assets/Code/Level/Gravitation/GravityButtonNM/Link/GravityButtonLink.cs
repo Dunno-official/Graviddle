@@ -2,7 +2,7 @@
 using Extensions;
 using UnityEngine;
 
-namespace Level.Gravitation.GravityButton.Link
+namespace Level.Gravitation.GravityButtonNM.Link
 {
     public abstract class GravityButtonLink : MonoBehaviour
     {

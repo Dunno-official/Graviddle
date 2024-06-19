@@ -1,18 +1,21 @@
-using LaserSystem2D;
-using Level.Gravitation.GravityButton.Link;
+using _2D_Laser_system.Code.Laser.Laser;
+using Level.Gravitation.GravityButtonNM.Link;
 using UnityEngine;
 
-public class GravityButtonLaserLink : GravityButtonLink
+namespace Level.Obstacles.Lasers
 {
-    [SerializeField] private LaserBase _laserBase;
-
-    protected override void Enable()
+    public class GravityButtonLaserLink : GravityButtonLink
     {
-        _laserBase.Enable();
-    }
+        [SerializeField] private LaserBase _laserBase;
 
-    protected override void Disable()
-    {
-        _laserBase.Disable();
+        protected override void Enable()
+        {
+            _laserBase.Enable();
+        }
+
+        protected override void Disable()
+        {
+            _laserBase.Disable();
+        }
     }
 }

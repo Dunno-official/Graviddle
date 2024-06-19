@@ -1,13 +1,13 @@
 ﻿using System.Linq;
 using Extensions;
 using Level.Gravitation;
-using Level.Gravitation.GravityButton;
+using Level.Gravitation.GravityButtonNM;
 using Level.Gravitation.SwipeHandlerNM;
 using Level.GravityBoxNM;
 using Level.Obstacles;
 using UnityEngine;
 
-namespace Level
+namespace Level.CompositionRoot
 {
     public class LevelItems
     {

@@ -5,15 +5,779 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="236f7ca0-e3d5-42cf-8bd1-4f65d9112fc7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Analytics.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Analytics.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelRecord.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelRecord.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelRecordPostRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelRecordPostRequest.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Configs/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Configs/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Configs/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Configs/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Utils/EditorUtils/TargetFPS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Utils/EditorUtils/TargetFPS.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/ChainLaserTool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/ChainLaserTool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/ChainToolUpdateCycle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/ChainToolUpdateCycle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolGhostPosition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolGhostPosition.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolPointInserting.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolPointInserting.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolPointRemoval.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolPointRemoval.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolPointSelection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolPointSelection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolViewData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/ChainToolViewData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/MouseState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/MouseState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/SelectionInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/ChainLaserTool/Components/SelectionInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorFactories.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorFactories/AutomaticLaserEditorFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorFactories/AutomaticLaserEditorFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorFactories/BaseLaserEditorFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorFactories/BaseLaserEditorFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorFactories/ChainLaserEditorFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorFactories/ChainLaserEditorFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorFactories/LaserEditorFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorFactories/LaserEditorFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Button.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Button.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/ConditionalDraw.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/ConditionalDraw.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/DrawableComposite.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/DrawableComposite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/DrawableDummy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/DrawableDummy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/DrawableIf.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/DrawableIf.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Extensions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Extensions/SerializedPropertyExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Extensions/SerializedPropertyExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/GenericEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/GenericEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/IDrawable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/IDrawable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/IEditorFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/IEditorFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Label.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Label.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Property.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Property.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/PropertyChangedListener.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/PropertyChangedListener.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/ReadOnlyElement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/ReadOnlyElement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Section.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Section.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Space.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/EditorWrapper/Space.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/Editors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/Editors/AutomaticLaserEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/Editors/AutomaticLaserEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/Editors/ChainLaserEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/Editors/ChainLaserEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/Editors/EditorUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/Editors/EditorUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/Editors/LaserEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Editor/Editors/LaserEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ChainLaser.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ChainLaser/ChainHitEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ChainLaser/ChainHitEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ChainLaser/ChainLaser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ChainLaser/ChainLaser.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ChainLaser/ChainLaserKeyPointsProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ChainLaser/ChainLaserKeyPointsProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ChainLaser/ChainLaserLifeCycleFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ChainLaser/ChainLaserLifeCycleFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ChainLaser/ChainLaserMaxPointUpdate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ChainLaser/ChainLaserMaxPointUpdate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Collision.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Collision/BoxCast2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Collision/BoxCast2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Collision/BoxCastData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Collision/BoxCastData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Collision/LaserCollision.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Collision/LaserCollision.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Dissolve.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Dissolve/DissolveShutdown.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Dissolve/DissolveShutdown.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Dissolve/LaserDissolve.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Dissolve/LaserDissolve.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/HitEffect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/HitEffect/HitEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/HitEffect/HitEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/HitEffect/RaycastHitEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/HitEffect/RaycastHitEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/HitEvent.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/HitEvent/HitEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/HitEvent/HitEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/HitEvent/RaycastHitEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/HitEvent/RaycastHitEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Interaction.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Interaction/ILaserEntered.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Interaction/ILaserEntered.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Interaction/ILaserExited.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Interaction/ILaserExited.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Interaction/ILaserStay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Interaction/ILaserStay.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Interaction/InteractedObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Interaction/InteractedObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Interaction/LaserInteraction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Interaction/LaserInteraction.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/LaserActiveHits.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/LaserActiveHits.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/LaserAudio.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/LaserAudio.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/LaserView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/LaserView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Length.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Length/LaserLength.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Length/LaserLength.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Length/RaycastLaserLength.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Length/RaycastLaserLength.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/LineRebuilding.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/LineRebuilding.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Raycast.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Raycast/LaserHit.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Raycast/LaserHit.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Raycast/LaserRaycast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Raycast/LaserRaycast.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Raycast/LaserReflectingObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/Raycast/LaserReflectingObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/TransformMapper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Components/TransformMapper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Data/CollisionData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Data/CollisionData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Data/LaserData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Data/LaserData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Data/RaycastData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Data/RaycastData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Data/ViewData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Data/ViewData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ILaserKeyPointProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/ILaserKeyPointProvider.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Laser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/Laser.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LaserBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LaserBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LaserComponents.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LaserComponents.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LaserLifeCycleFactory.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LaserLifeCycleFactory/ILaserLifeCycleFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LaserLifeCycleFactory/ILaserLifeCycleFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LaserLifeCycleFactory/LaserLifeCycleFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LaserLifeCycleFactory/LaserLifeCycleFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/LifeCycle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/LifeCycle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/LifeCycleUtils.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/LifeCycleUtils/IsPlayingCondition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/LifeCycleUtils/IsPlayingCondition.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Composite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Composite/DisableComposite.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Composite/DisableComposite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Composite/EnableComposite.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Composite/EnableComposite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Composite/InputUpdateComposite.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Composite/InputUpdateComposite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Composite/UpdateConditionComposite.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Composite/UpdateConditionComposite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Composite/UpdateCycle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Composite/UpdateCycle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/ConditionalUpdate.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/ConditionalUpdate/ConditionalUpdate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/ConditionalUpdate/ConditionalUpdate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/ConditionalUpdate/IUpdateCondition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/ConditionalUpdate/IUpdateCondition.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IDisable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IDisable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IEnable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IEnable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IInputOutputUpdate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IInputOutputUpdate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IInputUpdate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IInputUpdate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IOutputUpdate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IOutputUpdate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IUpdate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/IUpdate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Link.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Link/InputUpdateLink.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Link/InputUpdateLink.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Link/UpdateLink.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/Link/UpdateLink.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/UpdateDummy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Laser/LifeCycle/UpdateCycle/UpdateDummy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Manager.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Manager/HitEffectsPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Manager/HitEffectsPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Manager/LaserManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Manager/LaserManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Manager/LaserPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Manager/LaserPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Manager/ReflectingColliders.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Manager/ReflectingColliders.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/AutomaticLaser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/AutomaticLaser.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/EnumerableExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/EnumerableExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/FullRectLine.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/FullRectLine/FullRectLine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/FullRectLine/FullRectLine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/FullRectLine/FullRectLineMesh.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/FullRectLine/FullRectLineMesh.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/FullRectLine/LaserMaterial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/FullRectLine/LaserMaterial.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/FullRectLine/ResizableArray.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/FullRectLine/ResizableArray.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/ICoroutineRunner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/ICoroutineRunner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/MaterialBridge.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/MaterialBridge.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/MeshExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/MeshExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/ObservableList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/ObservableList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/Factory.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/Factory/ComponentFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/Factory/ComponentFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/Factory/IFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/Factory/IFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/Factory/LaserFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/Factory/LaserFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/Factory/PoolableParticleSystemFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/Factory/PoolableParticleSystemFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/IPoolable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/IPoolable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/ObjectPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/ObjectPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/PoolableMonoBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/PoolableMonoBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/PoolableParticleSystem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Pool/PoolableParticleSystem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Switcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Switcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Utils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/Utils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/VectorExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Code/Laser/Utils/VectorExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/ChainLaserDemo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/ChainLaserDemo/LaserButtonSprite.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/ChainLaserDemo/LaserButtonSprite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/ChainLaserDemo/LaserHitDebug.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/ChainLaserDemo/LaserHitDebug.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/ChainLaserDemo/LaserSpotGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/ChainLaserDemo/LaserSpotGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/ChainLaserDemo/PointsGeneration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/ChainLaserDemo/PointsGeneration.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/ChainLaserDemo/ZRotation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/ChainLaserDemo/ZRotation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/CameraBorders.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/CameraBorders.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/CameraBordersFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/CameraBordersFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/CameraClamping.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/CameraClamping.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/CameraFollowing.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/CameraFollowing.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/LevelBorders.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/LevelBorders.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/MainCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Camera/MainCamera.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/FPSCounter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/FPSCounter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Gun.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Gun/GunFasteningRotation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Gun/GunFasteningRotation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Gun/LaserGun.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Gun/LaserGun.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Gun/LaserGunRotation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Gun/LaserGunRotation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/LaserButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/LaserButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Parallax.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Parallax/GameParallaxLayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Parallax/GameParallaxLayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Parallax/ParallaxLayerClamping.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Parallax/ParallaxLayerClamping.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Parallax/ParallaxLayerStartPosition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Parallax/ParallaxLayerStartPosition.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/PatrolAnimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/PatrolAnimation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Restart.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Restart/IRestart.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Restart/IRestart.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Restart/LevelRestart.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/Restart/LevelRestart.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/SpriteFlip.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/SpriteFlip.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/UFO.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/UFO/UFO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/UFO/UFO.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/UFO/UFOAnimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/UFO/UFOAnimation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/UFO/UFODeath.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/UFO/UFODeath.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/UFO/UFOInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/UFO/UFOInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/UFO/UFOMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Game/UFO/UFOMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Materials/Green 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Materials/Green 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Materials/Particles.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Materials/Particles.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Music.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Music/Space journey.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Music/Space journey.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Music/hit.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Music/hit.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Music/loop_ambient_01.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Music/loop_ambient_01.ogg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Prefabs/HitEffect 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Prefabs/HitEffect 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Prefabs/HitEffect.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Prefabs/HitEffect.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Prefabs/laser.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Prefabs/laser.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Resources/Circle.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Resources/Circle.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Resources/DebugMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Resources/DebugMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Scenes/Chain laser.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Scenes/Chain laser.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Scenes/Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Scenes/Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Scenes/Preview.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Scenes/Preview.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile000.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile002.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile003.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile004.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile005.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile006.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile007.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile009.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile011.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile011.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile012.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile012.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile013.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile013.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile014.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile014.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile015.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile015.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile016.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile016.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile018.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile018.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile019.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile019.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile020.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile021.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile021.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile022.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile022.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile023.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile024.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile025.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile027.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile027.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile028.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile028.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile029.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile029.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile030.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile030.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile031.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile031.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile032.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile032.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile033.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile034.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile034.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile036.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile045.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile045.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile046.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile046.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile048.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile048.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile050.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile050.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile052.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile052.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile053.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile053.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile054.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile054.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile055.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile055.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile057.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile057.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile059.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile059.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile061.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile061.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile062.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Blue/tile062.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Green.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Green/tile036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Green/tile036.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile000.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile002.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile003.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile004.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile005.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile006.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile007.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile009.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile011.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile011.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile012.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile012.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile013.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile013.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile014.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile014.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile015.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile015.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile016.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile016.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile018.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile018.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile019.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile019.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile020.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile021.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile021.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile022.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile022.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile023.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile024.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile025.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile027.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile027.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile028.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile028.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile029.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile029.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile030.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile030.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile031.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile031.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile032.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile032.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile033.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile034.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile034.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile036.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile045.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile045.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile046.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile046.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile048.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile048.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile050.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile050.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile052.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile052.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile053.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile053.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile054.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile054.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile055.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile055.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile057.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile057.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile059.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile059.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile061.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile061.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile062.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Orange/tile062.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Red.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Red/tile036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/Tiles/Red/tile036.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/UFO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/UFO.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/UFO_empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/UFO_empty.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/background2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/background2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/laser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/laser.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/noiseTexture (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/noiseTexture (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/stars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/stars.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/trace_01_rotated.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Demo/Textures/trace_01_rotated.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Documentation.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Documentation.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Blue.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Blue.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Green.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Green.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Orange 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Orange 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Orange 2.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Orange 2.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Orange.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Orange.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Purple.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Material presets/Purple.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Shaders/Laser.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2D Laser system/Shaders/Laser.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Configs/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Configs/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterLaserDeath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterLaserDeath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CompositionRoot/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CompositionRoot/EntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CompositionRoot/LevelItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CompositionRoot/LevelItems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/DoorNM/GravityButtonDoorLink.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/DoorNM/GravityButtonDoorLink.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonClamping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonClamping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonIndicator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonIndicator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonLiftForce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonLiftForce.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonOrientation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonOrientation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonPressFeedback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonPressFeedback.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonRigidbodyConstraints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonRigidbodyConstraints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/Link/GravityButtonLink.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/Link/GravityButtonLink.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/LightBulbNM/LightBulb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/LightBulbNM/LightBulb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Lasers/GravityButtonLaserLink.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Obstacles/Lasers/GravityButtonLaserLink.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/PointerAnimation/BoxPointerAnimationView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/PointerAnimation/BoxPointerAnimationView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/PointerAnimation/PointerAnimationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/PointerAnimation/PointerAnimationData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/PointerAnimation/SwipePointerAnimationView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/PointerAnimation/SwipePointerAnimationView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/SpriteHolder/ISpriteHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/SpriteHolder/ISpriteHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/SpriteHolder/ImageSpriteHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/SpriteHolder/ImageSpriteHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/SpriteHolder/SpriteRendererSpriteHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Tutorial/SpriteHolder/SpriteRendererSpriteHolder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Attribute Processors.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Editor Windows.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Sample - RPG Editor.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/StompyRobot/SRDebugger/PlaymakerIntegration.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/External.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/External/Jetbrains.Annotations.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/External/Jetbrains.Annotations.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/External/MiniJSON.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/External/MiniJSON.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Internal.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Internal/ComponentMenuPaths.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Internal/ComponentMenuPaths.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/LICENSE.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/README.md.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Collections.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Collections/SRList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Collections/SRList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Components.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Components/SRAutoSingleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Components/SRAutoSingleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Components/SRMonoBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Components/SRMonoBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Components/SRMonoBehaviourEx.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Components/SRMonoBehaviourEx.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Components/SRSingleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Components/SRSingleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Coroutines.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Coroutines.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/FloatExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/FloatExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/GameObjectExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/GameObjectExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/IListExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/IListExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/NetFxExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/NetFxExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/StringExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/StringExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/TransformExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Extensions/TransformExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/AssetUtil.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/AssetUtil.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/Hierarchy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/Hierarchy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/MethodReference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/MethodReference.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/PropertyReference.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/PropertyReference.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRDebugUtil.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRDebugUtil.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRFileUtil.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRFileUtil.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRInstantiate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRInstantiate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRMath.Tweening.Functions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRMath.Tweening.Functions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRMath.Tweening.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRMath.Tweening.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRMath.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRMath.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRReflection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Helpers/SRReflection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/Attributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/Attributes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/IAsyncService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/IAsyncService.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/SRDependencyServiceBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/SRDependencyServiceBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/SRSceneServiceBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/SRSceneServiceBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/SRServiceBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/SRServiceBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/SRServiceManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/Service/SRServiceManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/ContentFitText.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/ContentFitText.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/CopyLayoutElement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/CopyLayoutElement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/CopyPreferredSize.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/CopyPreferredSize.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/CopyPreferredSizes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/CopyPreferredSizes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/CopySizeIntoLayoutElement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/CopySizeIntoLayoutElement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/DragHandle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/DragHandle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/CopyLayoutElementEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/CopyLayoutElementEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/CopyPreferredSizeEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/CopyPreferredSizeEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/CopyPreferredSizesEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/CopyPreferredSizesEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/LongPressButtonEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/LongPressButtonEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/SRNumberButtonEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/SRNumberButtonEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/StompyRobot.SRF.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/StompyRobot.SRF.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/StyleComponentEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/StyleComponentEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/StyleSheetEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Editor/StyleSheetEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/FlashGraphic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/FlashGraphic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/InheritColour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/InheritColour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Layout.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Layout/FlowLayoutGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Layout/FlowLayoutGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Layout/VirtualVerticalLayoutGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Layout/VirtualVerticalLayoutGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/LongPressButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/LongPressButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/ResponsiveBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/ResponsiveBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/ResponsiveEnable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/ResponsiveEnable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/ResponsiveResize.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/ResponsiveResize.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/SRNumberButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/SRNumberButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/SRNumberSpinner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/SRNumberSpinner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/SRRetinaScaler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/SRRetinaScaler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/SRSpinner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/SRSpinner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/SRText.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/SRText.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/ScrollToBottomBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/ScrollToBottomBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/StyleComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/StyleComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/StyleRoot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/StyleRoot.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/StyleSheet.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/StyleSheet.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Unselectable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/Scripts/UI/Unselectable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/StompyRobot.SRF.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SRF/StompyRobot.SRF.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SROptions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SROptions/SROptions.Attributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SROptions/SROptions.Attributes.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SROptions/SROptions.Test.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SROptions/SROptions.Test.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SROptions/SROptions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SROptions/SROptions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SROptions/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StompyRobot/SROptions/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,16 +796,6 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.addressables@2.1.0/Tests/Editor/BinaryStorageBufferTests.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ai.navigation@2.0.0/Editor/NavMeshLinkEditor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.timeline@1.8.6/Editor/TimelineHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/15944cc78ddd407d94b0767405a493324000/84/48b0486c/UnityAdsSettings.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3a14257c64894089b63c1600fe209a2d3200/15/422c52c0/UnityAdsSettings.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/91/4c61e007/IAsyncResult.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/97/f2920df2/IDisposable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/02/8838fb59/TweenExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8c037cac2c7d4986a1600f55b8499fec34400/bf/96ae61cc/AnimationState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/454b8adca03e44db8a0e3ace7093e9b81cb800/37/ce9d52d1/UnityEngine.CoreModule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonLiftForce.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Level/Obstacles/LaserTurretNM/TurretRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Level/Tutorial/PointerAnimation/BoxPointerAnimationView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,8 +805,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Code/Utils/Physics/PhysicsInputTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Utils/ScalePopup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.coffee.ui-effect/Scripts/UIDissolve.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask/Runtime/UnityAsyncExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../Tools/UnityEditors/6000.0.3f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.core/Editor/Properties/AdvancedProperties.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,31 +822,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.2409836&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;GraviddleRebuilding&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.2409836",
+    "git-widget-placeholder": "GraviddleRebuilding",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.build.unityPlugin",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Dunno\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Dunno\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Dunno\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Dunno\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Dunno\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Dunno\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Tools\UnityEditors\6000.0.3f1\Editor\Unity.exe" />
@@ -128,10 +883,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7236">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="7236" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -249,28 +1004,27 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Code/Level/Gravitation/SwipeHandlerNM/SwipeHandler.cs</url>
           <line>17</line>
-          <properties documentPath="D:\Business\Unity\Graviddle\Assets\Code\Level\Gravitation\SwipeHandlerNM\SwipeHandler.cs" initialLine="17" containingFunctionPresentation="Method 'OnBeginDrag'">
-            <startOffsets>
-              <option value="517" />
-            </startOffsets>
-            <endOffsets>
-              <option value="580" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="D:\Business\Unity\Graviddle\Assets\Code\Level\Gravitation\SwipeHandlerNM\SwipeHandler.cs" containingFunctionPresentation="Method 'OnBeginDrag'" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Code/Menu/LevelChoice/LevelChoicePanel.cs</url>
           <line>37</line>
-          <properties documentPath="D:\Business\Unity\Graviddle\Assets\Code\Menu\LevelChoice\LevelChoicePanel.cs" initialLine="37" containingFunctionPresentation="Method 'InitializeLevelButtons'">
+          <properties documentPath="D:\Business\Unity\Graviddle\Assets\Code\Menu\LevelChoice\LevelChoicePanel.cs" containingFunctionPresentation="Method 'InitializeLevelButtons'" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelRecordPostRequest.cs</url>
+          <line>13</line>
+          <properties documentPath="D:\Unity\Graviddle\Assets\Code\Level\AnalyticsNM\LevelRecordPostRequest.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="1270" />
+              <option value="402" />
             </startOffsets>
             <endOffsets>
-              <option value="1355" />
+              <option value="473" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,4 +1,4 @@
-using Level.Gravitation.GravityButton.Link;
+using Level.Gravitation.GravityButtonNM.Link;
 using UnityEngine;
 
 namespace Level.DoorNM

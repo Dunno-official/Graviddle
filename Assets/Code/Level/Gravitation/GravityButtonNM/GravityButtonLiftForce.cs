@@ -2,7 +2,7 @@ using Level.Restart;
 using MonoBehaviourWrapperNM;
 using UnityEngine;
 
-namespace Level.Gravitation.GravityButton
+namespace Level.Gravitation.GravityButtonNM
 {
     public class GravityButtonLiftForce : IRestart, ISubscriber, IUpdate
     {

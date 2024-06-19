@@ -1,4 +1,4 @@
-using Level.Gravitation.GravityButton;
+using Level.Gravitation.GravityButtonNM;
 using UnityEngine;
 
 namespace Level.LightBulbNM

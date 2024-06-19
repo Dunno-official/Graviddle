@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Level.Tutorial.PointerAnimation
+namespace Level.Tutorial.SpriteHolder
 {
     [Serializable]
     public class ImageSpriteHolder : ISpriteHolder

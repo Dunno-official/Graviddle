@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Level.Tutorial.PointerAnimation
+namespace Level.Tutorial.SpriteHolder
 {
     public interface ISpriteHolder
     {

@@ -1,4 +1,4 @@
-﻿namespace Level.Gravitation.GravityButton
+﻿namespace Level.Gravitation.GravityButtonNM
 {
     public enum GravityButtonOrientation
     {
