@@ -20,7 +20,10 @@ namespace Level.UserInterface
                 await panel.Initialize();
             }
 
-            await Show(_initialPanel);
+            if (_initialPanel != null)
+            {
+                await Show(_initialPanel);
+            }
         }
 
         public async void ShowSync(Panel panel) // editor button

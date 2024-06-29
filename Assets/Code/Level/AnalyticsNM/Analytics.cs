@@ -10,16 +10,14 @@ namespace Level.AnalyticsNM
     public class Analytics : ISubscriber, IInitializable
     {
         private readonly LevelRecordPostRequest _postRequest = new();
-        private readonly ISaveLoadSystem _saveLoadSystem;
         private readonly WinState _winState;
         private readonly DieState _dieState;
         private readonly Reward _reward;
         private float _startTime;
         private int _deathCount;
 
-        public Analytics(ISaveLoadSystem saveLoadSystem, WinState winState, DieState dieState, Reward reward)
+        public Analytics(WinState winState, DieState dieState, Reward reward)
         {
-            _saveLoadSystem = saveLoadSystem;
             _winState = winState;
             _dieState = dieState;
             _reward = reward;
@@ -51,12 +49,12 @@ namespace Level.AnalyticsNM
         {
             _postRequest.Execute(new LevelRecord()
             {
-                DeviceId = SystemInfo.deviceUniqueIdentifier,
-                Name = "Denys",
+                Id = SystemInfo.deviceUniqueIdentifier,
+                Name = new UserName().Load(),
                 DeathCount = _deathCount,
                 Level = SceneManager.GetActiveScene().name,
                 Stars = _reward.CollectedStars,
-                Time = Time.time - _startTime
+                Time = Mathf.Round(Time.time - _startTime) / 100f
             });
         }
     }

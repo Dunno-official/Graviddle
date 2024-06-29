@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Extensions;
+using Level.UserInterface;
 using Level.UserInterface.Panels;
 using UnityEngine;
 using Utils.UI;
@@ -11,18 +13,15 @@ namespace Menu.MainMenu.AnimatedPanel
         [SerializeField] private Canvas _canvas;
         [SerializeField] protected UIBlocker UIBlocker;
         [SerializeField] private AnimatedUIElement[] _animatedElements;
+        [SerializeReference] private IAsyncUIElement[] _asyncUIElements;
         private IEnumerable<UniTask> _onShowAnimation;
         private IEnumerable<UniTask> _onHideAnimation;
     
         public override UniTask Initialize()
         {
-            foreach (AnimatedUIElement animatedElement in _animatedElements)
-            {
-                animatedElement.Initialize(_canvas);
-            }
-
-            _onShowAnimation = _animatedElements.Select(element => element.Show());
-            _onHideAnimation = _animatedElements.Select(element => element.Hide());
+            _asyncUIElements.ForEach(x => x.Initialize());
+            _onShowAnimation = _asyncUIElements.Select(element => element.Show());
+            _onHideAnimation = _asyncUIElements.Select(element => element.Hide());
 
             return base.Initialize();
         }
