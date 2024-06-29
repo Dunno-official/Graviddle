@@ -3,9 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using Internal;
     using SRF.Service;
-    using SRF.Helpers;
     using UnityEngine;
 
     [Service(typeof (IOptionsService))]

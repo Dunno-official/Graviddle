@@ -19,6 +19,21 @@ namespace Utils.Physics
             _colliders.Remove(collider2d);
         }
 
+        public bool TryGetCollision<T>(out T result) where T : MonoBehaviour
+        {
+            result = null;
+            
+            foreach (Collider2D collider2d in _colliders)
+            {
+                if (collider2d.TryGetComponent(out result))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        
         public bool CheckCollision<T>() where T : MonoBehaviour
         {
             return _colliders.Any(collider2d => collider2d.GetComponent<T>() != null);

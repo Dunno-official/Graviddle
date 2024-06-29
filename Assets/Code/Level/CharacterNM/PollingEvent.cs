@@ -1,11 +1,13 @@
 ﻿
+using Level.CharacterNM.CharacterStateMachineNM;
+
 namespace Level.CharacterNM
 {
-    public class PollingEvent
+    public class PollingEvent : ICondition
     {
         private bool _eventHappened;
 
-        public bool CheckIfEventHappened()
+        public bool IsTrue()
         {
             bool result = _eventHappened;
 

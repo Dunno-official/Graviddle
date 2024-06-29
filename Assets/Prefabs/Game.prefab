@@ -124,18 +124,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f730bae106d6414a82ae428a098c1789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transitionsConditions:
+  _conditionsFactory:
+    _characterCollisions:
+      _characterFeet: {fileID: 8059827198979699868}
+      _allCollisions: {fileID: 7749859406398825423}
     _restartButton: {fileID: 5095809087917036308}
-    _allCollisions: {fileID: 7749859406398825423}
-    _characterFeet: {fileID: 8059827198979699868}
   _starPickupFeedback: {fileID: 6485531706089109070}
   _swipeHandler: {fileID: 1603758615754313137}
+  _rightButton: {fileID: 6648851590239235327}
+  _leftButton: {fileID: 2918516846925873886}
   _levelStars:
   - {fileID: 4252330658481351201}
   - {fileID: 4252330657674819984}
   - {fileID: 4252330659204219494}
-  _rightButton: {fileID: 6648851590239235327}
-  _leftButton: {fileID: 2918516846925873886}
   _cameraData:
     _zoomInButton: {fileID: 5019780644004743343}
     _zoomOutButton: {fileID: 555827681909446976}

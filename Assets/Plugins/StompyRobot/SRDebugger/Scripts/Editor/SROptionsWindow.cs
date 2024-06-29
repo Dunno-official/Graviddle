@@ -8,7 +8,6 @@ namespace SRDebugger.Editor
     using SRF;
     using UnityEngine;
     using UnityEditor;
-    using System.ComponentModel;
     using SRF.Helpers;
 #if !DISABLE_SRDEBUGGER
     using Internal;

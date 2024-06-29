@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace Level.CharacterNM
 {
-    public class CharacterLaserDeath : MonoBehaviour, ILaserEntered
+    public class CharacterLaserDeath : MonoBehaviour, ILaserEntered, IDeathCondition
     {
         private bool _isDead;
 
-        public bool GetState()
+        private bool UpdateIsDead()
         {
             bool state = _isDead;
 
@@ -21,6 +21,12 @@ namespace Level.CharacterNM
         public void OnLaserEntered(LaserBase laserBase, List<RaycastHit2D> hits)
         {
             _isDead = true;
+        }
+
+        public bool IsDead(out string reason)
+        {
+            reason = "Died from laser";
+            return UpdateIsDead();
         }
     }
 }

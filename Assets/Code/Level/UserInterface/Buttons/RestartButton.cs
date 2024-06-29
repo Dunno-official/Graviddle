@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Level.UserInterface.Buttons
 {
-    public class RestartButton : MonoBehaviour
+    public class RestartButton : MonoBehaviour, IDeathCondition
     {
         [SerializeField] private Button _button;
         private readonly PollingEvent _eventTransit = new();
@@ -13,10 +13,11 @@ namespace Level.UserInterface.Buttons
         {
             _button.onClick.AddListener(_eventTransit.Invoke);
         }
-    
-        public bool CheckIfPressed()
+
+        public bool IsDead(out string reason)
         {
-            return _eventTransit.CheckIfEventHappened();
+            reason = "Manual restart";
+            return _eventTransit.IsTrue();
         }
     }
 }

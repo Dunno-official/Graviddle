@@ -152,12 +152,12 @@ PrefabInstance:
     - target: {fileID: 711716987984909793, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 160
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 852435444486479202, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1761496302009652104, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
@@ -347,7 +347,7 @@ PrefabInstance:
     - target: {fileID: 7765117089892189390, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 174
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8221276322714819219, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
@@ -357,7 +357,7 @@ PrefabInstance:
     - target: {fileID: 8637867634674840944, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -160
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8730521293657802603, guid: bf0258e73efab374aac7c0e70a8c0f39,
         type: 3}
@@ -2785,7 +2785,7 @@ MonoBehaviour:
   _storyTelling: {fileID: 1580118390}
   _data:
     _spriteHolder:
-      rid: 1985634057143451849
+      rid: 3970859417403916357
     _rotationData:
       _curve:
         serializedVersion: 2
@@ -2849,9 +2849,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 1985634057143451849
-      type: {class: SpriteRendererSpriteHolder, ns: Level.Tutorial.PointerAnimation,
-        asm: Assembly-CSharp}
+    - rid: 3970859417403916357
+      type: {class: SpriteRendererSpriteHolder, ns: Level.Tutorial.SpriteHolder, asm: Assembly-CSharp}
       data:
         _spriteRenderer: {fileID: 1214517160}
 --- !u!212 &1214517160

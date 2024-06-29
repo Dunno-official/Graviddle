@@ -1,6 +1,5 @@
 ﻿namespace SRDebugger.UI.Controls
 {
-    using Internal;
     using SRF;
     using UnityEngine.UI;
 

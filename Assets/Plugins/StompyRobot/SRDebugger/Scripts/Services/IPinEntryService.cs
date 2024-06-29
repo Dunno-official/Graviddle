@@ -1,6 +1,5 @@
 ﻿namespace SRDebugger.Services
 {
-    using System;
     using System.Collections.Generic;
 
     public delegate void PinEntryCompleteCallback(bool validPinEntered);

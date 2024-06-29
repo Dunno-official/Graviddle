@@ -81,7 +81,6 @@ namespace Sirenix.OdinInspector.Modules.Addressables.Editor
     using UnityEngine;
     using UnityEngine.AddressableAssets;
 	using System.Runtime.Serialization;
-    using System.IO;
 
     /// <summary>
     /// Draws an AssetReference property.

@@ -6,7 +6,6 @@
     using System.Globalization;
     using System.Linq;
 #if !DISABLE_SRDEBUGGER
-    using SRDebugger.Internal;
 #endif
     using SRF;
     using UnityEditor;

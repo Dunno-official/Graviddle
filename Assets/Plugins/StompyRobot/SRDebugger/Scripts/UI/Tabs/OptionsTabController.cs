@@ -4,7 +4,6 @@ namespace SRDebugger.UI.Tabs
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
     using Controls;
     using Controls.Data;
     using Internal;

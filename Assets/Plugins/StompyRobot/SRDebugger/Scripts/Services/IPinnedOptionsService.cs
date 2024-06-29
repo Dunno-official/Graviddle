@@ -3,7 +3,6 @@
 namespace SRDebugger.Services
 {
     using System;
-    using Internal;
 
     public interface IPinnedUIService
     {

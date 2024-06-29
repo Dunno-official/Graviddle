@@ -6,20 +6,20 @@ namespace Level.CharacterNM.CharacterStateMachineNM.StateTransitions
     {
         public readonly CharacterState StateFrom;
         public readonly CharacterState StateTo;
-        private readonly Func<bool> _condition;
+        private readonly ICondition _condition;
 
-        public Transition(CharacterState stateFrom, CharacterState stateTo, Func<bool> condition)
+        public Transition(CharacterState stateFrom, CharacterState stateTo, ICondition condition)
         {
+            _condition = condition;
             StateFrom = stateFrom;
             StateTo = stateTo;
-            _condition = condition;
         }
 
         public event Action TransitionHappened;
 
         public bool CheckCondition()
         {
-            bool transitionHappened = _condition();
+            bool transitionHappened = _condition.IsTrue();
 
             if (transitionHappened)
             {

@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace SRDebugger.Internal
+﻿namespace SRDebugger.Internal
 {
     using System.Collections.Generic;
     using System.ComponentModel;

@@ -1,14 +1,11 @@
 ﻿using System.ComponentModel;
-using UnityEngine.Serialization;
 
 namespace SRDebugger
 {
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.IO;
     using System.Linq;
-    using SRF;
     using UnityEngine;
 #if UNITY_EDITOR
     using UnityEditor;

@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Level.CharacterNM.CharacterStateMachineNM.StateTransitions
 {
     public class TransitionsPresenterFactory
     {
+        private readonly TransitionsConditions _conditions;
         private readonly CharacterStatesPresenter _states;
-        private readonly TransitionsConditions _transitionsConditions;
 
-        public TransitionsPresenterFactory(CharacterStatesPresenter states, TransitionsConditions transitionsConditions)
+        public TransitionsPresenterFactory(CharacterStatesPresenter states, TransitionsConditions conditions)
         {
-            _transitionsConditions = transitionsConditions;
+            _conditions = conditions;
             _states = states;
         }
 
@@ -30,25 +29,19 @@ namespace Level.CharacterNM.CharacterStateMachineNM.StateTransitions
         {
             List<Transition> allTransitions = new();
 
-            allTransitions.AddRange(GetTransitionsWithState(_states.WinState, _transitionsConditions.CheckWin));
-        
-            allTransitions.AddRange(GetTransitionsWithState(_states.DieState, _transitionsConditions.CheckIfRestart));
-            allTransitions.AddRange(GetTransitionsWithState(_states.DieState, _transitionsConditions.CheckDeathFromObstacle));
-            allTransitions.Add(new Transition(_states.FallState, _states.DieState, _transitionsConditions.CheckDeathByLevelBorders));
-        
-            allTransitions.Add(new Transition(_states.DieState, _states.IdleState, _transitionsConditions.CheckIfResurrected));
-            allTransitions.Add(new Transition(_states.FallState, _states.IdleState, _transitionsConditions.CheckIfGrounded));
-            allTransitions.Add(new Transition(_states.RunState, _states.IdleState, _transitionsConditions.CheckIfNotRun));
-        
-            allTransitions.Add(new Transition(_states.IdleState, _states.RunState, _transitionsConditions.CheckIfRun));
-        
-            allTransitions.Add(new Transition(_states.RunState, _states.FallState, _transitionsConditions.CheckIfFall));
-            allTransitions.Add(new Transition(_states.IdleState, _states.FallState, _transitionsConditions.CheckIfFall));
+            allTransitions.AddRange(GetTransitionsWithState(_states.WinState, _conditions.Win));
+            allTransitions.AddRange(GetTransitionsWithState(_states.DieState, _conditions.Death));
+            allTransitions.Add(new Transition(_states.DieState, _states.IdleState, _conditions.Resurrected));
+            allTransitions.Add(new Transition(_states.FallState, _states.IdleState, _conditions.IsGrounded));
+            allTransitions.Add(new Transition(_states.RunState, _states.IdleState, _conditions.IsNotRunning));
+            allTransitions.Add(new Transition(_states.IdleState, _states.RunState, _conditions.IsRunning));
+            allTransitions.Add(new Transition(_states.RunState, _states.FallState, _conditions.IsFalling));
+            allTransitions.Add(new Transition(_states.IdleState, _states.FallState, _conditions.IsFalling));
 
             return allTransitions;
         }
 
-        private IEnumerable<Transition> GetTransitionsWithState(CharacterState targetState, Func<bool> condition)
+        private IEnumerable<Transition> GetTransitionsWithState(CharacterState targetState, ICondition condition)
         {
             List<Transition> transitionsWithState = new();
 
