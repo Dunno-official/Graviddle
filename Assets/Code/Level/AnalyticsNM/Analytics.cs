@@ -1,4 +1,5 @@
-﻿using Level.CharacterNM.CharacterStateMachineNM.States;
+﻿using Level.CharacterNM;
+using Level.CharacterNM.CharacterStateMachineNM.States;
 using Level.UserInterface.Panels.WinPanel;
 using MonoBehaviourWrapperNM;
 using UnityEngine;
@@ -12,10 +13,10 @@ namespace Level.AnalyticsNM
         private readonly WinState _winState;
         private readonly DieState _dieState;
 
-        public Analytics(WinState winState, DieState dieState, Reward reward, DeathAnalytics deathAnalytics)
+        public Analytics(WinState winState, DieState dieState, Reward reward, CharacterDeathConditions conditions)
         {
-            _levelAnalytics = new LevelAnalytics(deathAnalytics, reward, Time.time);
-            _deathAnalytics = deathAnalytics;
+            _deathAnalytics = new DeathAnalytics(conditions);
+            _levelAnalytics = new LevelAnalytics(_deathAnalytics, reward, Time.time);
             _winState = winState;
             _dieState = dieState;
         }

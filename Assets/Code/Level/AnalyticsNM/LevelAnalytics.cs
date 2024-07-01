@@ -1,4 +1,5 @@
-﻿using Level.UserInterface.Panels.WinPanel;
+﻿using Level.AnalyticsNM.RequestNM;
+using Level.UserInterface.Panels.WinPanel;
 using SaveSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,23 +9,24 @@ namespace Level.AnalyticsNM
 {
     public class LevelAnalytics
     {
-        private readonly LevelRecordPostRequest _postRequest = new();
         private readonly DeathAnalytics _deathAnalytics;
+        private readonly PostRequest _postRequest;
         private readonly float _startTime;
         private readonly Reward _reward;
 
         public LevelAnalytics(DeathAnalytics deathAnalytics, Reward reward, float startTime)
         {
+            _postRequest = Requests.LevelRecord;
             _deathAnalytics = deathAnalytics;
             _startTime = startTime;
             _reward = reward;
         }
 
-        public void PostRecord()
+        public async void PostRecord()
         {
             float timeForLevel = Time.time - _startTime;
             
-            _postRequest.Execute(new LevelRecord()
+            await _postRequest.Send(new LevelRecord()
             {
                 Id = SystemInfo.deviceUniqueIdentifier,
                 Name = new UserName().Load(),

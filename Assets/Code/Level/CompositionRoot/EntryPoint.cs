@@ -42,7 +42,6 @@ namespace Level.CompositionRoot
             CharacterGravityState gravityState = new(_swipeHandler);
             CharacterInput input = new InputProvider(_leftButton, _rightButton, gravityState).GetInput();
             TransitionsConditions conditions = _conditionsFactory.Create(_character, _borders, input, restartEvent);
-            DeathAnalytics deathAnalytics = new(3, conditions.Death);
             
             _levelStars.ForEach(levelStar => levelStar.Initialize(_starPickupFeedback, gravityState));
             _character.Initialize(conditions, gravityState, input, _swipeHandler);
@@ -59,7 +58,7 @@ namespace Level.CompositionRoot
                 new UIHandler(_character.States, _character, _ui),
                 new UIGravityBoxCover(levelItems.GravityBoxes, _ui.Find<GameplayPanel>()),
                 new LevelResultSave(_character.States.WinState, reward),
-                new Analytics(_character.States.WinState, _character.States.DieState, reward, deathAnalytics),
+                new Analytics(_character.States.WinState, _character.States.DieState, reward, conditions.Death),
                 reward,
             });
         }
