@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Level.AnalyticsNM.RequestNM;
 using Level.CharacterNM;
 using SaveSystem;
-using UnityEngine;
+using Unity.Collections;
 using UnityEngine.SceneManagement;
 
 namespace Level.AnalyticsNM
@@ -18,7 +18,7 @@ namespace Level.AnalyticsNM
 
         public DeathAnalytics(CharacterDeathConditions deathConditions)
         {
-            _screenshot = new Screenshot(new Vector2Int(Screen.width, Screen.height) / 2);
+            _screenshot = new Screenshot(scale:0.25f);
             _deathConditions = deathConditions;
             _request = Requests.DeathRecord;
             _deathCountPerRequest = 3;
@@ -33,7 +33,8 @@ namespace Level.AnalyticsNM
             
             if (DeathCount % _deathCountPerRequest == 0)
             {
-                byte[] data = await _screenshot.MakeScreenshot();
+                NativeArray<byte> data = await _screenshot.MakeScreenshotPNG();
+                
                 await _request.Send(new DeathRecord()
                 {
                     Name = new UserName().Load(),
@@ -41,6 +42,8 @@ namespace Level.AnalyticsNM
                     Reasons = _deathReasons.ToArray(),
                     ScreenShot = Convert.ToBase64String(data)
                 });
+
+                data.Dispose();
             }
         }
     }

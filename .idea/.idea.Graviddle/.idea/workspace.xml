@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="236f7ca0-e3d5-42cf-8bd1-4f65d9112fc7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Records.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Records/DeathRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Records/DeathRecord.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/RequestNM.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/RequestNM/PostRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/RequestNM/PostRequest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/RequestNM/Request.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/RequestNM/Request.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/RequestNM/Requests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/RequestNM/Requests.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Analytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Analytics.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/DeathAnalytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/DeathAnalytics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelAnalytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelAnalytics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Records/LevelRecord.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelRecord.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Records/LevelRecord.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelRecordPostRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelRecordPostRequest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CompositionRoot/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CompositionRoot/EntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Screenshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Screenshot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,6 +217,7 @@
       <workItem from="1719620080321" duration="26579000" />
       <workItem from="1719801632801" duration="2251000" />
       <workItem from="1719806536651" duration="709000" />
+      <workItem from="1719865833476" duration="5517000" />
     </task>
     <servers />
   </component>
