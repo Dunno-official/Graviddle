@@ -32,6 +32,7 @@ namespace Level.AnalyticsNM
                 Name = new UserName().Load(),
                 DeathCount = _deathAnalytics.DeathCount,
                 Level = SceneManager.GetActiveScene().name,
+                LevelIndex = SceneManager.GetActiveScene().buildIndex,
                 Stars = _reward.CollectedStars,
                 Time = Mathf.Round(timeForLevel * 100f) / 100f
             });

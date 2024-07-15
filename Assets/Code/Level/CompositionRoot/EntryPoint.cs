@@ -17,6 +17,7 @@ using Level.UserInterface.Panels.WinPanel;
 using MonoBehaviourWrapperNM;
 using SaveSystem;
 using UnityEngine;
+using Utils.EditorUtils;
 
 namespace Level.CompositionRoot
 {
@@ -58,7 +59,8 @@ namespace Level.CompositionRoot
                 new UIHandler(_character.States, _character, _ui),
                 new UIGravityBoxCover(levelItems.GravityBoxes, _ui.Find<GameplayPanel>()),
                 new LevelResultSave(_character.States.WinState, reward),
-                new Analytics(_character.States.WinState, _character.States.DieState, reward, conditions.Death),
+                new InGameSubscriber(new Analytics(_character.States.WinState, _character.States.DieState,
+                        reward, conditions.Death)),
                 reward,
             });
         }

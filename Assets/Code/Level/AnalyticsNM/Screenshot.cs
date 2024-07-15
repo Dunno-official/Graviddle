@@ -20,7 +20,7 @@ namespace Level.AnalyticsNM
         {
             await UniTask.WaitForEndOfFrame();
             Graphics.Blit(Camera.main.activeTexture, _source);
-            Graphics.Blit(_source, _texture, new Vector2(1.0f, -1.0f), new Vector2(0.0f, 1.0f));
+            Graphics.Blit(_source, _texture);
 
             AsyncGPUReadbackRequest request = await AsyncGPUReadback.RequestAsync(_texture, 0, TextureFormat.RGBA32);
 
