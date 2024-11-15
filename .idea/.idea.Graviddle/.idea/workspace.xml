@@ -5,22 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="236f7ca0-e3d5-42cf-8bd1-4f65d9112fc7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Utils/EditorUtils/InGameSubscriber.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Utils/EditorUtils/InGameSubscriber.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Graviddle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Configs/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Configs/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Configs/URP/UniversalRenderPipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Configs/URP/UniversalRenderPipelineAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Configs/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Configs/AddressableAssetsData/link.xml.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/Configs/URP/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Configs/URP/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/Materials/Level Choice/LevelStarShiny.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Materials/Level Choice/LevelStarShiny.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelAnalytics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/LevelAnalytics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Records/LevelRecord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Records/LevelRecord.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/RequestNM/Requests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/RequestNM/Requests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Screenshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/AnalyticsNM/Screenshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CompositionRoot/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CompositionRoot/EntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CharacterCapture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CameraNM/CharacterCapture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/RunState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/RunState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/WinState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/CharacterStateMachineNM/States/WinState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Effects/CharacterFallingVelocityListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Effects/CharacterFallingVelocityListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Physics/PhysicsRestart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/CharacterNM/Physics/PhysicsRestart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonClamping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonClamping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonLiftForce.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Level/Gravitation/GravityButtonNM/GravityButtonLiftForce.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultVolumeProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/AllIn1SpriteShader/2DRenderer_URP/Demo/Scripts/All1DemoUrpCamMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/AllIn1SpriteShader/2DRenderer_URP/Demo/Scripts/All1DemoUrpCamMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ScriptableBuildPipeline.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,35 +76,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.2409836&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;GraviddleRebuilding&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\denis\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\denis\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\denis\\AppData\\Local\\Symbols\\src&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.2409836",
+    "git-widget-placeholder": "GraviddleRebuilding",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.build.unityPlugin",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Tools\UnityEditors\6000.0.3f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Tools\UnityEditors\6000.0.24f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Natalya\Denis\Graviddle -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Natalya\Denis\Graviddle" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -111,7 +105,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Tools\UnityEditors\6000.0.3f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Tools\UnityEditors\6000.0.24f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Business\Unity\Graviddle -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Business\Unity\Graviddle" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -235,6 +229,7 @@
       <workItem from="1720046023700" duration="997000" />
       <workItem from="1720922251139" duration="1470000" />
       <workItem from="1721004445941" duration="341000" />
+      <workItem from="1731650785750" duration="331000" />
     </task>
     <servers />
   </component>
@@ -269,13 +264,27 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Code/Level/Gravitation/SwipeHandlerNM/SwipeHandler.cs</url>
           <line>17</line>
-          <properties documentPath="D:\Business\Unity\Graviddle\Assets\Code\Level\Gravitation\SwipeHandlerNM\SwipeHandler.cs" containingFunctionPresentation="Method 'OnBeginDrag'" />
+          <properties documentPath="D:\Business\Unity\Graviddle\Assets\Code\Level\Gravitation\SwipeHandlerNM\SwipeHandler.cs" containingFunctionPresentation="Method 'OnBeginDrag'">
+            <startOffsets>
+              <option value="517" />
+            </startOffsets>
+            <endOffsets>
+              <option value="580" />
+            </endOffsets>
+          </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Code/Menu/Panels/LevelChoice/LevelChoicePanel.cs</url>
           <line>37</line>
-          <properties documentPath="D:\Business\Unity\Graviddle\Assets\Code\Menu\LevelChoice\LevelChoicePanel.cs" containingFunctionPresentation="Method 'InitializeLevelButtons'" />
+          <properties documentPath="D:\Business\Unity\Graviddle\Assets\Code\Menu\LevelChoice\LevelChoicePanel.cs" containingFunctionPresentation="Method 'InitializeLevelButtons'">
+            <startOffsets>
+              <option value="1270" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1355" />
+            </endOffsets>
+          </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

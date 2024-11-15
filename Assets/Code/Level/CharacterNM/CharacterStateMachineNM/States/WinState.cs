@@ -14,7 +14,7 @@ namespace Level.CharacterNM.CharacterStateMachineNM.States
 
         protected override void OnEnter()
         {
-            _rigidbody.velocity = Vector2.zero;
+            _rigidbody.linearVelocity = Vector2.zero;
             _rigidbody.isKinematic = true;
         }
     }

@@ -20,7 +20,7 @@ namespace Level.CameraNM
 
         protected override void OnFixedUpdate()
         {
-            float captureTime = EvaluateCaptureTimeFunction(_target.velocity.magnitude);
+            float captureTime = EvaluateCaptureTimeFunction(_target.linearVelocity.magnitude);
             Vector3 clampedPosition = _cameraClamping.Clamp(_target.transform.position);
 
             _transform.position = Vector3.SmoothDamp(_transform.position, clampedPosition, ref _velocity, captureTime);

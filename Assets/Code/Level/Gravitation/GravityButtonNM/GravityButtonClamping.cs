@@ -25,7 +25,7 @@ namespace Level.Gravitation.GravityButtonNM
 
             if (resetVelocity)
             {
-                _rigidbody2D.velocity = Vector2.zero;
+                _rigidbody2D.linearVelocity = Vector2.zero;
             }
         }
     }

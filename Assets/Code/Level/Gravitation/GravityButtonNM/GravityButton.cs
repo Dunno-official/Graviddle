@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Level.Gravitation.GravityButtonNM
 {
-    public class GravityButton : MonoBehaviourWrapper
+    public class GravityButton : Context
     {
         [SerializeField] private GravityButtonOrientation _orientation;
         [SerializeField] private GravityButtonData _data;
@@ -15,7 +15,7 @@ namespace Level.Gravitation.GravityButtonNM
         
         public void Initialize()
         {
-            SetDependencies(new IUnityCallback[]
+            Bind(new IUnityCallback[]
             {
                 Events = new GravityButtonEvents(_data, _buttonRigidbody2D.transform), 
                 State = new GravityButtonState(Events),

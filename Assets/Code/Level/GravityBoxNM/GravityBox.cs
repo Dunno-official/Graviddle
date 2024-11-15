@@ -8,7 +8,7 @@ using Utils.Physics;
 
 namespace Level.GravityBoxNM
 {
-    public class GravityBox : MonoBehaviourWrapper
+    public class GravityBox : Context
     {
         [SerializeField] private GravityDirection _gravityDirection;
         [SerializeField] private ConstantForce2D _constantForce2D;
@@ -34,7 +34,7 @@ namespace Level.GravityBoxNM
                 new ScalePopup(_outline.transform, 0.5f, 1, _outlineScale)
             });
 
-            SetDependencies(new IUnityCallback[]
+            Bind(new IUnityCallback[]
             {
                 gravity,
                 rotation,

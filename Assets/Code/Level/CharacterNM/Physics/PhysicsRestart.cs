@@ -9,7 +9,7 @@ namespace Level.CharacterNM.Physics
 
         void IRestart.Restart()
         {
-            _rigidbody.velocity = Vector2.zero;
+            _rigidbody.linearVelocity = Vector2.zero;
         }
     }
 }

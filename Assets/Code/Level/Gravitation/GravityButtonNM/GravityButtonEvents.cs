@@ -32,7 +32,7 @@ namespace Level.Gravitation.GravityButtonNM
             {
                 _state = state;
                 Toggled?.Invoke(state);
-
+                
                 if (_state)
                 {
                     Enabled?.Invoke();

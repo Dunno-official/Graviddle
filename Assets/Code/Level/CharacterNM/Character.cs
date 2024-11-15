@@ -19,7 +19,7 @@ using Utils.Physics.Cast;
 
 namespace Level.CharacterNM
 {
-    public class Character : MonoBehaviourWrapper
+    public class Character : GameObjectContext
     {
         [SerializeField] private TwistingAnimationData _twistingAnimationData;
         [SerializeField] private ConstantForce2D _constantForce2d;
@@ -44,7 +44,7 @@ namespace Level.CharacterNM
             TransitionsPresenter transitionsPresenter = transitionsPresenterFactory.Create();
             Transition fallToIdleTransition = transitionsPresenter.GetTransition(States.FallState, States.IdleState);
 
-            SetDependencies(new IUnityCallback[]
+            Bind(new IUnityCallback[]
             {
                 gravity,
                 gravityRotation,

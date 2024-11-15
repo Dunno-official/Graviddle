@@ -25,7 +25,7 @@ namespace Level.CharacterNM.CharacterStateMachineNM.States
         public override void Update()
         {
             Vector2 slopeNormal = GetSlopeNormal();
-            _rigidbody.velocity = EvaluateVelocity(slopeNormal, _input.GetDirection());
+            _rigidbody.linearVelocity = EvaluateVelocity(slopeNormal, _input.GetDirection());
         }
 
         private Vector2 GetSlopeNormal()

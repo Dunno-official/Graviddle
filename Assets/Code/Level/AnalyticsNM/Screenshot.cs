@@ -22,7 +22,7 @@ namespace Level.AnalyticsNM
             Graphics.Blit(Camera.main.activeTexture, _source);
             Graphics.Blit(_source, _texture);
 
-            AsyncGPUReadbackRequest request = await AsyncGPUReadback.RequestAsync(_texture, 0, TextureFormat.RGBA32);
+            AsyncGPUReadbackRequest request = await AsyncGPUReadback.Request(_texture, 0, TextureFormat.RGBA32);
 
             return ImageConversion.EncodeNativeArrayToPNG(
                 request.GetData<byte>(),

@@ -21,7 +21,7 @@ using Utils.EditorUtils;
 
 namespace Level.CompositionRoot
 {
-    public class EntryPoint : MonoBehaviourWrapper
+    public class EntryPoint : SceneContext
     {
         [SerializeField] private TransitionsConditionsFactory _conditionsFactory;
         [SerializeField] private StarPickupFeedback _starPickupFeedback;
@@ -53,7 +53,7 @@ namespace Level.CompositionRoot
             levelItems.InitializeGravityButtons();
             _ui.Find<WinPanel>().Initialize(reward);
             
-            SetDependencies(new IUnityCallback[]
+            Bind(new IUnityCallback[]
             {
                 new LevelRestart(restartEvent.Invoke, _character.States.DieState),
                 new UIHandler(_character.States, _character, _ui),

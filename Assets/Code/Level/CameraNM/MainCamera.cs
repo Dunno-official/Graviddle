@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Level.CameraNM
 {
-    public class MainCamera : MonoBehaviourWrapper
+    public class MainCamera : Context
     {
         [SerializeField] private Camera _camera;
 
@@ -18,7 +18,7 @@ namespace Level.CameraNM
             CharacterCapture characterCapture = new(data.Character, transform, borders);
             CameraZoom cameraZoom = new(data, _camera, characterCapture);
         
-            SetDependencies(new IUnityCallback[]
+            Bind(new IUnityCallback[]
             {
                 borders,
                 characterCapture,

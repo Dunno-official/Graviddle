@@ -32,7 +32,7 @@ namespace Level.Gravitation.GravityButtonNM
         {
             if (_isLifting)
             {
-                _rigidbody.velocity += (Vector2)_rigidbody.transform.up * (_data.LiftingSpeed * Time.deltaTime);
+                _rigidbody.linearVelocity += (Vector2)_rigidbody.transform.up * (_data.LiftingSpeed * Time.deltaTime);
             }
         }
 
@@ -44,7 +44,7 @@ namespace Level.Gravitation.GravityButtonNM
         private void ResetLiftForce(bool enableLiftForce)
         {
             _isLifting = enableLiftForce;
-            _rigidbody.velocity = Vector2.zero;
+            _rigidbody.linearVelocity = Vector2.zero;
         }
     }
 }

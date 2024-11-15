@@ -19,7 +19,7 @@ namespace Level.CharacterNM.Effects
         {
             if (IsFalling)
             {
-                _velocity = _rigidbody2D.velocity.magnitude;
+                _velocity = _rigidbody2D.linearVelocity.magnitude;
                 OnFalling(_velocity);
             }
         }
